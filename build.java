@@ -2,18 +2,19 @@ import java.util.Scanner;
 import java.io.*;
 
 public class build{
-    public build(File in, File out, boolean n, boolean t, boolean v, boolean w){
+    public build(File in, File out, boolean n, boolean t, boolean v, boolean w, list list){
 
         String[] query=new String[200];
         int i=0;
         Scanner key=new Scanner(System.in);
+        taint taint=null;
         
         FileReader file=null;
         FileWriter write=null;
         BufferedWriter b=null;
         Scanner read=null;
         String input="";
-        String fin="";
+        String fin="This is a recreation of the original file, formatted, for testing.\n\n";
         
         try{
             file=new FileReader(in);
@@ -23,17 +24,26 @@ public class build{
             System.out.println("The file \""+in+"\" does not exist! Please point to a proper file. Exiting...");
             System.exit(1);
         }
-        read.useDelimiter("\\n|;\\n|\n");
+        read.useDelimiter(";\n");
+        String[] qs=null;
         while(read.hasNext()){
             input=read.next();
+            qs=input.split("\n");
+            input="";
+            for(int r=0; r<qs.length; r++){
+                if(r!=0)
+                    input+=qs[r]+" ";
+                else
+                    input+=qs[r];
+            }
             query[i]=input;
-            fin+=query[i];
+            fin+=query[i]+"\n";
             i++;
         }
-        for(int c=0; c<i; c++){
-            String[] q=query[c].split(" ");
-            System.out.println(q[0]);
-        }
+        if(t==true)
+            taint=new taint(query, i, list);
+            fin=taint.re();
+            System.out.println(fin);
         if(!out.exists()){
             try{
                 out.createNewFile();

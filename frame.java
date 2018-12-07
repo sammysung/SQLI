@@ -36,8 +36,15 @@ public class frame{
         System.out.println("If a test is not selected in the arguments, a selection menu will be shown to the user.");
         System.out.println("Multiple test options can be selected, and they will run sequentially.\n");
     }
+    
+    public static list data(File back){
+        backend b=new backend(back);
+        return b.db();
+    }
 
     public static void main(String args[]){
+        list list=new list();
+    
         boolean f=false;
         boolean o=false;
         boolean v=false;
@@ -46,13 +53,15 @@ public class frame{
         boolean t=false;
         boolean w=false;
         boolean u=false;
+        boolean d=false;
         int arg=0;
         Scanner key=new Scanner(System.in);
         File in=null;
+        File back=null;
         File out=new File("report-"+LocalDateTime.now()+".txt");
         if(args.length==0)
             System.out.println("Running in default mode.");
-        else if(args.length>3){
+        else if(args.length>4){
             System.out.println("Too many arguments! Exiting...");
             System.exit(0);
         }
@@ -92,10 +101,24 @@ public class frame{
                     case 't': t=true;
                               u=true;
                               break;
+                    case 'd': d=true;
+                              break;
+                    case 'D': arg++;
+                              back=new File(args[arg]);
+                              list=data(back);
+                              break;
                     default:  System.out.println("Unrecognized argument passed through! Please run the -hq argument for help with using the program! Exiting...");
                               System.exit(1);
                 }
             }
+        }
+        if(d==true){
+            System.out.println("Please input the name of the file that contains the safe queries you want to build.");
+            System.out.println("WARNING: if the queries you provide here are not safe, the tests will not work properly. Please only use safe queries here!");
+            String m=key.nextLine();
+            System.out.println();
+            back=new File(m);
+            list=data(back);
         }
         if(f==false){
             System.out.println("Please input the name of the input file you want to use:");
@@ -136,6 +159,6 @@ public class frame{
                     System.out.println("\""+se+"\" is not a recognized entry in the test table!");
             }
         }
-        build build=new build(in, out, n, t, v, w);
+        build build=new build(in, out, n, t, v, w, list);
     }
 }
