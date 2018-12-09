@@ -32,7 +32,7 @@ Structure: java frame [-{h,f,o,d,i,v,q,w,a,n,t}] [input file] [safe file] [outpu
 
 Example: "java frame -hfov in.txt out.txt" will print the help message, read from in.txt, output to out.txt, show a test selection menu, prompt for a safe file, and be verbose.
 
-         "java frame -ftdow query safe.txt test.txt" will run the Positive Tainting test, pulling input data from query, a safe file list from safe.txt, output to test.txt, and will overwrite test.txt if it already exists with no prompts.
+"java frame -ftdow query safe.txt test.txt" will run the Positive Tainting test, pulling input data from query, a safe file list from safe.txt, output to test.txt, and will overwrite test.txt if it already exists with no prompts.
 
 Arguments -f and -o do not run in order of appearance; if -o is before -f, the first argument will still be the input file.
 By default, with no arguments, the program will prompt for user input to assign the input filename and auto generate an output filename with the scheme "report-{UTC Local Time}.txt".
