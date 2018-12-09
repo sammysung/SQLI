@@ -29,7 +29,9 @@ Usage:
 -q: Use this to signal immediate shutdown (focused for testing purposes or help message only runs).
 
 Structure: java frame [-{h,f,o,d,i,v,q,w,a,n,t}] [input file] [safe file] [output file]
+
 Example: "java frame -hfov in.txt out.txt" will print the help message, read from in.txt, output to out.txt, show a test selection menu, prompt for a safe file, and be verbose.
+
          "java frame -ftdow query safe.txt test.txt" will run the Positive Tainting test, pulling input data from query, a safe file list from safe.txt, output to test.txt, and will overwrite test.txt if it already exists with no prompts.
 
 Arguments -f and -o do not run in order of appearance; if -o is before -f, the first argument will still be the input file.
