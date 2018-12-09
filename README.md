@@ -35,10 +35,13 @@ Example: "java frame -hfov in.txt out.txt" will print the help message, read fro
 "java frame -ftdow query safe.txt test.txt" will run the Positive Tainting test, pulling input data from query, a safe file list from safe.txt, output to test.txt, and will overwrite test.txt if it already exists with no prompts.
 
 Arguments -f and -o do not run in order of appearance; if -o is before -f, the first argument will still be the input file.
+
 By default, with no arguments, the program will prompt for user input to assign the input filename and auto generate an output filename with the scheme "report-{UTC Local Time}.txt".
+
 Arguments -i and -o are mutually exclusive. The program will use the autogenerate scheme if they are used together.
 
 If a test is not selected in the arguments, a selection menu will be shown to the user.
+
 Multiple test options can be selected, and they will run sequentially.
 
 Query file shows format this project expects as of right now.
