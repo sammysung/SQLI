@@ -22,7 +22,8 @@ public class frame{
         System.out.println("-n: Run AMNESIA test only. End once queries are scanned and analyzed. (Not yet implemented)");
         System.out.println("-t: Run Positive Tainting tests only. End once queries are scanned and analyzed. (In progress)");
         System.out.println("-f: Enable command line input file naming mode (first argument will be input filename).");
-        System.out.println("-o: Enable command line output file naming mode (second argument will be output filename if -f is present, first otherwise).");
+        System.out.println("-o: Enable command line output file naming mode (third argument will be output filename if -f is present, first otherwise).");
+        System.out.println("-d: Enables command line safe query list definition (second argument will be safe filename)");
         System.out.println("-i: Enable user input output file naming mode (program will prompt for output filename).");
         System.out.println("-v: Enable verbose mode (as of now, is just a stub of functionality).");
         System.out.println("-w: If an output filename is reused, overwrite without asking.");
@@ -102,8 +103,7 @@ public class frame{
                               u=true;
                               break;
                     case 'd': d=true;
-                              break;
-                    case 'D': arg++;
+                              arg++;
                               back=new File(args[arg]);
                               list=data(back);
                               break;
@@ -111,14 +111,6 @@ public class frame{
                               System.exit(1);
                 }
             }
-        }
-        if(d==true){
-            System.out.println("Please input the name of the file that contains the safe queries you want to build.");
-            System.out.println("WARNING: if the queries you provide here are not safe, the tests will not work properly. Please only use safe queries here!");
-            String m=key.nextLine();
-            System.out.println();
-            back=new File(m);
-            list=data(back);
         }
         if(f==false){
             System.out.println("Please input the name of the input file you want to use:");
@@ -157,6 +149,14 @@ public class frame{
                     t=true;
                 else
                     System.out.println("\""+se+"\" is not a recognized entry in the test table!");
+            }
+            if(!d){
+                System.out.println("Please input the name of the file that contains the safe queries you want to build.");
+                System.out.println("WARNING: if the queries you provide here are not safe, the tests will not work properly. Please only use safe queries here!");
+                String m=key.nextLine();
+                System.out.println();
+                back=new File(m);
+                list=data(back);
             }
         }
         build build=new build(in, out, n, t, v, w, list);
