@@ -45,7 +45,7 @@ public class frame{
 
     public static void main(String args[]){
         list list=new list();
-    
+        
         boolean f=false;
         boolean o=false;
         boolean v=false;
@@ -55,6 +55,7 @@ public class frame{
         boolean w=false;
         boolean u=false;
         boolean d=false;
+        boolean b=false;
         int arg=0;
         Scanner key=new Scanner(System.in);
         File in=null;
@@ -135,28 +136,42 @@ public class frame{
             System.out.println("AMNESIA: n");
             System.out.println("Positive Tainting: t");
             System.out.println("All Tests: a");
+            System.out.println("No Tests (check file reading functionality, overrides other options): b\n");
             String sel=key.nextLine();
             for(int l=0; l<sel.length(); l++){
                 char se=sel.charAt(l);
                 if(se=='a'){
                     n=true;
                     t=true;
+                    b=true;
+                }
+                else if(se=='n'){
+                    n=true;
+                    b=true;
+                }
+                else if(se=='t'){
+                    t=true;
+                    b=true;
+                }
+                else if(se=='b'){
+                    System.out.println("\nThis is just a formatted form of the file \""+in+"\":\n");
+                    t=false;
+                    n=false;
+                    b=false;
+                    list=new list();
                     break;
                 }
-                else if(se=='n')
-                    n=true;
-                else if(se=='t')
-                    t=true;
                 else
                     System.out.println("\""+se+"\" is not a recognized entry in the test table!");
             }
-            if(!d){
-                System.out.println("Please input the name of the file that contains the safe queries you want to build.");
-                System.out.println("WARNING: if the queries you provide here are not safe, the tests will not work properly. Please only use safe queries here!");
-                String m=key.nextLine();
-                System.out.println();
-                back=new File(m);
-                list=data(back);
+            if(d==false&&b==true){
+                    d=true;
+                    System.out.println("Please input the name of the file that contains the safe queries you want to build.");
+                    System.out.println("WARNING: if the queries you provide here are not safe, the tests will not work properly. Please only use safe queries here!");
+                    String m=key.nextLine();
+                    System.out.println();
+                    back=new File(m);
+                    list=data(back);
             }
         }
         build build=new build(in, out, n, t, v, w, list);

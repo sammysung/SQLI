@@ -40,10 +40,11 @@ public class build{
             fin+=query[i]+"\n";
             i++;
         }
-        if(t==true)
+        if(t==true){
             taint=new taint(query, i, list);
             fin=taint.re();
             System.out.println(fin);
+        }
         if(!out.exists()){
             try{
                 out.createNewFile();
