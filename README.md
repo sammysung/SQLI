@@ -7,15 +7,25 @@ themselves and generate meaningful reports.
 Usage:
 
 -h: Print this help message.
+
 -a: Run all tests implemented sequentially. Order to be updated as implementation is completed.
+
 -n: Run AMNESIA test only. End once queries are scanned and analyzed. (Not yet implemented)
+
 -t: Run Positive Tainting tests only. End once queries are scanned and analyzed. (In progress)
+
 -f: Enable command line input file naming mode (first argument will be input filename).
+
 -o: Enable command line output file naming mode (third argument will be output filename if -f is present, first otherwise).
+
 -d: Enables command line safe query list definition (second argument will be safe filename)
+
 -i: Enable user input output file naming mode (program will prompt for output filename).
+
 -v: Enable verbose mode (as of now, is just a stub of functionality).
+
 -w: If an output filename is reused, overwrite without asking.
+
 -q: Use this to signal immediate shutdown (focused for testing purposes or help message only runs).
 
 Structure: java frame [-{h,f,o,d,i,v,q,w,a,n,t}] [input file] [safe file] [output file]
