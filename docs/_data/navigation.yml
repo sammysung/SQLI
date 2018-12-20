@@ -10,3 +10,25 @@ main:
     url: /collection-archive/
   - title: "Sitemap"
     url: /sitemap/
+
+docs:
+  - title: "SQLI Project"
+    children:
+      - title: "Purpose"
+        #url: 
+      - title: "Repo"
+        url: https://github.com/sammysung/SQLI
+      - title: "Getting Started"
+        #url: 
+      - title: "Acknowledgements"
+        #url: 
+  - title: "Help"
+    children:
+      - title: "Help Document"
+        url: /files/README.md
+      - title: "Sample Commands"
+        #url:
+      - title: "Sample Queries"
+        #url: 
+      - title: "Wiki"
+        url: https://github.com/sammysung/SQLI/wiki
