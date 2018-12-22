@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>SQLI</title>
+<!-- begin _includes/seo.html --><title>Readme - SQLI</title>
 <meta name="description" content="A testing framework for SQL Injection attacks.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="SQLI">
-<meta property="og:title" content="SQLI">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="Readme">
+<meta property="og:url" content="http://localhost:4000/readme/">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/readme/">
 
 
 
@@ -100,7 +100,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -219,7 +219,7 @@
             
             
 
-            <li><a href="/readme/" class="">Help Document</a></li>
+            <li><a href="/readme/" class="active">Help Document</a></li>
           
             
             
@@ -256,23 +256,89 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Readme">
     
-      <h1 id="page-title" class="page__title"></h1>
     
     
 
-<!--
-<h3 class="archive__subtitle">Recent posts</h3>
--->
-<h3 class="archive__subtitle">Please use the sidebar to navigate the site.</h3>
+    <div class="page__inner-wrap">
+      
+        <header>
+        <!--
+          <h1 id="page-title" class="page__title" itemprop="headline">Readme
+</h1>
+        -->
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="usage">Usage</h1>
+<p>Structure: <code class="highlighter-rouge">java frame [-{h,f,o,d,i,v,q,w,a,n,t}] [input file] [safe file] [output file]</code></p>
+
+<p><strong>-h</strong>: Print this help message.</p>
+
+<p><strong>-a</strong>: Run all tests implemented sequentially. Order to be updated as implementation is completed.</p>
+
+<p><strong>-n</strong>: Run AMNESIA test only. End once queries are scanned and analyzed. (Not yet implemented)</p>
+
+<p><strong>-t</strong>: Run Positive Tainting tests only. End once queries are scanned and analyzed. (In progress)</p>
+
+<p><strong>-f</strong>: Enable command line input file naming mode (first argument will be input filename).</p>
+
+<p><strong>-o</strong>: Enable command line output file naming mode (third argument will be output filename if -f is present, first otherwise).</p>
+
+<p><strong>-d</strong>: Enables command line safe query list definition (second argument will be safe filename)</p>
+
+<p><strong>-i</strong>: Enable user input output file naming mode (program will prompt for output filename).</p>
+
+<p><strong>-v</strong>: Enable verbose mode (as of now, is just a stub of functionality).</p>
+
+<p><strong>-w</strong>: If an output filename is reused, overwrite without asking.</p>
+
+<p><strong>-q</strong>: Use this to signal immediate shutdown (focused for testing purposes or help message only runs).</p>
+
+<p>Example: “<code class="highlighter-rouge">java frame -hfov in.txt out.txt</code>” will print the help message, read from in.txt, output to out.txt, show a test selection menu, prompt for a safe file, and be verbose.</p>
+
+<p>“<code class="highlighter-rouge">java frame -ftdow query safe.txt test.txt</code>” will run the Positive Tainting test, pulling input data from query, a safe file list from safe.txt, output to test.txt, and will overwrite test.txt if it already exists with no prompts.</p>
+
+<p>Arguments <strong>-f</strong> and <strong>-o</strong> do not run in order of appearance; if <strong>-o</strong> is before <strong>-f</strong>, the first argument will still be the input file.</p>
+
+<p>By default, with no arguments, the program will prompt for user input to assign the input filename and auto generate an output filename with the scheme “<em>report-{UTC Local Time}.txt</em>”.</p>
+
+<p>Arguments <strong>-i</strong> and <strong>-o</strong> are mutually exclusive. The program will use the autogenerate scheme if they are used together.</p>
+
+<p>If a test is not selected in the arguments, a selection menu will be shown to the user.</p>
+
+<p>Multiple test options can be selected, and they will run sequentially.</p>
+
+<p>Query file shows format this project expects as of right now.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
 
 
+        
+      </footer>
 
+      
 
+      
+    </div>
 
-  </div>
+    
+  </article>
+
+  
+  
 </div>
+
     </div>
 
     
