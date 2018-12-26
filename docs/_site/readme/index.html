@@ -112,9 +112,9 @@
       <nav id="site-nav" class="greedy-nav">
         <a class="site-title" href="/">SQLI</a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/" >Quick-Start Guide</a>
+              <a href="/start/" >Getting Started</a>
             </li><li class="masthead__menu-item">
-              <a href="https://mmistakes.github.io/minimal-mistakes/about/" >About</a>
+              <a href="/SQLI.zip" >Current Release</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -183,14 +183,6 @@
             
             
 
-            <li><a href="https://github.com/sammysung/SQLI" class="">Repo</a></li>
-          
-            
-            
-
-            
-            
-
             <li><a href="/start/" class="">Getting Started</a></li>
           
             
@@ -199,7 +191,7 @@
             
             
 
-            <li><a href="" class="">Acknowledgements</a></li>
+            <li><a href="/ack/" class="">Acknowledgements</a></li>
           
         </ul>
         
@@ -227,7 +219,7 @@
             
             
 
-            <li><a href="" class="">Sample Commands</a></li>
+            <li><a href="/com/" class="">Sample Commands</a></li>
           
             
             
@@ -235,7 +227,27 @@
             
             
 
-            <li><a href="" class="">Sample Queries</a></li>
+            <li><a href="/query" class="">Sample Queries</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Dev Portal</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://github.com/sammysung/SQLI" class="">Repo</a></li>
           
             
             
@@ -276,7 +288,7 @@
       <section class="page__content" itemprop="text">
         
         <h1 id="usage">Usage</h1>
-<p>Structure: <code class="highlighter-rouge">java frame [-{h,f,o,d,i,v,q,w,a,n,t}] [input file] [safe file] [output file]</code></p>
+<p>Structure: <code class="highlighter-rouge">java -jar frame.jar [-{h,f,o,d,i,v,q,w,a,n,t}] [input file] [safe file] [output file]</code></p>
 
 <p><strong>-h</strong>: Print this help message.</p>
 
@@ -300,9 +312,9 @@
 
 <p><strong>-q</strong>: Use this to signal immediate shutdown (focused for testing purposes or help message only runs).</p>
 
-<p>Example: “<code class="highlighter-rouge">java frame -hfov in.txt out.txt</code>” will print the help message, read from in.txt, output to out.txt, show a test selection menu, prompt for a safe file, and be verbose.</p>
+<p>Example: “<code class="highlighter-rouge">java -jar frame.jar -hfov in.txt out.txt</code>” will print the help message, read from in.txt, output to out.txt, show a test selection menu, prompt for a safe file, and be verbose.</p>
 
-<p>“<code class="highlighter-rouge">java frame -ftdow query safe.txt test.txt</code>” will run the Positive Tainting test, pulling input data from query, a safe file list from safe.txt, output to test.txt, and will overwrite test.txt if it already exists with no prompts.</p>
+<p>“<code class="highlighter-rouge">java -jar frame.jar -ftdow query safe.txt test.txt</code>” will run the Positive Tainting test, pulling input data from query, a safe file list from safe.txt, output to test.txt, and will overwrite test.txt if it already exists with no prompts.</p>
 
 <p>Arguments <strong>-f</strong> and <strong>-o</strong> do not run in order of appearance; if <strong>-o</strong> is before <strong>-f</strong>, the first argument will still be the input file.</p>
 

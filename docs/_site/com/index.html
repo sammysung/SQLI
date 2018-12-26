@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>SQLI</title>
+<!-- begin _includes/seo.html --><title>Sample Commands - SQLI</title>
 <meta name="description" content="A testing framework for SQL Injection attacks.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="SQLI">
-<meta property="og:title" content="SQLI">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="Sample Commands">
+<meta property="og:url" content="http://localhost:4000/com/">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/com/">
 
 
 
@@ -100,7 +100,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
 
     <!--[if lt IE 9]>
 <div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
@@ -219,7 +219,7 @@
             
             
 
-            <li><a href="/com/" class="">Sample Commands</a></li>
+            <li><a href="/com/" class="active">Sample Commands</a></li>
           
             
             
@@ -268,23 +268,83 @@
   </div>
 
 
-  <div class="archive">
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Sample Commands">
     
-      <h1 id="page-title" class="page__title"></h1>
     
     
 
-<!--
-<h3 class="archive__subtitle">Recent posts</h3>
--->
-<h3 class="archive__subtitle">Please use the sidebar to navigate the site.</h3>
+    <div class="page__inner-wrap">
+      
+        <header>
+        <!--
+          <h1 id="page-title" class="page__title" itemprop="headline">Sample Commands
+</h1>
+        -->
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="starter-commands">Starter Commands</h1>
+
+<h2 id="important-notes">Important Notes</h2>
+
+<p>As of this writing, the JAR file must be run from the command line due to a lack of an implemented GUI.
+Because of this, simply double-clicking the JAR will appear to make it crash.
+This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable) from within the respective CLI.</p>
+
+<p>As this code has not been tested in a framework like Eclipse yet, it is not clear how well these classes will work there, though the packaging conventions are setup in the same manner.</p>
+
+<h2 id="first-run">First run</h2>
+
+<p><code class="highlighter-rouge">java -jar frame.jar -hq</code></p>
+
+<p><em>This displays the help message and exits the program completely. Use to test compilation and/or see the help message.</em></p>
+
+<h2 id="general-use">General Use</h2>
+
+<p><code class="highlighter-rouge">java -jar frame.jar</code></p>
+
+<p><em>Runs the default options for every setting, which will prompt for command line input of the filename to pull the test queries from, auto-generate an output filename based on UTC time, and show a selection menu for the tests that are to be performed. This mode will likely be the baseline for the GUI version of the project.</em></p>
+
+<p><code class="highlighter-rouge">java -jar frame.jar -f query</code></p>
+
+<p><em>Runs the default options, except that the filename for the test query file is defined in the CLI.</em></p>
+
+<p><code class="highlighter-rouge">java -jar frame.jar -i</code></p>
+
+<p><em>Runs the default options, except that the program will prompt for the user to input an output filename during program execution.</em></p>
+
+<p><code class="highlighter-rouge">java -jar frame.jar -ftdow query safe.txt test.txt</code></p>
+
+<p><em>Runs the Positive Tainting test, while also taking the first argument as the input filename, the second as the safety checking code, and the third as the output filename, while overwriting it without asking if found. Note that <strong>-f</strong> and <strong>-d</strong> run in order of definition, while <strong>-o</strong> will always run last.</em></p>
 
 
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
 
 
+        
+      </footer>
 
-  </div>
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
 </div>
+
     </div>
 
     
