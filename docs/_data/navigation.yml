@@ -24,6 +24,8 @@ docs:
         url: /SQLI.zip
       - title: "Getting Started"
         url: /start/
+      - title: "Diagrams"
+        url: /dia/
       - title: "Acknowledgements"
         url: /ack/
   - title: "Help"
@@ -33,7 +35,9 @@ docs:
       - title: "Sample Commands"
         url: /com/
       - title: "Sample Queries"
-        url: /query
+        url: /query/
+      - title: "Tools"
+        url: /tools/
   - title: "Dev Portal"
     children:
       - title: "Repo"

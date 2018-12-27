@@ -26,7 +26,7 @@ _This displays the help message and exits the program completely. Use to test co
 
 _Runs the default options for every setting, which will prompt for command line input of the filename to pull the test queries from, auto-generate an output filename based on UTC time, and show a selection menu for the tests that are to be performed. This mode will likely be the baseline for the GUI version of the project._
 
-`java -jar frame.jar -f query`
+`java -jar frame.jar -f query.txt`
 
 _Runs the default options, except that the filename for the test query file is defined in the CLI._
 
@@ -34,7 +34,7 @@ _Runs the default options, except that the filename for the test query file is d
 
 _Runs the default options, except that the program will prompt for the user to input an output filename during program execution._
 
-`java -jar frame.jar -ftdow query safe.txt test.txt`
+`java -jar frame.jar -ftdow query.txt safe.txt test.txt`
 
 _Runs the Positive Tainting test, while also taking the first argument as the input filename, the second as the safety checking code, and the third as the output filename, while overwriting it without asking if found. Note that **-f** and **-d** run in order of definition, while **-o** will always run last._
  

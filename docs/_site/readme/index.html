@@ -191,6 +191,14 @@
             
             
 
+            <li><a href="/dia/" class="">Diagrams</a></li>
+          
+            
+            
+
+            
+            
+
             <li><a href="/ack/" class="">Acknowledgements</a></li>
           
         </ul>
@@ -227,7 +235,15 @@
             
             
 
-            <li><a href="/query" class="">Sample Queries</a></li>
+            <li><a href="/query/" class="">Sample Queries</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/tools/" class="">Tools</a></li>
           
         </ul>
         
@@ -312,9 +328,9 @@
 
 <p><strong>-q</strong>: Use this to signal immediate shutdown (focused for testing purposes or help message only runs).</p>
 
-<p>Example: “<code class="highlighter-rouge">java -jar frame.jar -hfov in.txt out.txt</code>” will print the help message, read from in.txt, output to out.txt, show a test selection menu, prompt for a safe file, and be verbose.</p>
+<p>Example: “<code class="highlighter-rouge">java -jar frame.jar -hfov in.txt out.txt</code>” will print the help message, read from <strong>in.txt</strong>, output to <strong>out.txt</strong>, show a test selection menu, prompt for a safe file, and be verbose.</p>
 
-<p>“<code class="highlighter-rouge">java -jar frame.jar -ftdow query safe.txt test.txt</code>” will run the Positive Tainting test, pulling input data from query, a safe file list from safe.txt, output to test.txt, and will overwrite test.txt if it already exists with no prompts.</p>
+<p>“<code class="highlighter-rouge">java -jar frame.jar -ftdow query.txt safe.txt test.txt</code>” will run the Positive Tainting test, pulling input data from <strong>query.txt</strong>, a safe file list from <strong>safe.txt</strong>, output to <strong>test.txt</strong>, and will overwrite <strong>test.txt</strong> if it already exists with no prompts.</p>
 
 <p>Arguments <strong>-f</strong> and <strong>-o</strong> do not run in order of appearance; if <strong>-o</strong> is before <strong>-f</strong>, the first argument will still be the input file.</p>
 

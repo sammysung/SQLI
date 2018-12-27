@@ -191,6 +191,14 @@
             
             
 
+            <li><a href="/dia/" class="">Diagrams</a></li>
+          
+            
+            
+
+            
+            
+
             <li><a href="/ack/" class="">Acknowledgements</a></li>
           
         </ul>
@@ -227,7 +235,15 @@
             
             
 
-            <li><a href="/query" class="">Sample Queries</a></li>
+            <li><a href="/query/" class="">Sample Queries</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/tools/" class="">Tools</a></li>
           
         </ul>
         
@@ -309,7 +325,7 @@ This also means that the code will only work on Linux, Mac, or Windows (if you t
 
 <p><em>Runs the default options for every setting, which will prompt for command line input of the filename to pull the test queries from, auto-generate an output filename based on UTC time, and show a selection menu for the tests that are to be performed. This mode will likely be the baseline for the GUI version of the project.</em></p>
 
-<p><code class="highlighter-rouge">java -jar frame.jar -f query</code></p>
+<p><code class="highlighter-rouge">java -jar frame.jar -f query.txt</code></p>
 
 <p><em>Runs the default options, except that the filename for the test query file is defined in the CLI.</em></p>
 
@@ -317,7 +333,7 @@ This also means that the code will only work on Linux, Mac, or Windows (if you t
 
 <p><em>Runs the default options, except that the program will prompt for the user to input an output filename during program execution.</em></p>
 
-<p><code class="highlighter-rouge">java -jar frame.jar -ftdow query safe.txt test.txt</code></p>
+<p><code class="highlighter-rouge">java -jar frame.jar -ftdow query.txt safe.txt test.txt</code></p>
 
 <p><em>Runs the Positive Tainting test, while also taking the first argument as the input filename, the second as the safety checking code, and the third as the output filename, while overwriting it without asking if found. Note that <strong>-f</strong> and <strong>-d</strong> run in order of definition, while <strong>-o</strong> will always run last.</em></p>
 

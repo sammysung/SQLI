@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Acknowledgments - SQLI</title>
+<!-- begin _includes/seo.html --><title>Sample Queries - SQLI</title>
 <meta name="description" content="A testing framework for SQL Injection attacks.">
 
 
@@ -17,8 +17,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="SQLI">
-<meta property="og:title" content="Acknowledgments">
-<meta property="og:url" content="http://localhost:4000/ack/">
+<meta property="og:title" content="Sample Queries">
+<meta property="og:url" content="http://localhost:4000/query/">
 
 
 
@@ -36,7 +36,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/ack/">
+<link rel="canonical" href="http://localhost:4000/query/">
 
 
 
@@ -199,7 +199,7 @@
             
             
 
-            <li><a href="/ack/" class="active">Acknowledgements</a></li>
+            <li><a href="/ack/" class="">Acknowledgements</a></li>
           
         </ul>
         
@@ -235,7 +235,7 @@
             
             
 
-            <li><a href="/query/" class="">Sample Queries</a></li>
+            <li><a href="/query/" class="active">Sample Queries</a></li>
           
             
             
@@ -285,7 +285,7 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Acknowledgments">
+    <meta itemprop="headline" content="Sample Queries">
     
     
     
@@ -294,7 +294,7 @@
       
         <header>
         <!--
-          <h1 id="page-title" class="page__title" itemprop="headline">Acknowledgments
+          <h1 id="page-title" class="page__title" itemprop="headline">Sample Queries
 </h1>
         -->
           
@@ -303,18 +303,58 @@
 
       <section class="page__content" itemprop="text">
         
-        <h2 id="resources">Resources</h2>
-<ul>
-  <li>{Insert research paper name here}</li>
-  <li>Github for code and website hosting</li>
-</ul>
+        <h1 id="right-click-on-the-below-link-in-order-to-download-this-in-a-file">Right-click on the below link in order to download this in a file:</h1>
 
-<h2 id="thanks">Thanks</h2>
-<ul>
-  <li>{Research paper}</li>
-  <li>Github</li>
-  <li><a href="https://github.com/mmistakes/minimal-mistakes">Minimal Mistakes</a> for theming</li>
-</ul>
+<p><a href="/query.txt">query list</a></p>
+
+<h2 id="sample-query-list">Sample query list</h2>
+
+<p>select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5;</p>
+
+<p>select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary &gt; 30000;</p>
+
+<p>select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 and Sex=’M’;</p>
+
+<p>select Dname
+from EMPLOYEE, DEPARTMENT
+where Dno=Dnumber
+group by Dname
+having avg(Salary)&gt;30000;</p>
+
+<p>select Fname, Lname
+from EMPLOYEE
+where Dno = (select Dno
+from EMPLOYEE
+where Salary = (select max(Salary)
+from EMPLOYEE));</p>
+
+<p>select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or 1=1;</p>
+
+<p>select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 and Sex=’M’ or 1=1;</p>
+
+<p>select Fname, Lname
+from EMPLOYEE
+where Dno=5  ‘; drop table EMPLOYEE’;</p>
+
+<p>select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary &gt; 30000 ‘;SHUTDOWN; – ‘;</p>
+
+<p>select Fname, Lname
+from EMPLOYEE
+where Salary &gt; 15000
+UNION ALL select Ssn
+from FMOLOYEE;</p>
 
         
       </section>

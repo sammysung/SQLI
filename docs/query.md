@@ -1,3 +1,13 @@
+---
+layout: single
+title: Sample Queries
+permalink: /query/
+---
+# Right-click on the below link in order to download this in a file:
+
+[query list](/query.txt)
+
+## Sample query list
 
 select Fname, Lname, Ssn
 from EMPLOYEE

@@ -10,4 +10,4 @@ permalink: /ack/
 ## Thanks
 - {Research paper}
 - Github
-- Minimal Mistakes for theming {add link to page}
+- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) for theming 
