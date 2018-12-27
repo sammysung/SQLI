@@ -5,7 +5,7 @@ permalink: /query/
 ---
 # Right-click on the below link in order to download this in a file:
 
-[query list](/query.txt)
+[query list](/docs/query.txt)
 
 ## Sample query list
 
