@@ -23,5 +23,5 @@
 hs_err_pid*
 
 # ignore txt report files, can be edited later if needed.
-*.txt
+#*.txt
 Gemfile.lock
