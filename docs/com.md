@@ -10,7 +10,7 @@ permalink: /com/
 
 As of this writing, the JAR file must be run from the command line due to a lack of an implemented GUI.
 Because of this, simply double-clicking the JAR will appear to make it crash.
-This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable) from within the respective CLI.
+This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable, go to [this page](/start/) if you need help) from within the respective CLI.
 
 As this code has not been tested in a framework like Eclipse yet, it is not clear how well these classes will work there, though the packaging conventions are setup in the same manner.
 

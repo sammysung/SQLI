@@ -303,11 +303,23 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="initial-setup">Initial Setup</h1>
+        <h1 id="overall-notes">Overall Notes</h1>
 
-<p>Java will need to be setup on your system in order to run this program. As it is currently a command line only tool (though this is set to change) you will need to setup a JDK for your system and ensure that command line tools can use it. Below are steps to install and/or setup Java, depending on your system OS:</p>
+<p>Many of the things mentioned here can and have been automated via the use of scripts; if it would prove useful, these scripts can be supplied on this site on request.</p>
 
-<h2 id="linux-ubuntu-based">Linux (Ubuntu-based)</h2>
+<p>Java is the main dependency for this project at this state, though using Powershell as it is (surprisingly) cross-platform is a good idea if you would like to go the script route.</p>
+
+<p>The <a href="https://github.com/PowerShell/PowerShell#get-powershell">Powershell Github repository</a> is a great place to start should you choose to use it (Windows has this by default, too).</p>
+
+<p>With that said, there are Bash shell scripts, as well as Windows cmd batch files available as well. Mac works like Linux from what I remember, which will be tested soon.</p>
+
+<h2 id="java-initial-setup">Java Initial Setup</h2>
+
+<p>Java will need to be setup on your system in order to run this program. As it is currently a command line only tool (though this is set to change) you will need to setup a JDK for your system and ensure that command line tools can use it.</p>
+
+<p>Please note that our development versions of Java are currently between 10 and 11; if you cannot run the jar due to an “Unsupported Class Error”, either update or let the team know so we can aim for higher compatibility, if possible. Below are steps to install and/or setup Java, depending on your system OS:</p>
+
+<h3 id="linux-ubuntu-based">Linux (Ubuntu-based)</h3>
 
 <p>Simply open up a terminal and run the command:</p>
 
@@ -315,25 +327,78 @@
 
 <p>This should get you the most recent Java installation up and running without too much hassle.</p>
 
-<h2 id="windows">Windows</h2>
+<p>If for some reason you do not receive Java 11 with this command, you can try this series instead:</p>
 
-<p>First, install Java from <a href="https://java.com/en/download/manual.jsp">this site here</a>.</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://download.java.net/java/GA/jdk11/28/GPL/openjdk-11+28_linux-x64_bin.tar.gz <span class="nt">-O</span> /tmp/openjdk-11+28_linux-x64_bin.tar.gz
 
-<p>Make sure to select the Windows binary that fits your system architecture. That install will allow you to run Java programs everywhere but the command line.</p>
+<span class="nb">sudo tar </span>xfvz /tmp/openjdk-11+28_linux-x64_bin.tar.gz <span class="nt">--directory</span> /usr/lib/jvm
 
-<p>To get command line Java up and running, follow the instructions <a href="https://javatutorial.net/set-java-home-windows-10">located here</a>.</p>
+rm <span class="nt">-f</span> /tmp/openjdk-11+28_linux-x64_bin.tar.gz
+</code></pre></div></div>
+
+<h3 id="windows">Windows</h3>
+
+<p>First, install Java 11 from <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">this site here</a>.</p>
+
+<p>You will want the Windows file that ends in <code class="highlighter-rouge">.exe</code>. That install will allow you to run Java programs everywhere but the command line by default.</p>
+
+<p>To get command line Java up and running, follow the instructions <a href="https://javatutorial.net/set-java-home-windows-10">located here</a>. If you have trouble with this guide, a few more are provided down below.</p>
 
 <p>This will allow you to run java commands from any command line instance, which is not strictly necessary, but highly useful for any Java development on Windows.</p>
 
-<h2 id="mac">Mac</h2>
+<p>If you are running Windows 10, you could also take advantage of the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">ability to run Linux as an application inside Windows</a>.</p>
+
+<p>How-ToGeek has a good guide on that as well <a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">located here</a>.</p>
+
+<h3 id="mac">Mac</h3>
 
 <p>Coming soon! I haven’t fixed my internet kexts on my Mac install, and I don’t have my wireless dongle stopgap measure for it yet, either.</p>
 
-<h2 id="pathing">Pathing</h2>
+<h3 id="pathing">Pathing</h3>
 
 <p>If, for some reason, you need to run a seperate Java install or the Windows instructions were not clear, this is the offical Oracle documentation about the PATH variable for all systems (including Solaris, for anyone who happens to use that):</p>
 
 <p><a href="https://java.com/en/download/help/path.xml">https://java.com/en/download/help/path.xml</a></p>
+
+<p><a href="https://docs.oracle.com/javase/tutorial/essential/environment/paths.html">https://docs.oracle.com/javase/tutorial/essential/environment/paths.html</a></p>
+
+<h2 id="ruby">Ruby</h2>
+
+<p>Once it is available, if you would like to use the website hosting tools used to make this site, you will need to have Ruby installed and ready for deployment.</p>
+
+<p>For all platforms, a terminal will need to be opened and the following command ran:</p>
+
+<p><code class="highlighter-rouge">gem install bundler</code></p>
+
+<p>Jekyll, and therefore Github Pages, needs this technology to do anything.</p>
+
+<p>Run this on all platforms to install all needed bundles, check for updates, and begin hosting the page locally:</p>
+
+<pre><code class="language-Ruby">bundle install
+bundle update
+bundle exec jekyll serve
+</code></pre>
+
+<p>If the website info is released, these will be built into scripts for ease of use.</p>
+
+<h3 id="linux-install">Linux Install</h3>
+
+<p>Run this command in order to install Ruby and the dependencies for Pages:</p>
+
+<p><code class="highlighter-rouge">sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev ruby-all-dev</code></p>
+
+<h3 id="windows-install">Windows Install</h3>
+
+<p>Download the <a href="https://rubyinstaller.org/">RubyInstaller for Windows</a> package, and install it.</p>
+
+<p>This will fix the PATH for you, but if something goes wrong there, the above Java documentation may be able to help.</p>
+
+<p>Powershell or CMD will be able to run Ruby now.</p>
+
+<h3 id="mac-install">Mac Install</h3>
+
+<p>Coming Soon!</p>
+
 
         
       </section>
