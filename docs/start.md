@@ -53,9 +53,7 @@ How-ToGeek has a good guide on that as well [located here](https://www.howtogeek
 
 ### Mac
 
-**IMPORTANT NOTE!!!**
-
-_The test system for this is a OSX 10.10.5 Yosemite install, and as such, you may or may not have some tools preinstalled if you have a more current system. Likewise, older systems may not be able to use some of the tools; if this is an issue, please let the team know and we may be able to help you._
+_Older systems may not be able to use some of the tools; if this is an issue, please let the team know and we may be able to help you. The test system for Mac OSX is currently on 10.13.6, but some considerate was taken for 10.10.5 while the system was still on that version._
 
 With that said, installing the newest Java install is pretty simple. Just go grab the [Java 11 JDK .DMG](https://www.oracle.com/technetwork/java/javase/downloads/index.html). Run that, follow what the archive asks, and you’re good to go!
 
@@ -107,13 +105,7 @@ Powershell or CMD will be able to run Ruby now.
 
 ### Mac Install
 
-**Please run the command**
-
-`ruby -v` 
-
-**in a terminal before doing anything else here, you need to know what your Ruby version is!**
-
-If the result of the previous command was 2.2.0 or higher, then you are fine. OSX installs come with built-in versions of Ruby, so if this is the case for you, everything should just work. If your Ruby install is lower, or the scripts fail anyways, then you’ll want to follow the below.
+Do not use the built-in Ruby install for this! While you may not end up causing any problems, most advice I found while creating this guide indicated that this is a terrible idea, since it is quite a pain to revert it if something should go wrong. Instead, you'll want to setup a separate, most likely updated, install of Ruby that is free to be edited as needed.
 
 Installing this updated version, at least from my testing, proved to be a bit cumbersome. [This Stack Overflow page](https://stackoverflow.com/questions/38194032/how-to-update-ruby-version-2-0-0-to-the-latest-version-in-mac-osx-yosemite) offers two ways to approach this problem; while the first, accepted solution is what I got working on my system, and is 100% recommended for anyone planning to seriously use Ruby outside of this project, the second answer, titled “**Brew only solution**” should be attempted first.
 

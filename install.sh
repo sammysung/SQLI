@@ -1,3 +1,4 @@
 #!/bin/bash
 
-sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev ruby-all-dev default-jre
+sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev ruby-all-dev default-jre snapd
+sudo snap install powershell --classic

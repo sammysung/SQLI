@@ -352,9 +352,7 @@ rm <span class="nt">-f</span> /tmp/openjdk-11+28_linux-x64_bin.tar.gz
 
 <h3 id="mac">Mac</h3>
 
-<p><strong>IMPORTANT NOTE!!!</strong></p>
-
-<p><em>The test system for this is a OSX 10.10.5 Yosemite install, and as such, you may or may not have some tools preinstalled if you have a more current system. Likewise, older systems may not be able to use some of the tools; if this is an issue, please let the team know and we may be able to help you.</em></p>
+<p><em>Older systems may not be able to use some of the tools; if this is an issue, please let the team know and we may be able to help you. The test system for Mac OSX is currently on 10.13.6, but some considerate was taken for 10.10.5 while the system was still on that version.</em></p>
 
 <p>With that said, installing the newest Java install is pretty simple. Just go grab the <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">Java 11 JDK .DMG</a>. Run that, follow what the archive asks, and you’re good to go!</p>
 
@@ -405,13 +403,7 @@ bundle exec jekyll serve
 
 <h3 id="mac-install">Mac Install</h3>
 
-<p><strong>Please run the command</strong></p>
-
-<p><code class="highlighter-rouge">ruby -v</code></p>
-
-<p><strong>in a terminal before doing anything else here, you need to know what your Ruby version is!</strong></p>
-
-<p>If the result of the previous command was 2.2.0 or higher, then you are fine. OSX installs come with built-in versions of Ruby, so if this is the case for you, everything should just work. If your Ruby install is lower, or the scripts fail anyways, then you’ll want to follow the below.</p>
+<p>Do not use the built-in Ruby install for this! While you may not end up causing any problems, most advice I found while creating this guide indicated that this is a terrible idea, since it is quite a pain to revert it if something should go wrong. Instead, you’ll want to setup a separate, most likely updated, install of Ruby that is free to be edited as needed.</p>
 
 <p>Installing this updated version, at least from my testing, proved to be a bit cumbersome. <a href="https://stackoverflow.com/questions/38194032/how-to-update-ruby-version-2-0-0-to-the-latest-version-in-mac-osx-yosemite">This Stack Overflow page</a> offers two ways to approach this problem; while the first, accepted solution is what I got working on my system, and is 100% recommended for anyone planning to seriously use Ruby outside of this project, the second answer, titled “<strong>Brew only solution</strong>” should be attempted first.</p>
 
