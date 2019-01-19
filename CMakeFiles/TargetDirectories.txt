@@ -1,4 +1,0 @@
-/Users/dude/Documents/git/SQLI/CMakeFiles/rebuild_cache.dir
-/Users/dude/Documents/git/SQLI/CMakeFiles/edit_cache.dir
-/Users/dude/Documents/git/SQLI/CMakeFiles/test.dir
-/Users/dude/Documents/git/SQLI/CMakeFiles/frame.dir
