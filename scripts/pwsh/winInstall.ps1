@@ -14,4 +14,5 @@ choco install visualstudio2017community --package-parameters "--add Microsoft.Vi
 choco install mingw -y
 choco install vim -y
 choco install msys2 -y
+choco install vscode -y
 refreshenv

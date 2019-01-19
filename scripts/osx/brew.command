@@ -7,3 +7,4 @@ brew install ruby
 brew cask install eclipse-ide
 brew cask install powershell
 brew install cmake
+brew cask install visual-studio-code
