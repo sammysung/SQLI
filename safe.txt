@@ -19,7 +19,7 @@ having avg(Salary)>30000;
 
 select Fname, Lname
 from EMPLOYEE
-where Dno = ( select Dno
+where Dno = (select Dno
 from EMPLOYEE
 where Salary = (select max(Salary)
 from EMPLOYEE));

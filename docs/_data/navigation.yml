@@ -1,0 +1,52 @@
+# main links
+main:
+  #- title: "Quick-Start Guide"
+  #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  #- title: "About"
+  #  url: https://mmistakes.github.io/minimal-mistakes/about/
+  - title: "Getting Started"
+    url: /start/
+  - title: "Current Release"
+    url: /SQLI.zip
+#  - title: "Sample Posts"
+#    url: /year-archive/
+#  - title: "Sample Collections"
+#    url: /collection-archive/
+#  - title: "Sitemap"
+#    url: /sitemap/
+
+docs:
+  - title: "SQLI Project"
+    children:
+      - title: "Purpose"
+        url: /purpose/
+      - title: "Current Release"
+        url: /SQLI.zip
+      - title: "Getting Started"
+        url: /start/
+      - title: "Diagrams"
+        url: /dia/
+      - title: "Acknowledgements"
+        url: /ack/
+  - title: "Help"
+    children:
+      - title: "Help Document"
+        url: /readme/
+      - title: "Sample Commands"
+        url: /com/
+      - title: "Sample Queries"
+        url: /query/
+      - title: "Tools"
+        url: /tools/
+  - title: "Dev Portal"
+    children:
+      - title: "Repo"
+        url: https://github.com/sammysung/SQLI
+      - title: "Wiki"
+        url: https://github.com/sammysung/SQLI/wiki
+  
+        
+#- name: Home
+#  link: /
+#- name: About
+#  link: /readme.md

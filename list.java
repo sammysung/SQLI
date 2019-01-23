@@ -1,3 +1,5 @@
+package com.sqli.framework;
+
 import java.util.*;
 
 public class list{
