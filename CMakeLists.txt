@@ -11,17 +11,16 @@ set(CMAKE_JAVA_COMPILE_FLAGS)
 
 if (APPLE)
    install(CODE "MESSAGE(\"Apple flavored.\")")
-   install(CODE "execute_process(COMMAND scripts/osx/brew.command)")
+   install(CODE "execute_process(COMMAND bash ./scripts/osx/brew.command)")
 endif (APPLE)
 
 if (WIN32)
-   install(CODE "MESSAGE(\"Windows flavored?\")")
-   install(CODE "execute_process(COMMAND scripts/pwsh/choco.ps1)")
+   install(CODE "execute_process(COMMAND powershell.exe ./help.ps1)")
 endif ()
 
 if (UNIX AND NOT APPLE)
    install(CODE "MESSAGE(\"Linux flavored?\")")
-   install(CODE "execute_process(COMMAND scripts/linux/install.sh)")
+   install(CODE "execute_process(COMMAND bash ./scripts/linux/install.sh)")
 endif ()
 
 add_jar(frame frame.java build.java backend.java node.java list.java taint.java MANIFEST manifest.txt)
