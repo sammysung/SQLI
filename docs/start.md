@@ -112,6 +112,44 @@ Installing this updated version, at least from my testing, proved to be a bit cu
 Simply put, the first solution installs the whole Ruby development kit, which is unnecessary for simply running the server gem included here. [Homebrew](https://brew.sh/) will handle just what is needed for the script, be more lightweight, and is more versatile 
 in that it can install other apps.
 
+## CMake Setup
+
+### General notes
+
+While there are scripts available to create this without using the CMake framework, the main distribution process is through CMake, and install scripts that will setup up all of the prerequisites (and, if desired, extras) will run through it.
+
+If you don't use the various scripts to setup the CMake directories, setup scripts will not run by default. Just run them manually if you don't want to use the make scripts, but want the applications setup.
+
+### Linux 
+
+This one is easy! Just run
+
+`sudo apt install cmake` 
+
+and you're done! If you're not using the scripts, running 
+
+`cmake .`
+
+in the main directory of the project will setup the basic project.
+
+### Windows
+
+This is a bit more tricky. If you have Chocolatey setup, you can run
+
+`choco install cmake --installargs 'ADD_CMAKE_TO_PATH=System' -y`
+
+and this will all be done for you. Otherwise, grab the [CMake installer (64-bit)](https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3-win64-x64.msi) and install it. I'm not sure if this will add itself to the system path or not, refer to the Java documentation above for help with this.
+
+### Mac
+
+Again, the easiest way to get this is through a package manager, which is homebrew in this case. Run
+
+`brew install cmake` 
+
+if you already have it setup.
+
+Otherwise, grab the [DMG here](https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3-Darwin-x86_64.dmg) and install it.
+
 ## Powershell on Mac Notes
 
 If you happen to be using some older install of OSX (specifically, 10.11 or lower), you won’t be able to install the latest version of Powershell due to dependency issues. If you really, really want to run the Powershell scripts, then you’ll need to download an older version. I found that [Alpha 17](https://github.com/PowerShell/PowerShell/releases/tag/v6.0.0-alpha.17) worked for 10.10, and there should be somewhat newer versions that work with 10.11. 

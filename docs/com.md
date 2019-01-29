@@ -12,7 +12,7 @@ As of this writing, the JAR file must be run from the command line due to a lack
 Because of this, simply double-clicking the JAR will appear to make it crash.
 This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable, go to [this page](/start/) if you need help) from within the respective CLI.
 
-As this code has not been tested in a framework like Eclipse yet, it is not clear how well these classes will work there, though the packaging conventions are setup in the same manner.
+With the integration with CMake as a build utility, rudimentary support for exporting to IDEs have been enabled. While Eclipse is not working as expected so far, Visual Studio solution files have been created and confirmed working.
 
 ## First run
 

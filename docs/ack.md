@@ -4,10 +4,9 @@ title: Acknowledgments
 permalink: /ack/
 ---
 ## Resources
-- {Insert research paper name here}
-- Github for code and website hosting
+- "All about SQL injection attacks" paper provided by Dr. Subburaj.
+- Github for code and website hosting.
 
 ## Thanks
-- {Research paper}
-- Github
-- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) for theming 
+- [Github](https://github.com/)
+- [Minimal Mistakes](https://github.com/mmistakes/minimal-mistakes) for theming.
