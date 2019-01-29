@@ -2,9 +2,9 @@
 
 cd ..
 cd ..
-mkdir unix
-cp scripts/osx/brew.command unix/brew.command
+mkdir linix
+cp scripts/linux/install.sh linix/install.sh
 cmake . -G "Unix Makefiles" -B./unix
-cd unix
-make
+cd linix
 make install
+make
