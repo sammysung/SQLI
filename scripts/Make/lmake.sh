@@ -2,9 +2,10 @@
 
 cd ..
 cd ..
-mkdir linix
-cp scripts/linux/install.sh linix/install.sh
-cmake . -G "Unix Makefiles" -B./unix
-cd linix
+mkdir linux
+cp scripts/linux/install*.sh linux
+cmake . -G "Unix Makefiles" -B./linux
+cd linux
+pwd
 make install
 make

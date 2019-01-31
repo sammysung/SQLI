@@ -3,4 +3,4 @@ $direct = Split-Path -Path $MyInvocation.MyCommand.Definition
 cd $direct
 cd ..
 cd scripts/pwsh
-./choco.ps1
+./choco_stand.ps1
