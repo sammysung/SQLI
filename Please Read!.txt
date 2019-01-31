@@ -116,7 +116,7 @@ As they all create seperate directories, this will not cause damage, but the fil
 
 	For any first run, the command "java -jar frame.jar -hq" should be used to see the help menu and exit out of the program.
 This will cover the main usage of the program, but if this proves insufficent for your needs, the website referened above has a 
-section dedicated to usage and a section for examples, as well as an example of well-formed test files formats.
+section dedicated to usage and a section for examples, as well as an example of well-formed test file formats.
 
 ##################################
 4.   Extra Notes
