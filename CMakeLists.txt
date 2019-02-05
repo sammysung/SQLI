@@ -11,7 +11,7 @@ cmake_minimum_required (VERSION 2.6)
 # full:  This will install all optional packages for all OS' as well. Do note that this will take quite some time, especially on Windows due to Visual Studio.
 #        Use if you want to test exporting to various IDEs.
 
-set(Type "stand")
+set(Type "full")
 
 find_package(Java REQUIRED)
 include(UseJava)
