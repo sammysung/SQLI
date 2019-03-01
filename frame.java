@@ -103,8 +103,8 @@ public class frame{
                               break;
                     case 'l': System.out.println("Testing LexicalSimulator...");
                               arg++;
-                              in=new File(args[arg]);
-                              lex.run(in);
+                              String ddd=args[arg];
+                              lex.run(ddd);
                               System.exit(1);
                     default:  System.out.println("Unrecognized argument passed through! Please run the -hq argument for help with using the program! Exiting...");
                               System.exit(1);

@@ -1,12 +1,13 @@
 package com.sqli.framework;
 import java.io.*;
+import java.nio.charset.Charset;
 
 public class LexicalSimulator {
     public LexicalSimulator(){
     
     }
     
-    public void run(File file){
+    public void run(String file){
         //Scanner input= new Scanner(System.in);
         //System.out.println("Enter the code snippet: ");
         //String myCode= input.nextLine();
@@ -14,9 +15,14 @@ public class LexicalSimulator {
 
         //File file = new File("front.txt");
 
-        try{
-            is= new FileInputStream(file);
+        
+        
+        //try{
+            is = new ByteArrayInputStream(file.getBytes(Charset.forName("UTF-8")));
+            //is= new FileInputStream(file);
             Lexer lexer= new Lexer(is);
+            
+            
             try {
                 while (i>0) {
                     lexer.scan();
@@ -25,9 +31,12 @@ public class LexicalSimulator {
             } catch (SyntaxException|IOException |ClassCastException e){
               e.printStackTrace();
               }
-         } catch (FileNotFoundException e){
+         //} 
+         /*
+         catch (IOException e){
             e.printStackTrace();
            }
-
+           */
+        
      }
 }

@@ -17,6 +17,7 @@ public class build{
         FileWriter write=null;
         BufferedWriter b=null;
         Scanner read=null;
+        LexicalSimulator lex=new LexicalSimulator();
         String input="";
         String fin="This is a recreation of the original file, formatted, for testing.\n\n";
         
@@ -40,6 +41,14 @@ public class build{
         else
             pkg=re.go(read, query, i);
         pkg.setList(list);
+        
+        query=pkg.getArray();
+        int y=pkg.getCount()-1;
+        System.out.println(y);
+        for(y=y; y>-1; y--){
+            System.out.println("Out of the lex: "+query[y]);
+            lex.run(query[y]);
+        }
         
         if(drive.getTTest()==true){
             taint=new taint(pkg);

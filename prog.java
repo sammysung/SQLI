@@ -34,7 +34,7 @@ public class prog{
                             break;
                         }
                     }
-                    hold+=qs[r]+" ";
+                    hold+=qs[r];
                 }
                 back=qs[qs.length-1].split(" ");
                 if(back[0].equals(";"))
