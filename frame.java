@@ -47,25 +47,15 @@ public class frame{
 
     public static void main(String args[]){
         list list=new list();
-        
-        boolean f=false;
-        boolean o=false;
-        boolean v=false;
-        boolean i=false;
-        boolean n=false;
-        boolean t=false;
-        boolean w=false;
-        boolean u=false;
-        boolean d=false;
-        boolean b=false;
         int arg=0;
         Scanner key=new Scanner(System.in);
         File in=null;
         File back=null;
         File out=new File("report-"+LocalDateTime.now()+".txt");
+        driver drive=new driver();
         if(args.length==0)
             System.out.println("Running in default mode.");
-        else if(args.length>4){
+        else if(args.length>5){
             System.out.println("Too many arguments! Exiting...");
             System.exit(0);
         }
@@ -79,33 +69,33 @@ public class frame{
                 char s=c.charAt(p);
                 switch(s){
                     case 'f': arg++;
-                              f=true;
+                              drive.setTerm(true);
                               in=new File(args[arg]);
                               break;
-                    case 'v': v=true;
+                    case 'v': drive.setVerbose(true);
                               System.out.println("Running in verbose mode now.");
                               break;
                     case 'h': help();
                               break;
-                    case 'o': o=true;
+                    case 'o': drive.setOutput(true);
                               break;
-                    case 'i': i=true;
+                    case 'i': drive.setInteractive(true);
                               break;
                     case 'q': System.out.println("Immediate shutdown option selected! Exiting...");
                               System.exit(1);
-                    case 'w': w=true;
+                    case 'w': drive.setOverWrite(true);
                               break;
-                    case 'a': n=true;
-                              t=true;
-                              u=true;
+                    case 'a': drive.setATest(true);
+                              drive.setTTest(true);
+                              drive.setSelection(true);
                               break;
-                    case 'n': n=true;
-                              u=true;
+                    case 'n': drive.setATest(true);
+                              drive.setSelection(true);
                               break;
-                    case 't': t=true;
-                              u=true;
+                    case 't': drive.setTTest(true);
+                              drive.setSelection(true);
                               break;
-                    case 'd': d=true;
+                    case 'd': drive.setSafe(true);
                               arg++;
                               back=new File(args[arg]);
                               list=data(back);
@@ -115,24 +105,24 @@ public class frame{
                 }
             }
         }
-        if(f==false){
+        if(drive.getTerm()==false){
             System.out.println("Please input the name of the input file you want to use:");
             String m=key.nextLine();
             in=new File(m);
         }
-        if(i==true&&o==true){
+        if(drive.getInteractive()==true&&drive.getOutput()==true){
             System.out.println("The arguments -i and -o are mutually exclusive! Reverting to autogenerate procedure.");
         }
-        else if(i==true){
+        else if(drive.getInteractive()==true){
             System.out.println("Please input the name of the output file you want to use:");
             String m=key.nextLine();
             out=new File(m);
         }
-        else if(o==true){
+        else if(drive.getOutput()==true){
             arg++;
             out=new File(args[arg]);
         }
-        if(u==false){
+        if(drive.getSelection()==false){
             System.out.println("Please indicate the tests you would like to run, and type the corrosponding letter(s), followed by the enter key:");
             System.out.println("Options:\n");
             System.out.println("AMNESIA: n");
@@ -143,31 +133,31 @@ public class frame{
             for(int l=0; l<sel.length(); l++){
                 char se=sel.charAt(l);
                 if(se=='a'){
-                    n=true;
-                    t=true;
-                    b=true;
+                    drive.setATest(true);
+                    drive.setTTest(true);
+                    drive.setCheck(true);
                 }
                 else if(se=='n'){
-                    n=true;
-                    b=true;
+                    drive.setATest(true);
+                    drive.setCheck(true);
                 }
                 else if(se=='t'){
-                    t=true;
-                    b=true;
+                    drive.setTTest(true);
+                    drive.setCheck(true);
                 }
                 else if(se=='b'){
                     System.out.println("\nThis is just a formatted form of the file \""+in+"\":\n");
-                    t=false;
-                    n=false;
-                    b=false;
+                    drive.setATest(false);
+                    drive.setTTest(false);
+                    drive.setCheck(false);
                     list=new list();
                     break;
                 }
                 else
                     System.out.println("\""+se+"\" is not a recognized entry in the test table!");
             }
-            if(d==false&&b==true){
-                    d=true;
+            if(drive.getSafe()==false&&drive.getCheck()==true){
+                    drive.setSafe(true);
                     System.out.println("Please input the name of the file that contains the safe queries you want to build.");
                     System.out.println("WARNING: if the queries you provide here are not safe, the tests will not work properly. Please only use safe queries here!");
                     String m=key.nextLine();
@@ -176,6 +166,6 @@ public class frame{
                     list=data(back);
             }
         }
-        build build=new build(in, out, n, t, v, w, list);
+        build build=new build(in, out, drive, list);
     }
 }

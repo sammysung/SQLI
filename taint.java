@@ -4,11 +4,14 @@ import java.util.*;
 
 public class taint{
     String r=null;
-    public taint(String[] q, int index, list list){
+    public taint(pkg pkg){
         r="This is a list of all the queries that did not match marked models.\n\n";
         String qu="";
         boolean safe=false;
         list bad=new list();
+        int index=pkg.getCount();
+        list list=pkg.getList();
+        String[] q=pkg.getArray();
         for(int i=0; i<index; i++){
             node current=list.first;
             while(current!=null){
