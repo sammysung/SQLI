@@ -65,7 +65,7 @@ public class Lexer {
             }
 
             // extending the lexer to handle relational operator
-            String relD = "*=!<>;";
+            String relD = "*=!<>;'";
             char c = peek;
             if (relD.indexOf(c) > -1) {
                 StringBuffer b = new StringBuffer();
