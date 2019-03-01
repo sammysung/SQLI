@@ -74,9 +74,6 @@ public class Lexer {
                 if (peek == '=') {
                     b.append(peek);
                 }
-		if (peek == '\'') {
-                    b.append(peek);
-                }
                 new Rel(b.toString()).PrintRelOp();
             }
 
