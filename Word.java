@@ -1,4 +1,4 @@
-package analyzercomponents;
+package com.sqli.framework;
 
 public class Word extends Token{
 	public final String lexeme;

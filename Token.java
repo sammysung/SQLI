@@ -1,4 +1,4 @@
-package analyzercomponents;
+package com.sqli.framework;
 
 public class Token{
 	public final int tag;

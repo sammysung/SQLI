@@ -1,4 +1,4 @@
-package analyzercomponents;
+package com.sqli.framework;
 
 import java.io.IOException;
 import java.io.InputStream;

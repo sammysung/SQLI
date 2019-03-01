@@ -51,6 +51,7 @@ public class frame{
         Scanner key=new Scanner(System.in);
         File in=null;
         File back=null;
+        LexicalSimulator lex=new LexicalSimulator();
         File out=new File("report-"+LocalDateTime.now()+".txt");
         driver drive=new driver();
         if(args.length==0)
@@ -100,6 +101,11 @@ public class frame{
                               back=new File(args[arg]);
                               list=data(back);
                               break;
+                    case 'l': System.out.println("Testing LexicalSimulator...");
+                              arg++;
+                              in=new File(args[arg]);
+                              lex.run(in);
+                              System.exit(1);
                     default:  System.out.println("Unrecognized argument passed through! Please run the -hq argument for help with using the program! Exiting...");
                               System.exit(1);
                 }

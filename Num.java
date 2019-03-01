@@ -1,4 +1,4 @@
-package analyzercomponents;
+package com.sqli.framework;
 
 public class Num extends Token {
 	public final int value;

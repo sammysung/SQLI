@@ -1,15 +1,18 @@
-package tester;
-import analyzercomponents.*;
+package com.sqli.framework;
 import java.io.*;
 
 public class LexicalSimulator {
-    public static void main(String [] args){
+    public LexicalSimulator(){
+    
+    }
+    
+    public void run(File file){
         //Scanner input= new Scanner(System.in);
         //System.out.println("Enter the code snippet: ");
         //String myCode= input.nextLine();
         InputStream is; int i=30000;
 
-        File file = new File("front.txt");
+        //File file = new File("front.txt");
 
         try{
             is= new FileInputStream(file);
