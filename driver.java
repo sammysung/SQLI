@@ -21,7 +21,8 @@ public class driver{
     private boolean database=false;
     // b
     private boolean DBcheck=false;
-    
+    // semicolon
+    private boolean semi=false;
     public driver(){
     
     }
@@ -66,6 +67,10 @@ public class driver{
         DBcheck=c;
     }
     
+    public void setSemi(boolean s){
+        semi=s;
+    }
+    
     public boolean getTerm(){
         return termFile;
     }
@@ -104,5 +109,9 @@ public class driver{
     
     public boolean getCheck(){
         return DBcheck;
+    }
+    
+    public boolean getSemi(){
+        return semi;
     }
 }
