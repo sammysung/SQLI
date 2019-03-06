@@ -18,16 +18,11 @@
         </jar>
     </target>
 
-    <!--
 
     <target name="run">
-        <java jar="build/jar/frame.jar" fork="true"/>
-    </target>
-    -->
-    <target name="run">
-        <exec executable="build/jar/frame.jar">
+        <java jar="build/jar/frame.jar" fork="true">
             <arg value="-hq"/>
-        </exec>
+        </java>
     </target>
 
 </project>

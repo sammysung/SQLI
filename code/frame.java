@@ -83,7 +83,7 @@ public class frame{
                     case 'i': drive.setInteractive(true);
                               break;
                     case 'q': System.out.println("Immediate shutdown option selected! Exiting...");
-                              System.exit(1);
+                              System.exit(0);
                     case 'w': drive.setOverWrite(true);
                               break;
                     case 'a': drive.setATest(true);
