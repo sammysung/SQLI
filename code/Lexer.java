@@ -9,24 +9,29 @@ public class Lexer {
 	private char peek = ' ';
 	private InputStream stream;
 	private Hashtable<String, Word> words = new Hashtable<>();
+	private driver drive=null;
 	
-	public Lexer(InputStream stream){
+	public Lexer(InputStream stream, driver d){
 		this.stream = stream;
 		reserve(new Word(Tag.TRUE, "true"));
 		reserve(new Word(Tag.FALSE, "false"));
+		drive=d;
 	}
 	
 	private void reserve(Word t){
 		words.put(t.lexeme, t);
 	}
 
-	public void scan () throws IOException, SyntaxException{
+	public driver scan () throws IOException, SyntaxException{
 
             for (; ; peek = (char) stream.read()) {
                 if (peek == ' ' || peek == '\t') {
                     continue;
                 } else if (peek == '\n') {
                     line++;
+                } else if (peek == ';') {
+                    System.out.println("Gotcha!");
+                    drive.setSemi(true);
                 } else {
                     break;
                 }
@@ -74,8 +79,12 @@ public class Lexer {
                 if (peek == '=') {
                     b.append(peek);
                 }
-		if (peek == '\'') {
+		        if (peek == '\'') {
                     b.append(peek);
+                }
+                if(peek== ';' ){
+                    drive.setSemi(true);
+                    System.out.println("Semi is true!");
                 }
                 new Rel(b.toString()).PrintRelOp();
             }
@@ -110,6 +119,6 @@ public class Lexer {
 
             Token t = new Token(peek);
             peek = ' ';
-            //return t;
+            return drive;
 	}
 }

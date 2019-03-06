@@ -7,7 +7,7 @@ public class LexicalSimulator {
     
     }
     
-    public void run(String file){
+    public driver run(String file, driver drive){
         //Scanner input= new Scanner(System.in);
         //System.out.println("Enter the code snippet: ");
         //String myCode= input.nextLine();
@@ -20,12 +20,12 @@ public class LexicalSimulator {
         //try{
             is = new ByteArrayInputStream(file.getBytes(Charset.forName("UTF-8")));
             //is= new FileInputStream(file);
-            Lexer lexer= new Lexer(is);
+            Lexer lexer= new Lexer(is, drive);
             
             
             try {
                 while (i>0) {
-                    lexer.scan();
+                    drive=lexer.scan();
                     i--;
                 }
             } catch (SyntaxException|IOException |ClassCastException e){
@@ -37,6 +37,6 @@ public class LexicalSimulator {
             e.printStackTrace();
            }
            */
-        
+        return drive;
      }
 }

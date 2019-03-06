@@ -52,7 +52,10 @@ public class frame{
         File in=null;
         File back=null;
         LexicalSimulator lex=new LexicalSimulator();
-        File out=new File("report-"+LocalDateTime.now()+".txt");
+        //File out=new File("report-"+LocalDateTime.now()+".txt");
+        String f="report-"+LocalDateTime.now()+".txt";
+        f=f.replace(':', '-');
+        File out=new File(f);
         driver drive=new driver();
         if(args.length==0)
             System.out.println("Running in default mode.");
@@ -83,7 +86,7 @@ public class frame{
                     case 'i': drive.setInteractive(true);
                               break;
                     case 'q': System.out.println("Immediate shutdown option selected! Exiting...");
-                              System.exit(0);
+                              System.exit(1);
                     case 'w': drive.setOverWrite(true);
                               break;
                     case 'a': drive.setATest(true);
@@ -104,7 +107,7 @@ public class frame{
                     case 'l': System.out.println("Testing LexicalSimulator...");
                               arg++;
                               String ddd=args[arg];
-                              lex.run(ddd);
+                              drive=lex.run(ddd,drive);
                               System.exit(1);
                     default:  System.out.println("Unrecognized argument passed through! Please run the -hq argument for help with using the program! Exiting...");
                               System.exit(1);

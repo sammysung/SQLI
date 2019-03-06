@@ -47,13 +47,18 @@ public class build{
         System.out.println(y);
         for(y=y; y>-1; y--){
             System.out.println("Out of the lex: "+query[y]);
-            lex.run(query[y]);
+            drive=lex.run(query[y], drive);
         }
         
         if(drive.getTTest()==true){
             taint=new taint(pkg);
             fin=taint.re();
-            System.out.println(fin);
+            //System.out.println(fin);
+        }
+        
+        if(drive.getSemi()==true){
+            fin+="\nAn instance of a piggybacking attack was found!";
+            System.out.println(fin); //"piggyback found!...\n"+fin);
         }
         
         if(!out.exists()){
