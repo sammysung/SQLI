@@ -104,6 +104,9 @@ public class frame{
                               back=new File(args[arg]);
                               list=data(back);
                               break;
+
+                    // hidden option for testing, will not be included in help doc
+
                     case 'l': System.out.println("Testing LexicalSimulator...");
                               arg++;
                               String ddd=args[arg];
