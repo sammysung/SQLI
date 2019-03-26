@@ -29,6 +29,9 @@ public class Lexer {
                     continue;
                 } else if (peek == '\n') {
                     line++;
+                } else if (peek == ';') {
+                    System.out.println("Gotcha!");
+                    drive.setSemi(true);
                 } else {
                     break;
                 }

@@ -52,7 +52,10 @@ public class frame{
         File in=null;
         File back=null;
         LexicalSimulator lex=new LexicalSimulator();
-        File out=new File("report-"+LocalDateTime.now()+".txt");
+        //File out=new File("report-"+LocalDateTime.now()+".txt");
+        String f="report-"+LocalDateTime.now()+".txt";
+        f=f.replace(':', '-');
+        File out=new File(f);
         driver drive=new driver();
         if(args.length==0)
             System.out.println("Running in default mode.");

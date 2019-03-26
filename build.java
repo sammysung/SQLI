@@ -58,7 +58,7 @@ public class build{
         
         if(drive.getSemi()==true){
             fin+="\nAn instance of a piggybacking attack was found!";
-            System.out.println(fin);
+            System.out.println(fin); //"piggyback found!...\n"+fin);
         }
         
         if(!out.exists()){
