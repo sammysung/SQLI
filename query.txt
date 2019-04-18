@@ -1,0 +1,64 @@
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = 4;
+
+select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary > 30000;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 and Sex='M';
+
+select Dname
+from EMPLOYEE, DEPARTMENT
+where Dno=Dnumber
+group by Dname
+having avg(Salary)>30000;
+
+select Fname, Lname
+from EMPLOYEE
+where Dno = (select Dno
+from EMPLOYEE
+where Salary = (select max(Salary)
+from EMPLOYEE));
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or 1=1;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 and Sex='M' or 1=1;
+
+select Fname, Lname
+from EMPLOYEE
+where Dno=5  '; drop table EMPLOYEE';
+
+select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary > 30000 ';SHUTDOWN; -- ';
+
+select Fname, Lname
+from EMPLOYEE
+where Salary > 15000
+UNION ALL
+select Ssn
+from EMPLOYEE;
+
+select *
+from EMPLOYEE
+where userid = 'abcd' and password = ''; drop table xyz -- '
+
+SELECT supplier_id, supplier_name
+FROM suppliers
+WHERE state = 'California'
+UNION ALL
+SELECT company_id, company_name
+FROM companies
+WHERE company_id > 1000
+ORDER BY 2;
+
+SELECT name, description, price
+FROM products
+WHERE category=1 UNION SELECT 'A', 'B', 3
