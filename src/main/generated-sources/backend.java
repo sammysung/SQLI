@@ -8,6 +8,7 @@ public class backend{
     }
     
     public void show(){
+      //  System.out.println("~~~~~~~~~~~~~~~~~test from SHOW ");
         node current=list.first;
         while(current!=null){
             current.show();
@@ -44,11 +45,12 @@ public class backend{
                     q+=qs[i];
             }
             System.out.println(q);
+            // print initial queries form safe
             list.add(t,q,id);
             q="";
             id++;
         }
-        System.out.println();
-        show();
+    //    System.out.println("~~~~~~~~~~~~~bottom of BACK END~~~~~~~" );
+       // show();
     }
 }

@@ -1,11 +1,10 @@
-//import com.sqli.grammar.*;
 import java.util.Scanner;
 import java.io.*;
-import org.antlr.v4.runtime.TokenSource;
 
 public class build{
     public build(File in, File out, driver drive, list list){
-
+      //  System.out.println(out.getName());
+     //   static String[] reportData = new String[200];
         String[] query=new String[200];
         int i=0;
         Scanner key=new Scanner(System.in);
@@ -13,13 +12,13 @@ public class build{
         //pkg pkg=new pkg();
         //prog prog=new prog();
         //read re=new read();
-        launch l = null;
         FileReader file=null;
         FileWriter write=null;
         BufferedWriter b=null;
         Scanner read=null;
         String input="";
         String fin="This is a recreation of the original file, formatted, for testing.\n\n";
+        String done="";
         
         try{
             file=new FileReader(in);
@@ -53,23 +52,23 @@ public class build{
         
         */
         
-        l=new launch();
+        launch l=new launch();
         l.runF(in);
         listener lis=new listener();
         
         String[] que=lis.getQuery();
+
         int quec=lis.getQueryCount();
         
         if(drive.getTTest()==true){
             taint=new taint(que, quec, list);
+
             fin=taint.re();
-            System.out.println(fin);
         }
-        
-        System.out.println("This is the tainting result file...\n\n\n\n\n\n");
-        l.runS(fin);
-        
-        
+
+        System.out.println("\n\nThis is the tainting result file...\n");
+        done = l.runS(fin);
+
         if(!out.exists()){
             try{
                 out.createNewFile();
@@ -90,14 +89,14 @@ public class build{
         try{
             write=new FileWriter(out);
             b=new BufferedWriter(write);
-            b.write(fin);
+            b.write(done);
             b.newLine();
             b.close();
         }
         catch (IOException e){
             e.printStackTrace();
         }
-        for(int j=0; j<i; j++)
-            System.out.println(query[j]);
+
+
     }  
 }

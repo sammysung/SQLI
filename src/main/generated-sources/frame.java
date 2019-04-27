@@ -33,7 +33,7 @@ public class frame{
         System.out.println("If a test is not selected in the arguments, a selection menu will be shown to the user.");
         System.out.println("Multiple test options can be selected, and they will run sequentially.\n");
     }
-    
+
     public static list data(File back){
         backend b=new backend(back);
         return b.db();
@@ -59,33 +59,33 @@ public class frame{
         else{
             String c=args[0];
             if(c.charAt(0)!='-'){
-                System.out.println("Invaid argument syntax! Please begin the argument block with the character \'-\'! Exiting...");
+                System.out.println("Invaid argument syntax! Please begin the arguement block with the character \'-\'! Exiting...");
                 System.exit(1);
             }
             for(int p=1; p<c.length(); p++){
                 char s=c.charAt(p);
                 switch(s){
                     case 'f': arg++;
-                              drive.setTerm(true);
-                              in=new File(args[arg]);
-                              break;
+                        drive.setTerm(true);
+                        in=new File(args[arg]);
+                        break;
                     case 'h': help();
-                              break;
+                        break;
                     case 'o': drive.setOutput(true);
-                              break;
+                        break;
                     case 'i': drive.setInteractive(true);
-                              break;
+                        break;
                     case 'q': System.out.println("Immediate shutdown option selected! Exiting...");
-                              System.exit(1);
+                        System.exit(1);
                     case 'w': drive.setOverWrite(true);
-                              break;
+                        break;
                     case 'd': drive.setSafe(true);
-                              arg++;
-                              back=new File(args[arg]);
-                              list=data(back);
-                              break;
+                        arg++;
+                        back=new File(args[arg]);
+                        list=data(back);
+                        break;
                     default:  System.out.println("Unrecognized argument passed through! Please run the -hq argument for help with using the program! Exiting...");
-                              System.exit(1);
+                        System.exit(1);
                 }
             }
         }
@@ -108,13 +108,13 @@ public class frame{
             out=new File(args[arg]);
         }
         if(drive.getSafe()==false){
-                    drive.setSafe(true);
-                    System.out.println("Please input the name of the file that contains the safe queries you want to build.");
-                    System.out.println("WARNING: if the queries you provide here are not safe, the tests will not work properly. Please only use safe queries here!");
-                    String m=key.nextLine();
-                    System.out.println();
-                    back=new File(m);
-                    list=data(back);
+            drive.setSafe(true);
+            System.out.println("Please input the name of the file that contains the safe queries you want to build.");
+            System.out.println("WARNING: if the queries you provide here are not safe, the tests will not work properly. Please only use safe queries here!");
+            String m=key.nextLine();
+            System.out.println();
+            back=new File(m);
+            list=data(back);
         }
         build build=new build(in, out, drive, list);
     }

@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Fix.iml" filepath="$PROJECT_DIR$/Fix.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SQLI.iml" filepath="$PROJECT_DIR$/SQLI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
     </modules>
   </component>
 </project>

@@ -6,22 +6,26 @@ grammar Test;
 
 query               : linetype+ EOF ;
 
-nested              : command request NEWLINE command request NEWLINE command request equals WHITESPACE leftparent command request NEWLINE command request NEWLINE command request equals? WHITESPACE? leftparent? command? request? NEWLINE? command? request? NEWLINE? NEWLINE? ;
+nested              : command request NEWLINE command request NEWLINE command request equals WHITESPACE leftparent command request NEWLINE command request NEWLINE command request equals? WHITESPACE? leftparent? command? request? NEWLINE? command? request? NEWLINE? NEWLINE?
+                    | command request NEWLINE command request NEWLINE command request leftparent command request NEWLINE command request NEWLINE? NEWLINE?;
 
-longline            : command request NEWLINE command request NEWLINE command request NEWLINE groupby NEWLINE command request NEWLINE? NEWLINE? ;
+longline            : command request NEWLINE command request NEWLINE command request NEWLINE groupby NEWLINE command request NEWLINE NEWLINE?
+                    | command request NEWLINE command request NEWLINE command request NEWLINE orderby NEWLINE NEWLINE?;
 
-line                : command request NEWLINE command request NEWLINE command request NEWLINE? NEWLINE? ;
+line                : command request NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
+                    | command request NEWLINE command request NEWLINE NEWLINE? NEWLINE? ;
 
-union               : command request NEWLINE (command request NEWLINE)? (command request NEWLINE)? unionsetup NEWLINE command request NEWLINE (command request)? NEWLINE? NEWLINE?
-                    | command request NEWLINE (command request NEWLINE)? (command request NEWLINE)? unionsetup NEWLINE command request NEWLINE command request NEWLINE (command request)? NEWLINE? NEWLINE?
-                    | command request NEWLINE (command request NEWLINE)? (command request NEWLINE)? (unionsetup NEWLINE) command request NEWLINE (command request NEWLINE)? (command request NEWLINE)? orderby NEWLINE? NEWLINE? ;
+union               : command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
+                    | command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
+                    | command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE command request NEWLINE orderby NEWLINE? NEWLINE? ;
 
 linetype            : line | nested | longline | union ;
 
-request             : (operator | quotes | variable | digit | tautology | piggyback | storedprocedure | unionattack | unionsetup | endquery | leftparent | rightparent | WHITESPACE)+ ;
+request             : (operator | quotes | variable | digit | function | tautology | piggyback | storedprocedure | unionattack | unionsetup | endquery /*| leftparent*/ | rightparent | WHITESPACE)+ ;
 
 tautology           : (variable WHITESPACE? equals WHITESPACE? variable) | (digit WHITESPACE? equals WHITESPACE? digit)
-                    | (variable WHITESPACE? equals WHITESPACE? digit) | (variable WHITESPACE? equals WHITESPACE? quoted) ;
+                    | (variable WHITESPACE? equals WHITESPACE? digit) | (variable WHITESPACE? equals WHITESPACE? quoted)
+                    | (quoted WHITESPACE? equals WHITESPACE? quoted) | (variable WHITESPACE? equals WHITESPACE? request) ;
 
 piggyback           : endquery request quotes ;
 
@@ -33,13 +37,17 @@ command             : (SELECT | FROM | GROUP | WHERE | HAVING | UNION | ALL | OR
 
 procedures          : SHUTDOWN ;
 
-unionsetup          : (command request command) ;
+unionsetup          : command request command
+                    | UNION;
 
 groupby             : command request command request;
 
-orderby             : (command request command request endquery) ;
+function            : variable leftparent (variable | digit | operator) rightparent;
 
-operator            : ',' | '-' | '<' | '>' | '*' ;
+orderby             : ORDER WHITESPACE BY WHITESPACE request NEWLINE? NEWLINE? ; /*: command request command request endquery
+                    | ORDER BY request? ;*/
+
+operator            : ',' | '-' | '<' | '>' | '*' | '.' | '$' | '[' | ']' | '"' ;
 
 quotes              : '\'' ;
 
@@ -55,7 +63,7 @@ digit               : DIGIT ;
 
 variable            : WORD ;
 
-quoted              : ('\''WORD'\'' | '\''DIGIT'\'' | '\'''\'') ;
+quoted              : ('\''WORD'\'' | '\''DIGIT'\'' | '\'''\'' | '\''(WORD | DIGIT)) ;
 
 /*
  * Lexer Rules
