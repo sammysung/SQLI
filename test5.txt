@@ -1,0 +1,8 @@
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 and Sex='M';
+
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or true=true and false=false;

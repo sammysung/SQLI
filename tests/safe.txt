@@ -1,0 +1,25 @@
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5;
+
+select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary > 30000;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 and Sex='M';
+
+select Dname
+from EMPLOYEE, DEPARTMENT
+where Dno=Dnumber
+group by Dname
+having avg(Salary)>30000;
+
+select Fname, Lname
+from EMPLOYEE
+where Dno = (select Dno
+from EMPLOYEE
+where Salary = (select max(Salary)
+from EMPLOYEE));

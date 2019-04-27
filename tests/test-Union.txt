@@ -1,0 +1,10 @@
+SELECT name, description, price
+FROM products
+WHERE category=1 UNION SELECT 'A', 'B', 3
+
+SELECT supplier_id
+FROM suppliers
+UNION ALL
+SELECT supplier_id
+FROM orders;
+WHERE category=1 UNION SELECT 'A', 'B', 3

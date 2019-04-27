@@ -1,1 +1,2 @@
 Main-Class: com.sqli.framework.frame
+Class-Path: antlr-4.7.2-complete.jar Grammar.jar

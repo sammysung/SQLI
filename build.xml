@@ -1,0 +1,39 @@
+<project>
+
+    <path id="build.classpath">
+        <fileset dir="lib">
+            <include name="**/*.jar"/>
+            <include name="**/*.zip"/>
+        </fileset>
+    </path>
+
+
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="build/classes"/>
+        <javac srcdir="code" destdir="build/classes">
+            <classpath refid="build.classpath"/>
+        </javac>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/frame.jar" basedir="build/classes">
+            <manifest>
+                <attribute name="Main-Class" value="com.sqli.framework.frame"/>
+                <attribute name="Class-Path" value="lib/antlr-4.7.2-complete.jar"/>
+            </manifest>
+        </jar>
+    </target>
+
+
+    <target name="run">
+        <java jar="build/jar/frame.jar" fork="true">
+            <arg value="-hq"/>
+        </java>
+    </target>
+
+</project>

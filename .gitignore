@@ -11,11 +11,11 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.nar
 *.ear
-*.zip
+#*.zip
 *.tar.gz
 *.rar
 
@@ -24,4 +24,5 @@ hs_err_pid*
 
 # ignore txt report files, can be edited later if needed.
 #*.txt
+report*.txt
 Gemfile.lock
