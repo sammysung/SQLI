@@ -1,5 +1,9 @@
 # Compiled class file
-*.class
+/**/*.class
+
+/**/.DS_Store
+/**/target
+/**/test-output
 
 # Log file
 *.log
@@ -24,5 +28,5 @@ hs_err_pid*
 
 # ignore txt report files, can be edited later if needed.
 #*.txt
-report*.txt
+/**/report*.txt
 Gemfile.lock
