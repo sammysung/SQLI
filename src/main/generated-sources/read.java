@@ -1,5 +1,9 @@
 import java.util.Scanner;
-import java.io.*;
+
+/*
+    A holder class from when manual parsing was used; may prove useful if you wish to get hotspots from java files or
+    actual web input, but is not currently used all that much.
+ */
 
 public class read{
 

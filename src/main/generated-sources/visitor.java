@@ -1,6 +1,10 @@
-//import com.sqli.grammar.TestBaseVisitor;
-//import com.sqli.grammar.TestParser;
 import org.antlr.v4.runtime.ParserRuleContext;
+
+/*
+    This class is not used right now, but left in a semi-usable state in order to give a jumping off point for the next
+    group to look at this code. Do NOT remove the import statement for the antlr4 ParserRuleContext, just to avoid any
+    issues.
+ */
 
 public class visitor extends TestBaseVisitor {
 
@@ -27,19 +31,7 @@ public class visitor extends TestBaseVisitor {
             return taut;
         }
         
-        public int getTautCount(){
+        public int getTautCount() {
             return t;
         }
-        
-        /*
-        
-        @Override public String visitName(TestParser.NameContext ctx) { 
-            return "Found a name! " + ctx.getText();
-        }
-        
-        @Override public String visitEmoticon(TestParser.EmoticonContext ctx) { 
-            return "Here's an emoticon! " + ctx.getText();
-        }
-        */
-        
     } 

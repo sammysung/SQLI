@@ -1,4 +1,7 @@
-import java.util.*;
+
+/*
+    Pretty standard node implementation, with return methods for safety status, id, and the query associated.
+ */
 
 public class node{
     private boolean safe;

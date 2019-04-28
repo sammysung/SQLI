@@ -1,12 +1,23 @@
-//import com.sqli.grammar.TestBaseListener;
-//import com.sqli.grammar.TestParser;
 import org.antlr.v4.runtime.ParserRuleContext;
 
+/*
+    This is the class that actually integrates the antlr4 grammar with the framework, as all the @Override methods
+    listed here are also listed in the TestBaseListener.java file. Some basic commented code has been left in the
+    methods not used just to show possible uses.
+
+    The 70 size limit in queryLimit is arbitrary, change it as needed.
+ */
+
 public class listener extends TestBaseListener {
-        String[] taut= new String[70];
-        String[] tautQuery= new String[70];
-        String[][] bad = new String[5][70];
-        String[] query=new String[70];
+        int queryLimit=70;
+
+        // The methods using taut or tautQuery are used for just detecting tautology attacks, if that feature is needed
+        // in the future. They are not used right now.
+
+        //String[] taut= new String[queryLimit];
+        //String[] tautQuery= new String[queryLimit];
+        String[][] bad = new String[5][queryLimit];
+        String[] query=new String[queryLimit];
 
         int t=0, s=0, p=0, b=0;
         int count=0;
@@ -23,6 +34,10 @@ public class listener extends TestBaseListener {
 
     @Override public void enterIsequal(TestParser.IsequalContext ctx) {
             //  System.out.println("from enterTautology"+count);
+
+            // Tautology attacks require this framework to calculate whether the right and left sides are truly equals,
+            // at least for the purpose of seeing if this is usable attack. OR statements are not, by default, bad.
+
             String[] h=ctx.getText().split("=");
 
             if(h[0].equals(h[1])){
@@ -111,12 +126,14 @@ public class listener extends TestBaseListener {
         public String[][] getBadQuery() {return bad; }
         public int getBadQueryCount() { return b; }
 
+        /*
         public String[] getTaut(){
             return taut;
         }
         public int getTautCount(){
             return t;
         }
+        */
 
         public String[] getQuery(){
             return query;

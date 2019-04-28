@@ -1,5 +1,9 @@
 import java.util.*;
 
+/*
+    Pretty standard list implementation, with size option to show how many nodes you have.
+ */
+
 public class list implements List<Object> {
     public node first;
     private static boolean safe;

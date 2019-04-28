@@ -1,6 +1,12 @@
 import java.util.Scanner;
 import java.io.*;
 
+/*
+   Prog is currently an unused class, used to facilitate reading in static Java files and finding hotspots.
+   Maybe the next group can learn from it if they want to tackle the same goal.
+ */
+
+
 public class prog{
 
     public prog(){
@@ -15,9 +21,17 @@ public class prog{
         String hold="";
         boolean sem=false;
         boolean c=false;
+
+        // Since this is targeting a Java SQL program, it looks for quotes (") in order to detect hotspots and begin
+        // parsing. May prove useful to integrate with antlr4 code to help with web queries.
+
         while(read.hasNext()){
             input=read.nextLine();
             qs=input.split("\"");
+
+            // From here on out, though, it tries to parse out the query into the best positions to recreate for
+            // scanning, meaning that it may conflict with the grammar.
+
             if(qs.length==1)
                 continue;
             else{

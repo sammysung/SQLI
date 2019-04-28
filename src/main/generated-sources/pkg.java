@@ -1,3 +1,8 @@
+
+/*
+    Just a file container method, use it or extend it to transfer information or return multiple values from one method.
+ */
+
 public class pkg{
     private String[] test=null;
     private int count=0;
