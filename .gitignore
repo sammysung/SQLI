@@ -4,6 +4,7 @@
 /**/.DS_Store
 /**/target
 /**/test-output
+/**/antlr-output
 
 # Log file
 *.log

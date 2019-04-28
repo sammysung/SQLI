@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d02d571a-d3f7-447e-9bd6-d25cd4b5074a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/safe.txt" beforeDir="false" afterPath="$PROJECT_DIR$/safe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated-sources/backend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated-sources/backend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated-sources/build.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated-sources/build.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated-sources/frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated-sources/frame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated-sources/launch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated-sources/launch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated-sources/list.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated-sources/list.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated-sources/listener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated-sources/listener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated-sources/node.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated-sources/node.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/generated-sources/taint.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/generated-sources/taint.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,10 +16,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-10">
+              <caret line="91" column="38" lean-forward="true" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1001">
-              <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
+            <state relative-caret-position="135">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
               <folding>
                 <element signature="e#3294#3295#0" expanded="true" />
                 <element signature="e#3330#3331#0" expanded="true" />
@@ -51,22 +52,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/antlr-output/TestBaseListener.java">
+        <entry file="file://$PROJECT_DIR$/src/main/generated-sources/taint.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="65" column="4" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="69" />
+            <state relative-caret-position="-342">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+              <folding>
+                <element signature="e#1964#1965#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/generated-sources/taint.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-              <folding>
-                <element signature="e#1964#1965#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -120,15 +121,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BigQueryList.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BigQueryList_Numbered.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="329">
@@ -155,9 +147,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/generated-sources/driver.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/main/generated-sources/frame.java" />
         <option value="$PROJECT_DIR$/BigQueryList.txt" />
         <option value="$PROJECT_DIR$/src/main/generated-sources/node.java" />
@@ -169,6 +159,8 @@
         <option value="$PROJECT_DIR$/src/main/generated-sources/launch.java" />
         <option value="$PROJECT_DIR$/src/main/generated-sources/backend.java" />
         <option value="$PROJECT_DIR$/src/main/generated-sources/taint.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -214,34 +206,6 @@
               <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
               <item name="SQLI" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="antlr4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="antlr-output" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -250,11 +214,11 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556416938837" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556417555028" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/frame.jar" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
@@ -360,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556401937624</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed the Tainting test integration with antlr4.">
+      <created>1556417033982</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1556417033982</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TodoView">
@@ -389,7 +360,7 @@
       <window_info anchor="bottom" id="Messages" weight="0.3294702" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848485" visible="true" weight="0.22019868" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49772727" visible="true" weight="0.06125828" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -397,7 +368,7 @@
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924242" weight="0.3294702" />
       <window_info anchor="bottom" id="Tool Output" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151515" side_tool="true" weight="0.3294702" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5022727" side_tool="true" weight="0.21688741" />
       <window_info anchor="bottom" id="Console" order="11" />
       <window_info anchor="bottom" id="Version Control" order="12" weight="0.3294702" />
       <window_info anchor="bottom" id="ANTLR Preview" order="13" />
@@ -448,7 +419,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated pom to move frame.jar to main directory." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated pom to move frame.jar to main directory." />
+    <MESSAGE value="Fixed the Tainting test integration with antlr4." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the Tainting test integration with antlr4." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -490,22 +462,8 @@
     <entry file="file://$PROJECT_DIR$/src/assembly/jar.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="51" column="45" selection-start-line="51" selection-start-column="45" selection-end-line="51" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/report-2019-04-27T16-47-18.470131.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/output.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -563,13 +521,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BigQueryList.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/node.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -602,39 +553,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/build.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1001">
-          <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
-          <folding>
-            <element signature="e#3294#3295#0" expanded="true" />
-            <element signature="e#3330#3331#0" expanded="true" />
-            <element signature="e#3375#3376#0" expanded="true" />
-            <element signature="e#3411#3412#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/launch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/backend.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
@@ -649,11 +567,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/taint.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        <state relative-caret-position="-342">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
             <element signature="e#1964#1965#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BigQueryList.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/build.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="73" column="25" selection-start-line="73" selection-start-column="25" selection-end-line="73" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/launch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="e#3294#3295#0" expanded="true" />
+            <element signature="e#3330#3331#0" expanded="true" />
+            <element signature="e#3375#3376#0" expanded="true" />
+            <element signature="e#3411#3412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-10">
+          <caret line="91" column="38" lean-forward="true" selection-start-line="91" selection-start-column="38" selection-end-line="91" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
         </state>
       </provider>
     </entry>
