@@ -3,75 +3,71 @@ import java.io.*;
 
 public class build{
     public build(File in, File out, driver drive, list list){
-      //  System.out.println(out.getName());
-     //   static String[] reportData = new String[200];
-        String[] query=new String[200];
-        int i=0;
+        if(drive.getVerbose()==true) {
+            System.out.println("This is the provided output filename.");
+            System.out.println(out.getName()+"\n\n");
+        }
+        /*
+            Most of the important variable for this method are pre-initialized, just for ease of reading.
+
+            key is only used for the overwrite method, should it be removed, key should go with it.
+
+            taint as a null is vital for pre-initialization
+
+            The value for fin should never show up as the framework is now; treat that message as a debug message if it
+            appears.
+
+
+        */
+
         Scanner key=new Scanner(System.in);
         taint taint=null;
-        //pkg pkg=new pkg();
-        //prog prog=new prog();
-        //read re=new read();
+
         FileReader file=null;
         FileWriter write=null;
         BufferedWriter b=null;
-        Scanner read=null;
-        String input="";
         String fin="This is a recreation of the original file, formatted, for testing.\n\n";
         String done="";
-        
+
+        // This attempt may not look useful at the moment, but it serves as a check for a missing input file while also
+        // keeping the setup for manual parsing. Can be replaced with a simple "file.exists()" check
         try{
             file=new FileReader(in);
-            read=new Scanner(file);
         }
         catch(FileNotFoundException e){
             System.out.println("The file \""+in+"\" does not exist! Please point to a proper file. Exiting...");
             System.exit(1);
         }
-        /*
-        String ext=in.getName();
-        int la=ext.lastIndexOf(".");
-        if(la==-1)
-            ext="";
-        else
-            ext=ext.substring(la+1);
-        if(ext.equalsIgnoreCase("java"))
-            pkg=prog.go(read, query, i);
-        else
-            pkg=re.go(read, query, i);
-        pkg.setList(list);
-        
-        query=pkg.getArray();
-        int y=pkg.getCount()-1;
-        /*
-        System.out.println(y);
-        for(y=y; y>-1; y--){
-            System.out.println("Out of the lex: "+query[y]);
-            lex.run(query[y]);
-        }
-        
-        */
 
+        // runF takes a file as input, and is used to scan both the safe query file and test file; the output from the
+        // two associated methods are the actual list of queries in a String Array, and the length of said array.
         launch l=new launch();
-        listener lis = l.runF(in);
-
-        //listener lis=new listener();
-        
+        listener lis = l.runF(in, drive);
         String[] que=lis.getQuery();
 
         int quec=lis.getQueryCount();
+        if(drive.getVerbose()==true) {
+            System.out.println("\n\nThis is the count of all the queries found in the file being scanned.");
+            System.out.println(quec+"\n\n");
+        }
 
-        //System.out.println(quec);
-        
+        // As of now, this test is always set to run, but the method of changing it is left in just in case future
+        // maintainers happen to implement the test menu/other tests.
         if(drive.getTTest()==true){
             taint=new taint(que, quec, list);
 
             fin=taint.re();
         }
-        //System.out.println(fin);
+        if(drive.getVerbose()==true) {
+            System.out.println("\n\nThis is the output of potentially bad queries that is passed to the runS method.");
+            System.out.println(fin+"\n\n");
+            System.out.println("\n\nThis is the tainting result file...\n");
+        }
 
-        System.out.println("\n\nThis is the tainting result file...\n");
-        done = l.runS(fin,que );
+        // This runs the queries that don't match the safe list to see whether they explicitly attempt an attack or if
+        // they need to be reviewed manually (either actually harmless or may be contextually dangerous
+        // Piped into a string for printing out the results once the danger of the queries has been determined.
+        done = l.runS(fin,que,drive);
 
         if(!out.exists()){
             try{

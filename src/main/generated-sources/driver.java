@@ -19,6 +19,8 @@ public class driver{
     private boolean database=false;
     // b
     private boolean DBcheck=false;
+    // sd
+    private boolean safeCheck=false;
     
     public driver(){
     
@@ -63,6 +65,8 @@ public class driver{
     public void setCheck(boolean c){
         DBcheck=c;
     }
+
+    public void setSafeCheck(boolean sc) {safeCheck=sc;}
     
     public boolean getTerm(){
         return termFile;
@@ -103,4 +107,9 @@ public class driver{
     public boolean getCheck(){
         return DBcheck;
     }
+
+    public boolean getSafeCheck(){
+        return safeCheck;
+    }
+
 }

@@ -3,12 +3,16 @@ import java.io.*;
 
 public class backend{
     list list=new list();
+
+    // This method is used in the frame to collect the list after parsing.
+
     public list db(){
         return list;
     }
-    
+
+    // Used to print the list out, once it is made. May be currently unused.
+
     public void show(){
-        //System.out.println("~~~~~~~~~~~~~~~~~test from SHOW ");
         node current=list.first;
         while(current!=null){
             current.show();
@@ -17,7 +21,7 @@ public class backend{
         }
     }
 
-    public backend(File b){
+    public backend(File b, driver drive){
         FileReader file=null;
         Scanner read=null;
         try{
@@ -30,7 +34,7 @@ public class backend{
         }
 
         launch l=new launch();
-        listener lis = l.runF(b);
+        listener lis = l.runF(b,drive);
 
         String[] que=lis.getQuery();
 
@@ -45,6 +49,11 @@ public class backend{
             id++;
             len++;
         }
+
+        // This is old manual code to parse through the safe query file; the antlr4 grammar is used now instead to allow
+        // for quick implementation of safe query scanning if needed, and to keep output exactly the same even if the
+        // grammar drastically changes.
+
         /*
         //read.useDelimiter(";\n|;");
         read.useDelimiter("\n");

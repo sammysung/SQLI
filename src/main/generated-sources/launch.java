@@ -4,19 +4,54 @@ import static org.antlr.v4.runtime.CharStreams.fromFileName;
 import static org.antlr.v4.runtime.CharStreams.fromString;
 import java.io.*;
 
+/*
+    Major note:
+
+    Intellij will highlight all references to antlr4 code, or code dependent on it, due to the way integration works
+    with Maven. Essentially, the framework code has no way of seeing those classes until the jar is compiled, and so it
+    can't trust that those references will actually work. These errors (usually linked to listener.java or Test* classes)
+    are safe to ignore.
+
+    Also, some older versions on the repo may have code for using the visitor methods or directly interacting with
+    listener methods; in the interest of readability, they are being removed from the final review.
+ */
+
 public class launch{
     public static void main(String[] args) {
     }
 
+    /*
+        Methods runF and runS are not drastically different when it comes to using the listeners to perform tasks, but
+        they are very different in scope and what is done with that information.
+
+        As of now, runF is used to run the listener code through the safe query file and the input query file; through
+        this, information on potential attacks is implicitly collected on both. However, tainting methodology presumes
+        that the safe query list is, well, safe; the solution to this problem is to run a different safe query file
+        against the found queries, or extend functionality beyond the exact scope of the test method.
+
+        runS, on the other hand, is made to analyze and output results of found bad queries, as well as ones that don't
+        fit a rule, but also aren't marked as safe. This will take a String input, formatted to match the input file.
+     */
+
     public void launch(){
 
     }
+    // tempCount is the counter of how many queries the listener has found, check output with setVerbose() or by using
+    // custom printout statements.
+
     int tempCount=0;
+
+    // doneBad will become a list of all marked bad queries, while doneReview lists all queries that were not marked as
+    // explicitly good or bad. These are formatted to be ready to write out to a file.
+
     String doneBad="";
     String doneReview="";
 
-    public listener runF(File f){
+    public listener runF(File f, driver drive){
         CharStream cs = null;
+
+        // Using an antlr4 method to setup the file for parsing and creating a file
+
         try{
             cs = fromFileName(f.getName());  //load the file
             doneBad += "Test file: "+ f.getName()+"\n\n";
@@ -32,70 +67,31 @@ public class launch{
 
 
         // Code for listener version
+
         ParseTree tree = parser.query(); // parse the content and get the tree
         listener listen=new listener();
 
-        visitor visit = new visitor();
+        // The visitor initialization shown here can help you get started if you need the features they offer.
 
+        //visitor visit = new visitor();
 
-        //String t= visit.visitQuery(parser.query());
-        //System.out.println(t);
-    /*
-    int i=0;
-    while(i<29&&!"t".equals("<EOF>")){
-        t=visit.visitTautology(parser.tautology());
-        i++;
-    }
-    */
         ParseTreeWalker walker = new ParseTreeWalker();
         walker.walk(listen,tree);
-        //      String[] taut=listen.getTaut();
-//        System.out.println("~~~~~~~~~~~~~~~~~~~~~Test~~~~~~~~~~~~~~~~` \n"+taut);
-        //    int ct=listen.getTautCount();
-       /* int t=0;
-        while(t<ct){
- //           System.out.println(taut[t]+"  "+t);
-            String[] h=taut[t].split("=");
-//            System.out.println(h[0]+"    "+h[1]);
-            if(h[0].equals(h[1])){
-//                System.out.println(" Tautology found! "+h[0]+"    "+h[1]);
-            }
-            t++;
-        }
 
-
-        */
         tempCount = listen.getQueryCount();
-        //System.out.println(tempCount);
+
+        if(drive.getVerbose()==true) {
+            System.out.println("\n\nThis is the count of queries found in this run of the listener method.");
+            System.out.println(tempCount+"\n\n");
+        }
         return listen;
-
-
-
-    /*
-    CharStream c = fromString(t);
-    ChatLexer lex = new ChatLexer(c);  //instantiate a lexer
-    CommonTokenStream token = new CommonTokenStream(lex); //scan stream for tokens
-    ChatParser parse = new ChatParser(token);
-    Myvisitor visi = new Myvisitor();
-
-    String e=visit.visitName(parse.name());
-    System.out.println(e);
-
-    t= visit.visitLine(parser.line());
-    System.out.println(t);
-    t= visit.visitLine(parser.line());
-    System.out.println(t);
-    parser = new ChatParser(tokens);
-    t= visit.visitName(parser.name());
-    System.out.println(t);
-    parser = new ChatParser(tokens);
-    t= visit.visitEmoticon(parser.emoticon());
-    System.out.println(t);
-
-    */
     }
 
-    public String runS(String s, String[] allQueries){
+
+
+    
+
+    public String runS(String s, String[] allQueries, driver drive){
         CharStream cs = fromString(s);  //load the file
         TestLexer lexer = new TestLexer(cs);  //instantiate a lexer
         CommonTokenStream tokens = new CommonTokenStream(lexer); //scan stream for tokens
@@ -106,38 +102,11 @@ public class launch{
         ParseTree tree = parser.query(); // parse the content and get the tree
         listener listen=new listener();
 
-        visitor visit = new visitor();
+        // The visitor initialization shown here can help you get started if you need the features they offer.
+        //visitor visit = new visitor();
 
-
-        //String t= visit.visitQuery(parser.query());
-        //System.out.println(t);
-    /*
-    int i=0;
-    while(i<29&&!"t".equals("<EOF>")){
-        t=visit.visitTautology(parser.tautology());
-        i++;
-    }
-    */
         ParseTreeWalker walker = new ParseTreeWalker();
         walker.walk(listen,tree);
-  /*       String[] outTaut = new String[30];
-        int cot = 0;
-        ct--;
-        while(ct>-1){
-//            System.out.println(taut[ct]+"  "+ct);
-            String[] h=taut[ct].split("=");
-//            System.out.println(h[0]+"    "+h[1]);
-            if(h[0].equals(h[1])){
-                outTaut[cot] ="Tautology|"+h[0]+"="+h[1]+"|"+ct;
-                cot++;
-                //System.out.println("Tautology found! "+h[0]+"    "+h[1]);
-
-                //   System.out.println(listen.getQ);
-
-            }
-            ct--;
-        }
-*/
 
         String[] tempQ = listen.getQuery();
         String[][] baqQueries = listen.getBadQuery();
@@ -152,9 +121,9 @@ public class launch{
                 tempQ[i]=tempQ[i].replaceAll("[\\t\\n\\r]+"," ");
             }
         }
-        System.out.printf("   %-5s %-12s  %-17s  %-40s  %s \n", "#", "Query Number","Attack Type", "Attact in Query", "Bad Query");
+        System.out.printf("   %-5s %-12s  %-17s  %-40s  %s \n", "#", "Query Number","Attack Type", "Attack in Query", "Bad Query");
         System.out.print( "--".repeat(75) +"\n");
-        doneBad+= String.format("   %-5s %-12s  %-17s  %-40s  %s \n", "#", "Query Number","Attack Type", "Attact in Query", "Bad Query");
+        doneBad+= String.format("   %-5s %-12s  %-17s  %-40s  %s \n", "#", "Query Number","Attack Type", "Attack in Query", "Bad Query");
         doneBad+= "--".repeat(75) + "\n";
 
 
@@ -208,39 +177,7 @@ public class launch{
             }
         }
 //        System.out.println(doneReview);
-
-
         return doneBad;
-
     }
-
-
-
-
-    /*
-    CharStream c = fromString(t);
-    ChatLexer lex = new ChatLexer(c);  //instantiate a lexer
-    CommonTokenStream token = new CommonTokenStream(lex); //scan stream for tokens
-    ChatParser parse = new ChatParser(token);
-    Myvisitor visi = new Myvisitor();
-    
-    String e=visit.visitName(parse.name());
-    System.out.println(e);
-    
-    t= visit.visitLine(parser.line());
-    System.out.println(t);
-    t= visit.visitLine(parser.line());
-    System.out.println(t);
-    parser = new ChatParser(tokens);
-    t= visit.visitName(parser.name());
-    System.out.println(t);
-    parser = new ChatParser(tokens);
-    t= visit.visitEmoticon(parser.emoticon());
-    System.out.println(t);
-    
-    */
-
-
-
 }
 
