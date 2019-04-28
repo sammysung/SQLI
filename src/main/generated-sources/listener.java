@@ -40,6 +40,11 @@ public class listener extends TestBaseListener {
 
             String[] h=ctx.getText().split("=");
 
+            int hl=h.length;
+
+            for (int i=0; i<hl-1; i++){
+
+            }
             if(h[0].equals(h[1])){
                 bad[0][b] = Integer.toString(b+1);
                 bad[1][b] = Integer.toString(count);
@@ -119,6 +124,14 @@ public class listener extends TestBaseListener {
         bad[0][b]= Integer.toString(b+1);
         bad[1][b] = Integer.toString(count);
         bad[2][b] = "Alternative Encoding";
+        bad[3][b] = ctx.getText();
+        b++;
+    }
+
+    @Override public void enterInference(TestParser.InferenceContext ctx) {
+        bad[0][b]= Integer.toString(b+1);
+        bad[1][b] = Integer.toString(count);
+        bad[2][b] = "Inference";
         bad[3][b] = ctx.getText();
         b++;
     }

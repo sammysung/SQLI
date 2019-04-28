@@ -16,6 +16,8 @@ equals              : '=' ;
 
 endquery            : ';' ;
 
+forslash            : '/' ;
+
 operator            : ',' | '-' | '<' | '>' | '*' | '.' | '$' | '[' | ']' | '"' | '+' ;
 
 digit               : DIGIT ;
@@ -28,6 +30,12 @@ variable            : WORD ;
 
 or                  : OR ;
 
+iff                 : IF ;
+
+then                : THEN ;
+
+els                 : ELSE ;
+
 quoted              : ('\''WORD'\'' | '\''DIGIT'\'' | '\'''\'' | '\''(WORD | DIGIT)) ;
 
 command             : (SELECT | FROM | GROUP | WHERE | HAVING | UNION | ALL | ORDER | BY) ;
@@ -38,6 +46,8 @@ orderby             : ORDER WHITESPACE BY WHITESPACE request NEWLINE? NEWLINE? ;
 
 unionsetup          : (command request command NEWLINE?)
                     | UNION;
+
+divsetup            : command WHITESPACE? digit forslash digit ;
 
 altfunction         : variable leftparent (hexidecimal | utf) rightparent
                     | variable leftparent variable leftparent (hexidecimal | utf) rightparent rightparent ;
@@ -62,8 +72,10 @@ tautology           : or WHITESPACE? isequal ;
 
 unionattack         : WHITESPACE? isequal WHITESPACE? unionsetup request command? request? ;
 
+inference           : endquery? WHITESPACE? (iff | then) WHITESPACE? request? divsetup NEWLINE? (els | then) WHITESPACE? command request ;
+
 request             : (operator | quotes | variable | digit | plusdigit | hexidecimal | altencoding | function
-                    | isequal | tautology | piggyback | equals | unionattack | unionsetup | endquery | rightparent | WHITESPACE)+ ;
+                    | isequal | tautology | piggyback | equals | unionattack | inference | unionsetup | endquery | rightparent | WHITESPACE)+ ;
 
 nested              : command request NEWLINE command request NEWLINE command request equals WHITESPACE leftparent command request NEWLINE command request NEWLINE command request equals? WHITESPACE? leftparent? command? request? NEWLINE? command? request? NEWLINE? NEWLINE?
                     | command request NEWLINE command request NEWLINE command request leftparent command request NEWLINE command request NEWLINE? NEWLINE?;
@@ -125,13 +137,13 @@ HAVING              : H A V I N G ;
 UNION               : U N I O N ;
 ORDER               : O R D E R ;
 OR                  : O R ;
+IF                  : I F ;
+THEN                : T H E N ;
+ELSE                : E L S E ;
 
 WORD                : (LOWERCASE | UPPERCASE | '_')+ ;
-
 DIGIT               : [0-9] ;
 HEXADECIMAL         : '0x' ([a-fA-F0-9])+ ;
-UTF                 : 'U+' ([a-fA-F0-9])+ ;
-
+UTF                 : ('U+' | 'u+') ([a-fA-F0-9])+ ;
 WHITESPACE          : (' ' | '\t') ;
-
 NEWLINE             : ('\r'? '\n' | '\r')+ ;

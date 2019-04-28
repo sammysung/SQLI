@@ -35,11 +35,15 @@ public class frame{
         System.out.println("-w: If an output filename is reused, overwrite without asking.");
         System.out.println("-v: Enable verbose mode.");
         System.out.println("-q: Use this to signal immediate shutdown (focused for testing purposes or help message only runs).");
-        System.out.println("\nStructure: java frame [-{h,f,o,i,q,w}] [input file] [output file]");
-        System.out.println("Example: \"java frame -hfo in.txt out.txt\" will print the help message, read from in.txt, and output to out.txt.\n");
-        System.out.println("Arguments -f and -o do not run in order of appearance; if -o is before -f, the first argument will still be the input file.");
+        System.out.println("\nStructure: java frame [-{h,f,o,i,q,w,v} [input file] [output file name] [safe query file]]");
+        System.out.println("Example: \"java frame -hfo in.txt out\" will print the help message, read from in.txt, " +
+                "and output to out-safe.txt, out-review.txt, and out-bad.txt.\n");
+        System.out.println("The output filename should not have any extensions provided, as the program will assign " +
+                "a .txt extension during runtime.");
+        System.out.println("Arguments -f, -o, and -d do not run in order of appearance; if -o is before -f, the " +
+                "first argument will still be the input file.");
         System.out.print("By default, with no arguments, the program will prompt for user input to assign the input filename and auto-");
-        System.out.println("generate an output filename with the scheme \"report-{UTC Local Time}.txt\".");
+        System.out.println("generate an output filename with the scheme \"report-{UTC Local Time}-{type}.txt\".");
         System.out.println("Arguments -i and -o are mutually exclusive. The program will use the auto-generate scheme if they are used together.\n");
     }
 

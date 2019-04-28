@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SQLI.iml" filepath="$PROJECT_DIR$/SQLI.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SQLI.iml" filepath="$PROJECT_DIR$/SQLI.iml" />
     </modules>
   </component>
 </project>

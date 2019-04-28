@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 
-mvn clean compile package
-cp target/frame.jar .
+mvn clean compile package exec:java
