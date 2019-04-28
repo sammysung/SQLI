@@ -107,6 +107,7 @@ public class frame{
             arg++;
             out=new File(args[arg]);
         }
+
         if(drive.getSafe()==false){
             drive.setSafe(true);
             System.out.println("Please input the name of the file that contains the safe queries you want to build.");

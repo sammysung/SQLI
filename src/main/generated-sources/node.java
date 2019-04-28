@@ -15,7 +15,7 @@ public class node{
     public void show(){
         System.out.println("The query is: "+query);
         System.out.println("The query ID is: "+id);
-        System.out.println("The query saftey status is: "+safe);
+        System.out.println("The query safety status is: "+safe);
     }
     
     public boolean getSafety(){

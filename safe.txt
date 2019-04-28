@@ -22,3 +22,7 @@ where Dno = (select Dno
 from EMPLOYEE
 where Salary = (select max(Salary)
 from EMPLOYEE));
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or 1=1;

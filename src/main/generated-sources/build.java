@@ -51,20 +51,24 @@ public class build{
         }
         
         */
-        
+
         launch l=new launch();
-        l.runF(in);
-        listener lis=new listener();
+        listener lis = l.runF(in);
+
+        //listener lis=new listener();
         
         String[] que=lis.getQuery();
 
         int quec=lis.getQueryCount();
+
+        //System.out.println(quec);
         
         if(drive.getTTest()==true){
             taint=new taint(que, quec, list);
 
             fin=taint.re();
         }
+        //System.out.println(fin);
 
         System.out.println("\n\nThis is the tainting result file...\n");
         done = l.runS(fin);
@@ -96,7 +100,5 @@ public class build{
         catch (IOException e){
             e.printStackTrace();
         }
-
-
     }  
 }

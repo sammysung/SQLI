@@ -6,6 +6,7 @@ public class list implements List<Object> {
     private static String query;
     private static int id;
     private int index;
+    private int size=0;
     private Scanner key=new Scanner(System.in);
 
     
@@ -21,6 +22,7 @@ public class list implements List<Object> {
         node l=new node(s,q,i);
         l.next=first;
         first=l;
+        size++;
     }
     
     public void show(){
@@ -29,12 +31,13 @@ public class list implements List<Object> {
             current.show();
             current=current.next;
             System.out.println();
+            size++;
         }
     }
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override

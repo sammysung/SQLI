@@ -6,18 +6,18 @@ public class listener extends TestBaseListener {
         String[] taut= new String[70];
         String[] tautQuery= new String[70];
         String[][] bad = new String[5][70];
+        String[] query=new String[70];
 
-        static String[] query=new String[70];
         int t=0, s=0, p=0, b=0;
-        static int count=0;
+        int count=0;
         @Override public void enterEveryRule(ParserRuleContext ctx) {
             //see gramBaseListener for allowed functions
            // System.out.println("Test log: " + ctx.getText());      //code that executes per rule
         }
         
         @Override public void enterQuery(TestParser.QueryContext ctx) {
-            //query[count]=ctx.getText();
-            //count++;
+            //check[c]=ctx.getText();
+            //c++;
            // System.out.println("Query found"+ ctx.getText());
         }
         
@@ -38,21 +38,21 @@ public class listener extends TestBaseListener {
             //System.out.println("Here's an emoticon! " + ctx.getText());
         }
         
-        @Override public void enterNested(TestParser.NestedContext ctx) { 
-            query[count]=ctx.getText();
-            count++;
+        @Override public void enterNested(TestParser.NestedContext ctx) {
+            //query[count]=ctx.getText();
+            //count++;
             //System.out.println("double "+ctx.getText());
         }
         
         @Override public void enterLongline(TestParser.LonglineContext ctx) { 
-            query[count]=ctx.getText();
-            count++;
+            //query[count]=ctx.getText();
+            //count++;
             //System.out.println("long "+ctx.getText());
         }
         
         @Override public void enterLine(TestParser.LineContext ctx) { 
-            query[count]=ctx.getText();
-            count++;
+            //query[count]=ctx.getText();
+            //count++;
           //  System.out.println("line "+ctx.getText());
         }
         
@@ -76,16 +76,28 @@ public class listener extends TestBaseListener {
             b++;
         }
 
+    @Override public void enterLinetype(TestParser.LinetypeContext ctx) {
 
-  /*  @Override public void enterUnionattack(TestParser.UnionattackContext ctx) {
+        query[count]=ctx.getText();
+        //System.out.println("Line found!\n\n"+query[count]);
+        count++;
+    }
 
-        bad[0][b] = Integer.toString(b+1);
-        bad[1][b] = Integer.toString(count);
-        bad[2][b] = "Union";
-        bad[3][b] = ctx.getText();
-        b++;
 
-   }*/
+    @Override public void enterUnionattack(TestParser.UnionattackContext ctx) {
+
+           bad[0][b] = Integer.toString(b+1);
+           bad[1][b] = Integer.toString(count);
+           bad[2][b] = "Union";
+           bad[3][b] = ctx.getText();
+           b++;
+
+        }
+
+    @Override public void enterUnion(TestParser.UnionContext ctx) {
+        //query[count]=ctx.getText();
+        //count++;
+    }
 
         public String[][] getBadQuery() {return bad; }
         public int getBadQueryCount() { return b; }

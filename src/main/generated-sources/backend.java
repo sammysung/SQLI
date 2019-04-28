@@ -8,7 +8,7 @@ public class backend{
     }
     
     public void show(){
-      //  System.out.println("~~~~~~~~~~~~~~~~~test from SHOW ");
+        //System.out.println("~~~~~~~~~~~~~~~~~test from SHOW ");
         node current=list.first;
         while(current!=null){
             current.show();
@@ -28,7 +28,26 @@ public class backend{
             System.out.println("The file \""+b+"\" does not exist! Please point to a proper file. Exiting...");
             System.exit(1);
         }
-        read.useDelimiter(";\n|;");
+
+        launch l=new launch();
+        listener lis = l.runF(b);
+
+        String[] que=lis.getQuery();
+
+        int quec=lis.getQueryCount();
+
+        int id=1;
+        boolean t=true;
+        int len=0;
+        while (len < quec) {
+            //System.out.println(que[len]);
+            list.add(t,que[len],id);
+            id++;
+            len++;
+        }
+        /*
+        //read.useDelimiter(";\n|;");
+        read.useDelimiter("\n");
         String q="";
         String c="";
         String[] qs=null;
@@ -36,7 +55,8 @@ public class backend{
         boolean t=true;
         while(read.hasNext()){
             q=read.next();
-            qs=q.split("\n\n");
+            //qs=q.split("\n\n");
+            qs=q.split("\n");
             q="";
             for(int i=0; i<qs.length; i++){
                 if(i!=0)
@@ -52,5 +72,6 @@ public class backend{
         }
     //    System.out.println("~~~~~~~~~~~~~bottom of BACK END~~~~~~~" );
        // show();
+       */
     }
 }

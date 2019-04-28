@@ -14,7 +14,7 @@ public class launch{
     int tempCount=0;
     String doneF="";
 
-    public void runF(File f){
+    public listener runF(File f){
         CharStream cs = null;
         try{
             cs = fromFileName(f.getName());  //load the file
@@ -61,6 +61,8 @@ public class launch{
             t++;
         }
         tempCount = listen.getQueryCount();
+        //System.out.println(tempCount);
+        return listen;
 
 
     
@@ -142,7 +144,7 @@ public class launch{
         doneF+= String.format("   %-5s %-12s  %-17s  %-25s  %s \n", "#", "Query Number","Attack Type", "Attact in Query", "Bad Query");
         doneF+= "--".repeat(75) + "\n";
         for (int pq = 0; pq<bqc; pq++){
-                tempP = Integer.parseInt(baqQueries[1][pq]) - tempCount;
+                tempP = Integer.parseInt(baqQueries[1][pq]);// - tempCount;
                 baqQueries[4][pq] = tempQ[tempP-1].replaceAll("[\\t\\n\\r]+"," ");
                 System.out.printf("   %-5s      %-7d  %-17s  %-25s  %s \n",
                         baqQueries[0][pq] ,tempP, baqQueries[2][pq], baqQueries[3][pq], baqQueries[4][pq] );
