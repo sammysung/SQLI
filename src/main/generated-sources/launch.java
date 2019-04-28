@@ -9,35 +9,37 @@ public class launch{
     }
 
     public void launch(){
-    
+
     }
     int tempCount=0;
-    String doneF="";
+    String doneBad="";
+    String doneReview="";
 
     public listener runF(File f){
         CharStream cs = null;
         try{
             cs = fromFileName(f.getName());  //load the file
-            doneF += "Test file: "+ f.getName()+"\n\n";
+            doneBad += "Test file: "+ f.getName()+"\n\n";
+            doneReview += "Test file: "+ f.getName()+"\n\n";
 
         }
         catch (IOException e){
-             e.printStackTrace();
+            e.printStackTrace();
         }
         TestLexer lexer = new TestLexer(cs);  //instantiate a lexer
         CommonTokenStream tokens = new CommonTokenStream(lexer); //scan stream for tokens
         TestParser parser = new TestParser(tokens);  //parse the tokens
 
-    
-    // Code for listener version
+
+        // Code for listener version
         ParseTree tree = parser.query(); // parse the content and get the tree
         listener listen=new listener();
-    
+
         visitor visit = new visitor();
 
-    
-    //String t= visit.visitQuery(parser.query());
-    //System.out.println(t);
+
+        //String t= visit.visitQuery(parser.query());
+        //System.out.println(t);
     /*
     int i=0;
     while(i<29&&!"t".equals("<EOF>")){
@@ -47,11 +49,10 @@ public class launch{
     */
         ParseTreeWalker walker = new ParseTreeWalker();
         walker.walk(listen,tree);
-        //String[] taut=listen.getTaut();
+        //      String[] taut=listen.getTaut();
 //        System.out.println("~~~~~~~~~~~~~~~~~~~~~Test~~~~~~~~~~~~~~~~` \n"+taut);
-        /*
-        int ct=listen.getTautCount();
-        int t=0;
+        //    int ct=listen.getTautCount();
+       /* int t=0;
         while(t<ct){
  //           System.out.println(taut[t]+"  "+t);
             String[] h=taut[t].split("=");
@@ -61,23 +62,25 @@ public class launch{
             }
             t++;
         }
+
+
         */
         tempCount = listen.getQueryCount();
         //System.out.println(tempCount);
         return listen;
 
 
-    
+
     /*
     CharStream c = fromString(t);
     ChatLexer lex = new ChatLexer(c);  //instantiate a lexer
     CommonTokenStream token = new CommonTokenStream(lex); //scan stream for tokens
     ChatParser parse = new ChatParser(token);
     Myvisitor visi = new Myvisitor();
-    
+
     String e=visit.visitName(parse.name());
     System.out.println(e);
-    
+
     t= visit.visitLine(parser.line());
     System.out.println(t);
     t= visit.visitLine(parser.line());
@@ -88,26 +91,26 @@ public class launch{
     parser = new ChatParser(tokens);
     t= visit.visitEmoticon(parser.emoticon());
     System.out.println(t);
-    
+
     */
     }
-    
-    public String runS(String s){
+
+    public String runS(String s, String[] allQueries){
         CharStream cs = fromString(s);  //load the file
         TestLexer lexer = new TestLexer(cs);  //instantiate a lexer
         CommonTokenStream tokens = new CommonTokenStream(lexer); //scan stream for tokens
         TestParser parser = new TestParser(tokens);  //parse the tokens
 
-    
-    // Code for listener version
+
+        // Code for listener version
         ParseTree tree = parser.query(); // parse the content and get the tree
         listener listen=new listener();
-    
+
         visitor visit = new visitor();
 
-    
-    //String t= visit.visitQuery(parser.query());
-    //System.out.println(t);
+
+        //String t= visit.visitQuery(parser.query());
+        //System.out.println(t);
     /*
     int i=0;
     while(i<29&&!"t".equals("<EOF>")){
@@ -115,7 +118,7 @@ public class launch{
         i++;
     }
     */
-       ParseTreeWalker walker = new ParseTreeWalker();
+        ParseTreeWalker walker = new ParseTreeWalker();
         walker.walk(listen,tree);
   /*       String[] outTaut = new String[30];
         int cot = 0;
@@ -136,27 +139,80 @@ public class launch{
         }
 */
 
-
         String[] tempQ = listen.getQuery();
         String[][] baqQueries = listen.getBadQuery();
         int bqc = listen.getBadQueryCount();
-        int tempP;
-        System.out.printf("   %-5s %-12s  %-17s  %-25s  %s \n", "#", "Query Number","Attack Type", "Attact in Query", "Bad Query");
-        System.out.print( "--".repeat(75) +"\n");
-        doneF+= String.format("   %-5s %-12s  %-17s  %-25s  %s \n", "#", "Query Number","Attack Type", "Attact in Query", "Bad Query");
-        doneF+= "--".repeat(75) + "\n";
-        for (int pq = 0; pq<bqc; pq++){
-                tempP = Integer.parseInt(baqQueries[1][pq]);// - tempCount;
-                baqQueries[4][pq] = tempQ[tempP-1].replaceAll("[\\t\\n\\r]+"," ");
-                System.out.printf("   %-5s      %-7d  %-17s  %-25s  %s \n",
-                        baqQueries[0][pq] ,tempP, baqQueries[2][pq], baqQueries[3][pq], baqQueries[4][pq] );
-                doneF+=String.format("   %-5s      %-7d  %-17s  %-25s  %s \n",
-                        baqQueries[0][pq] ,tempP, baqQueries[2][pq], baqQueries[3][pq], baqQueries[4][pq] );
+        int tempP, badC, allC=0, i,j,k,revC=0;
+        for (i=0; i<allQueries.length;i++){
+            if (allQueries[i]!=null){
+                allQueries[i]=allQueries[i].replaceAll("[\\t\\n\\r]+"," ");
+                allC++;
             }
-
-        return doneF;
-
+            if (tempQ[i] != null){
+                tempQ[i]=tempQ[i].replaceAll("[\\t\\n\\r]+"," ");
+            }
         }
+        System.out.printf("   %-5s %-12s  %-17s  %-40s  %s \n", "#", "Query Number","Attack Type", "Attact in Query", "Bad Query");
+        System.out.print( "--".repeat(75) +"\n");
+        doneBad+= String.format("   %-5s %-12s  %-17s  %-40s  %s \n", "#", "Query Number","Attack Type", "Attact in Query", "Bad Query");
+        doneBad+= "--".repeat(75) + "\n";
+
+
+        for (badC = 0; badC<bqc; badC++){
+            tempP = Integer.parseInt(baqQueries[1][badC]);
+            baqQueries[4][badC] = tempQ[tempP-1];
+            for (i=0; i<allQueries.length;i++){
+                if (baqQueries[4][badC].equals(allQueries[i]) ){
+                    tempP=i+1;
+                    break;
+                }
+            }
+            System.out.printf("   %-5s      %-7d  %-17s  %-40s  %s \n",
+                    baqQueries[0][badC] ,tempP, baqQueries[2][badC], baqQueries[3][badC], baqQueries[4][badC] );
+            doneBad+=String.format("   %-5s      %-7d  %-17s  %-40s  %s \n",
+                    baqQueries[0][badC] ,tempP, baqQueries[2][badC], baqQueries[3][badC], baqQueries[4][badC] );
+        }
+
+
+        doneReview += String.format("   %-5s %-12s  %-17s    %s \n", "#", "Query Number","Status", "Query");
+        System.out.printf("\n\n   %-5s %-12s  %-17s    %s \n", "#", "Query Number","Status", "Query");
+        doneReview+= "--".repeat(75) + "\n";
+        System.out.printf("--".repeat(75) + "\n");
+        String reviewQ;
+        for( i=0; i<30;i++) {
+            if (tempQ[i] != null) {
+                reviewQ = tempQ[i];
+                for (j = 0; j < badC; j++) {
+                    if (reviewQ.equals(baqQueries[4][j])) {
+                        //                    System.out.println("checkBad: "+ i + "    "+  reviewQ );
+
+                        tempQ[i] = null;
+                    }
+                }
+            }
+        }
+        for( i=0; i<30;i++) {
+            if (tempQ[i] != null) {
+                reviewQ = tempQ[i];
+                //         System.out.println("checkall: "+ i + "    "+  reviewQ );
+                for (k = 0; k < allC; k++) {
+                    if (reviewQ.equals(allQueries[k])) {
+                        doneReview += String.format("   %-5d      %-7d    %-40s  %s \n",
+                                revC, k+1, "Review", reviewQ);
+                        System.out.printf("   %-5d      %-7d    %-40s  %s \n",
+                                revC+1, k+1, "Review", reviewQ);
+                        revC++;
+                        //break;
+                    }
+                }
+            }
+        }
+//        System.out.println(doneReview);
+
+
+        return doneBad;
+
+    }
 
 
 

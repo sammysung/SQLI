@@ -71,7 +71,7 @@ public class build{
         //System.out.println(fin);
 
         System.out.println("\n\nThis is the tainting result file...\n");
-        done = l.runS(fin);
+        done = l.runS(fin,que );
 
         if(!out.exists()){
             try{
