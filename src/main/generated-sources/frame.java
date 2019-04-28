@@ -66,7 +66,7 @@ public class frame{
         // default; as every OS can use UTC time, and UTC time is very precise, why not use that to create a default
         // file name that will not every overwrite itself?
 
-        String pq="report-"+LocalDateTime.now()+".txt";
+        String pq="report-"+LocalDateTime.now();
 
         // ... however, Windows does not like the character ':' in filenames, so it's best to just replace that.
 
@@ -75,8 +75,8 @@ public class frame{
         // This particular print statement should be treated as verbose, but the options have not been set yet.
         // As it is now, if you don't want the filename to show, comment this out.
 
-        System.out.println(pq);
-        File out=new File(pq);
+        //System.out.println(pq);
+        //File out=new File(pq);
         driver drive=new driver();
         if(args.length==0)
             System.out.println("Running in default mode.");
@@ -152,12 +152,11 @@ public class frame{
         }
         else if(drive.getInteractive()==true){
             System.out.println("Please input the name of the output file you want to use:");
-            String m=key.nextLine();
-            out=new File(m);
+            pq=key.nextLine();
         }
         else if(drive.getOutput()==true){
             arg++;
-            out=new File(args[arg]);
+            pq=args[arg];
         }
 
         // This is a fix to make the safe file check happen after the options have all been parsed, in order to catch
@@ -183,6 +182,6 @@ public class frame{
             back=new File(m);
             list=data(back,drive);
         }
-        build build=new build(in, out, drive, list);
+        build build=new build(in, pq, drive, list);
     }
 }

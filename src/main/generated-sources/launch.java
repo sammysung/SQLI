@@ -179,5 +179,8 @@ public class launch{
 //        System.out.println(doneReview);
         return doneBad;
     }
+    public String review(){
+        return doneReview;
+    }
 }
 
