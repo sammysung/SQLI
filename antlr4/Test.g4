@@ -6,49 +6,6 @@ grammar Test;
 
 query               : linetype+ EOF ;
 
-nested              : command request NEWLINE command request NEWLINE command request equals WHITESPACE leftparent command request NEWLINE command request NEWLINE command request equals? WHITESPACE? leftparent? command? request? NEWLINE? command? request? NEWLINE? NEWLINE?
-                    | command request NEWLINE command request NEWLINE command request leftparent command request NEWLINE command request NEWLINE? NEWLINE?;
-
-longline            : command request NEWLINE command request NEWLINE command request NEWLINE groupby NEWLINE command request NEWLINE NEWLINE?
-                    | command request NEWLINE command request NEWLINE command request NEWLINE orderby NEWLINE NEWLINE?;
-
-line                : command request NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
-                    | command request NEWLINE command request NEWLINE NEWLINE? NEWLINE? ;
-
-union               : command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
-                    | command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
-                    | command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE command request NEWLINE orderby NEWLINE? NEWLINE? ;
-
-linetype            : line | nested | longline | union ;
-
-request             : (operator | quotes | variable | digit | function | tautology | piggyback | storedprocedure | unionattack | unionsetup | endquery /*| leftparent*/ | rightparent | WHITESPACE)+ ;
-
-tautology           : (variable WHITESPACE? equals WHITESPACE? variable) | (digit WHITESPACE? equals WHITESPACE? digit)
-                    | (variable WHITESPACE? equals WHITESPACE? digit) | (variable WHITESPACE? equals WHITESPACE? quoted)
-                    | (quoted WHITESPACE? equals WHITESPACE? quoted) | (variable WHITESPACE? equals WHITESPACE? request) ;
-
-piggyback           : endquery request quotes ;
-
-storedprocedure     : endquery procedures endquery request quotes endquery ;
-
-unionattack         : WHITESPACE tautology request unionsetup request ;
-
-command             : (SELECT | FROM | GROUP | WHERE | HAVING | UNION | ALL | ORDER | BY) ;
-
-procedures          : SHUTDOWN ;
-
-unionsetup          : command request command
-                    | UNION;
-
-groupby             : command request command request;
-
-function            : variable leftparent (variable | digit | operator) rightparent;
-
-orderby             : ORDER WHITESPACE BY WHITESPACE request NEWLINE? NEWLINE? ; /*: command request command request endquery
-                    | ORDER BY request? ;*/
-
-operator            : ',' | '-' | '<' | '>' | '*' | '.' | '$' | '[' | ']' | '"' ;
-
 quotes              : '\'' ;
 
 leftparent          : '(' ;
@@ -59,11 +16,70 @@ equals              : '=' ;
 
 endquery            : ';' ;
 
+operator            : ',' | '-' | '<' | '>' | '*' | '.' | '$' | '[' | ']' | '"' | '+' ;
+
 digit               : DIGIT ;
+
+hexidecimal         : HEXADECIMAL ;
+
+utf                 : UTF ;
 
 variable            : WORD ;
 
+or                  : OR ;
+
 quoted              : ('\''WORD'\'' | '\''DIGIT'\'' | '\'''\'' | '\''(WORD | DIGIT)) ;
+
+command             : (SELECT | FROM | GROUP | WHERE | HAVING | UNION | ALL | ORDER | BY) ;
+
+groupby             : command request command request;
+
+orderby             : ORDER WHITESPACE BY WHITESPACE request NEWLINE? NEWLINE? ;
+
+unionsetup          : (command request command NEWLINE?)
+                    | UNION;
+
+altfunction         : variable leftparent (hexidecimal | utf) rightparent
+                    | variable leftparent variable leftparent (hexidecimal | utf) rightparent rightparent ;
+
+function            : variable leftparent (variable | digit | operator ) rightparent
+                    | variable leftparent variable leftparent (variable | digit | operator ) rightparent rightparent;
+
+plusdigit           : digit WHITESPACE? operator WHITESPACE? digit WHITESPACE? operator? WHITESPACE? digit? WHITESPACE? operator? WHITESPACE? digit?
+                      WHITESPACE? operator? WHITESPACE? digit? WHITESPACE? operator? WHITESPACE? digit? WHITESPACE? operator? WHITESPACE? digit?;
+
+isequal             : (variable WHITESPACE? equals WHITESPACE? variable) | ((digit | plusdigit) WHITESPACE? equals WHITESPACE? digit)
+                    | (variable WHITESPACE? equals WHITESPACE? digit) | (variable WHITESPACE? equals WHITESPACE? quoted)
+                    | (quoted WHITESPACE? equals WHITESPACE? quoted) | (variable WHITESPACE? equals WHITESPACE? request) ;
+
+altencoding         : (WHITESPACE? variable WHITESPACE? equals WHITESPACE? (hexidecimal | utf))
+                    | (WHITESPACE? variable WHITESPACE? equals WHITESPACE? altfunction )
+                    | endquery WHITESPACE? altfunction request? ;
+
+piggyback           : (endquery request endquery? quotes endquery?) ;
+
+tautology           : or WHITESPACE? isequal ;
+
+unionattack         : WHITESPACE? isequal WHITESPACE? unionsetup request command? request? ;
+
+request             : (operator | quotes | variable | digit | plusdigit | hexidecimal | altencoding | function
+                    | isequal | tautology | piggyback | equals | unionattack | unionsetup | endquery | rightparent | WHITESPACE)+ ;
+
+nested              : command request NEWLINE command request NEWLINE command request equals WHITESPACE leftparent command request NEWLINE command request NEWLINE command request equals? WHITESPACE? leftparent? command? request? NEWLINE? command? request? NEWLINE? NEWLINE?
+                    | command request NEWLINE command request NEWLINE command request leftparent command request NEWLINE command request NEWLINE? NEWLINE?;
+
+longline            : command request NEWLINE command request NEWLINE command request NEWLINE groupby NEWLINE command request NEWLINE NEWLINE?
+                    | command request NEWLINE command request NEWLINE command request NEWLINE orderby NEWLINE NEWLINE?;
+
+line                : command request NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
+                    | command request NEWLINE command request NEWLINE NEWLINE? NEWLINE? ;
+
+union               : command request NEWLINE (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
+                    | command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
+                    | command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE command request NEWLINE? NEWLINE?
+                    | command request NEWLINE (command request NEWLINE) (command request NEWLINE) unionsetup NEWLINE command request NEWLINE command request NEWLINE command request NEWLINE orderby NEWLINE? NEWLINE? ;
+
+linetype            : line | nested | longline | union ;
 
 /*
  * Lexer Rules
@@ -78,19 +94,23 @@ fragment F          : ('F'|'f') ;
 fragment G          : ('G'|'g') ;
 fragment H          : ('H'|'h') ;
 fragment I          : ('I'|'i') ;
+fragment J          : ('J'|'j') ;
+fragment K          : ('K'|'k') ;
 fragment L          : ('L'|'l') ;
 fragment M          : ('M'|'m') ;
 fragment N          : ('N'|'n') ;
 fragment O          : ('O'|'o') ;
 fragment P          : ('P'|'p') ;
+fragment Q          : ('Q'|'q') ;
 fragment R          : ('R'|'r') ;
 fragment S          : ('S'|'s') ;
 fragment T          : ('T'|'t') ;
 fragment U          : ('U'|'u') ;
 fragment V          : ('V'|'v') ;
 fragment W          : ('W'|'w') ;
+fragment X          : ('X'|'x') ;
 fragment Y          : ('Y'|'y') ;
-
+fragment Z          : ('Z'|'z') ;
 
 fragment LOWERCASE  : [a-z] ;
 fragment UPPERCASE  : [A-Z] ;
@@ -103,12 +123,14 @@ GROUP               : G R O U P ;
 WHERE               : W H E R E ;
 HAVING              : H A V I N G ;
 UNION               : U N I O N ;
-SHUTDOWN            : S H U T D O W N ;
 ORDER               : O R D E R ;
+OR                  : O R ;
 
 WORD                : (LOWERCASE | UPPERCASE | '_')+ ;
 
 DIGIT               : [0-9] ;
+HEXADECIMAL         : '0x' ([a-fA-F0-9])+ ;
+UTF                 : 'U+' ([a-fA-F0-9])+ ;
 
 WHITESPACE          : (' ' | '\t') ;
 

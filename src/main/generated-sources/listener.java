@@ -20,9 +20,9 @@ public class listener extends TestBaseListener {
             //c++;
            // System.out.println("Query found"+ ctx.getText());
         }
-        
-        @Override public void enterTautology(TestParser.TautologyContext ctx) {
-          //  System.out.println("from enterTautology"+count);
+
+    @Override public void enterIsequal(TestParser.IsequalContext ctx) {
+            //  System.out.println("from enterTautology"+count);
             String[] h=ctx.getText().split("=");
 
             if(h[0].equals(h[1])){
@@ -66,7 +66,7 @@ public class listener extends TestBaseListener {
 
         }
 
-
+    /*
     @Override public void enterStoredprocedure(TestParser.StoredprocedureContext ctx) {
 
             bad[0][b] = Integer.toString(b+1);
@@ -75,6 +75,7 @@ public class listener extends TestBaseListener {
             bad[3][b] = ctx.getText();
             b++;
         }
+     */
 
     @Override public void enterLinetype(TestParser.LinetypeContext ctx) {
 
@@ -97,6 +98,14 @@ public class listener extends TestBaseListener {
     @Override public void enterUnion(TestParser.UnionContext ctx) {
         //query[count]=ctx.getText();
         //count++;
+    }
+
+    @Override public void enterAltencoding(TestParser.AltencodingContext ctx) {
+        bad[0][b]= Integer.toString(b+1);
+        bad[1][b] = Integer.toString(count);
+        bad[2][b] = "Alternative Encoding";
+        bad[3][b] = ctx.getText();
+        b++;
     }
 
         public String[][] getBadQuery() {return bad; }

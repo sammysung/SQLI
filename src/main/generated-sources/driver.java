@@ -5,7 +5,7 @@ public class driver{
     private boolean outputFile=false;
     // v
     private boolean verbose=false;
-    //i
+    // i
     private boolean interactive=false;
     // n
     private boolean aTest=false;

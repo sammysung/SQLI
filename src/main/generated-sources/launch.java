@@ -47,8 +47,9 @@ public class launch{
     */
         ParseTreeWalker walker = new ParseTreeWalker();
         walker.walk(listen,tree);
-        String[] taut=listen.getTaut();
+        //String[] taut=listen.getTaut();
 //        System.out.println("~~~~~~~~~~~~~~~~~~~~~Test~~~~~~~~~~~~~~~~` \n"+taut);
+        /*
         int ct=listen.getTautCount();
         int t=0;
         while(t<ct){
@@ -60,6 +61,7 @@ public class launch{
             }
             t++;
         }
+        */
         tempCount = listen.getQueryCount();
         //System.out.println(tempCount);
         return listen;
