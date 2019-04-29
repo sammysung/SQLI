@@ -34,6 +34,13 @@ public class listener extends TestBaseListener {
         int num[];
         int index;
         int limit;
+        boolean check;
+
+
+        public boolean isInteger(String s){
+            return s.matches("\\d+");
+        }
+
 
         public STR(String str, String delim)
         {
@@ -43,6 +50,7 @@ public class listener extends TestBaseListener {
             num = new int[limit];
             ops = new String[limit];
             op  = new char[limit];
+            check=false;
 
             String    token, op;
             char      c1,c2;
@@ -100,11 +108,14 @@ public class listener extends TestBaseListener {
             System.out.println(nums.length);
             for(int i = 0; i < nums.length; i++)
             {
-                if(nums[i] == null) break;
-                num[i] = Integer.parseInt(nums[i]);
-                if(ops[i].isBlank()){
+                if(!isInteger(nums[i])){
+                    check=true;
+                    System.out.println(nums[i]);
+                    System.out.println("Gotcha");
                     break;
                 }
+                if(nums[i] == null) break;
+                num[i] = Integer.parseInt(nums[i]);
                 if(ops[i].equals("+")) {
                     op[i] = '+';
                     System.out.println(op[i]);
@@ -129,6 +140,10 @@ public class listener extends TestBaseListener {
             System.out.println("sum = " + sum);
             return sum;
         }
+
+        public boolean flagged(){
+            return check;
+        }
     }
 
 
@@ -150,32 +165,59 @@ public class listener extends TestBaseListener {
             // at least for the purpose of seeing if this is usable attack. OR statements are not, by default, bad.
 
             String[] h=ctx.getText().split("=");
-            /*
+
+            if(!isInteger(h[0])&&!isInteger(h[1])){
+                if(h[0].trim()==h[1].trim()){
+                    System.out.println("Did it!");
+                    System.out.println(h[0]);
+                    System.out.println(h[1]);
+                    bad[0][b] = Integer.toString(b+1);
+                    bad[1][b] = Integer.toString(count);
+                    bad[2][b] = "Tautology";
+                    bad[3][b] = h[0]+"="+h[1];
+                    b++;
+                }
+                return;
+            }
+
             System.out.println(ctx.getText());
 
             STR stok= new STR(ctx.getText(),"+-=");
             stok.convert();
             int left = stok.math();
-            int right=Integer.parseInt(h[1]);
-            */
-            if(h[0]==h[1]){
-                bad[0][b] = Integer.toString(b+1);
-                bad[1][b] = Integer.toString(count);
-                bad[2][b] = "Tautology";
-                bad[3][b] = h[0]+"="+h[1];
-                b++;
+            int right=0;
+            if(!isInteger(h[1])){
+                right=-10;
+            }
+            else{
+                right=Integer.parseInt(h[1]);
             }
 
-
-            /*
-            if(h[0].equals(h[1])){
-                bad[0][b] = Integer.toString(b+1);
-                bad[1][b] = Integer.toString(count);
-                bad[2][b] = "Tautology";
-                bad[3][b] = h[0]+"="+h[1];
-                b++;
+            boolean c=stok.flagged();
+            if(right!=-10||!c){
+                if(left==right){
+                    bad[0][b] = Integer.toString(b+1);
+                    bad[1][b] = Integer.toString(count);
+                    bad[2][b] = "Tautology";
+                    bad[3][b] = h[0]+"="+h[1];
+                    b++;
+                }
             }
-            */
+            else {
+                System.out.println("Got it!");
+                System.out.println(h[0]);
+                System.out.println(h[1]);
+                if(h[0].trim()==h[1].trim()){
+                    System.out.println("Did it!");
+                    System.out.println(h[0]);
+                    System.out.println(h[1]);
+                    bad[0][b] = Integer.toString(b+1);
+                    bad[1][b] = Integer.toString(count);
+                    bad[2][b] = "Tautology";
+                    bad[3][b] = h[0]+"="+h[1];
+                    b++;
+                }
+            }
         }
 
         /*
