@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d02d571a-d3f7-447e-9bd6-d25cd4b5074a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/com/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/com/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/setup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/setup/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/com.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/setup.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/setup.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -227,6 +232,52 @@
               <item name="SQLI" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_site" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_site" type="462c0819:PsiDirectoryNode" />
+              <item name="dia" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_site" type="462c0819:PsiDirectoryNode" />
+              <item name="readme" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_site" type="462c0819:PsiDirectoryNode" />
+              <item name="releases" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="_site" type="462c0819:PsiDirectoryNode" />
+              <item name="setup" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -235,7 +286,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556576935722" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556577082269" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -460,7 +511,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556576750108</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Added index files for web">
+      <created>1556577062650</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1556577062650</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TodoView">
@@ -559,7 +617,8 @@
     <MESSAGE value="Added newest tests, removed old ones." />
     <MESSAGE value="Updated the website with the new test files, as well as edited some information on others. Added Table of Contents to the setup page, which will eventually be replaced by a new one describing the current setup.&#10;&#10;Also added the proper rule to ignore Gemfile.lock files." />
     <MESSAGE value="Added new setup page, figured out links between pages, added space for old setup page (for future reference)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added new setup page, figured out links between pages, added space for old setup page (for future reference)." />
+    <MESSAGE value="Added index files for web" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added index files for web" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -4,7 +4,7 @@ title: Getting Started
 permalink: /setup/
 ---
 
-# If you are looking for the old setup help page, [click here.](/start/)
+# If you are looking for the old setup help page, [click here.](/SQLI/start/)
 
 # Table of Contents
 
