@@ -3,20 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d02d571a-d3f7-447e-9bd6-d25cd4b5074a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_data/navigation.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/ack/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/ack/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/com/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/com/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/dia/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/dia/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/purpose/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/purpose/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/query/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/query/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/readme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/readme/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/sitemap.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/start/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/tools/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/com.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/com.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/start.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/start.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -249,7 +235,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556576697113" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556576935722" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -467,7 +453,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556563036238</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added new setup page, figured out links between pages, added space for old setup page (for future reference).">
+      <created>1556576750108</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1556576750108</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TodoView">
@@ -565,7 +558,8 @@
     <MESSAGE value="Tautologies can now handle subtraction input!" />
     <MESSAGE value="Added newest tests, removed old ones." />
     <MESSAGE value="Updated the website with the new test files, as well as edited some information on others. Added Table of Contents to the setup page, which will eventually be replaced by a new one describing the current setup.&#10;&#10;Also added the proper rule to ignore Gemfile.lock files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated the website with the new test files, as well as edited some information on others. Added Table of Contents to the setup page, which will eventually be replaced by a new one describing the current setup.&#10;&#10;Also added the proper rule to ignore Gemfile.lock files." />
+    <MESSAGE value="Added new setup page, figured out links between pages, added space for old setup page (for future reference)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added new setup page, figured out links between pages, added space for old setup page (for future reference)." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

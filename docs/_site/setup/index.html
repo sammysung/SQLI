@@ -1,0 +1,543 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.14.1 by Michael Rose
+  Copyright 2013-2018 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Getting Started - SQLI</title>
+<meta name="description" content="A testing framework for SQL Injection attacks.">
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="SQLI">
+<meta property="og:title" content="Getting Started">
+<meta property="og:url" content="http://localhost:4000/setup/">
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/setup/">
+
+
+
+
+
+
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Samson Wood, Bryan Arney, Ram Ilani",
+      "url": "http://localhost:4000",
+      "sameAs": null
+    }
+  </script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="SQLI Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if lte IE 9]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    <div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        <a class="site-title" href="/">SQLI</a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/setup/" >Getting Started</a>
+            </li><li class="masthead__menu-item">
+              <a href="/SQLI.zip" >Current Release</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+  
+    
+      
+      
+      
+      
+    
+    
+      
+
+<nav class="nav__list">
+  
+  <input id="ac-toc" name="accordion-toc" type="checkbox" />
+  <label for="ac-toc">Toggle menu</label>
+  <ul class="nav__items">
+    
+      <li>
+        
+          <span class="nav__sub-title">SQLI Project</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/purpose/" class="">Purpose</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/releases/" class="">Releases</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/setup/" class="active">Getting Started</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/dia/" class="">Diagrams</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/ack/" class="">Acknowledgements</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Help</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/readme/" class="">Help Document</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/com/" class="">Sample Commands</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/query/" class="">Sample Queries</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/tools/" class="">Tools</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="/start/" class="">Outdated Setup (for reference)</a></li>
+          
+        </ul>
+        
+      </li>
+    
+      <li>
+        
+          <span class="nav__sub-title">Dev Portal</span>
+        
+
+        
+        <ul>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://github.com/sammysung/SQLI" class="">Repo</a></li>
+          
+            
+            
+
+            
+            
+
+            <li><a href="https://github.com/sammysung/SQLI/wiki" class="">Wiki</a></li>
+          
+        </ul>
+        
+      </li>
+    
+  </ul>
+</nav>
+    
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Getting Started">
+    
+    
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+        <!--
+          <h1 id="page-title" class="page__title" itemprop="headline">Getting Started
+</h1>
+        -->
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h1 id="if-you-are-looking-for-the-old-setup-help-page-click-here">If you are looking for the old setup help page, <a href="/start/">click here.</a></h1>
+
+<h1 id="table-of-contents">Table of Contents</h1>
+
+<p><a href="#Java Initial Setup">Java Setup</a></p>
+
+<p><a href="#Pathing">Pathing Help for Windows</a></p>
+
+<p><a href="#antlr4">Antlr4 and Grammar Setup</a></p>
+
+<p><a href="#Maven">Maven Setup</a></p>
+
+<p><a href="#Config">Configuration</a></p>
+
+<p><a href="#Ruby">Ruby Setup</a></p>
+
+<p><a href="#CMake Setup">CMake Setup</a></p>
+
+<p><a href="#Powershell on Mac Notes">PowerShell for OSX 10.11 and lower</a></p>
+
+<h1 id="overall-notes">Overall Notes</h1>
+
+<p>Many of the things mentioned here can and have been automated via the use of scripts; if it would prove useful, these scripts can be supplied on this site on request.</p>
+
+<p>Java is the main dependency for this project at this state, though using Powershell as it is (surprisingly) cross-platform is a good idea if you would like to go the script route.</p>
+
+<p>The <a href="https://github.com/PowerShell/PowerShell#get-powershell">Powershell Github repository</a> is a great place to start should you choose to use it (Windows has this by default, too).</p>
+
+<p>With that said, there are Bash shell scripts, as well as Windows cmd batch and Mac command files available as well.</p>
+
+<h2 id="-java-initial-setup"><a name="Java Initial Setup"></a> Java Initial Setup</h2>
+
+<p>Java will need to be setup on your system in order to run this program. As it is currently a command line only tool (though this is set to change) you will need to setup a JDK for your system and ensure that command line tools can use it.</p>
+
+<p>Please note that our development versions of Java are currently between 10 and 11; if you cannot run the jar due to an “Unsupported Class Error”, either update or let the team know so we can aim for higher compatibility, if possible. Below are steps to install and/or setup Java, depending on your system OS:</p>
+
+<h3 id="linux-ubuntu-based">Linux (Ubuntu-based)</h3>
+
+<p>Simply open up a terminal and run the command:</p>
+
+<p><code class="highlighter-rouge">sudo apt install default-jre</code></p>
+
+<p>This should get you the most recent Java installation up and running without too much hassle.</p>
+
+<p>If for some reason you do not receive Java 11 with this command, you can try 
+this series instead:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt-get install openjdk-11-jdk
+</code></pre></div></div>
+
+<p>However, chances are high that this particular command will actually install openjdk <strong>10</strong>, as an oversight since the adoption of JDK 11 is not 100% ready for all systems. It doesn’t hurt to try, but if it doesn’t work, you can add the repo directly and pull from there:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>add-apt-repository ppa:openjdk-r/ppa <span class="se">\</span>
+<span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt-get update <span class="nt">-q</span> <span class="se">\</span>
+<span class="o">&amp;&amp;</span> <span class="nb">sudo </span>apt install <span class="nt">-y</span> openjdk-11-jdk
+</code></pre></div></div>
+<p>This one is a bit safer, since it just adds the repo keys for the open JDK,but if you are not running on an Ubuntu derivative, it may fail for you. The next one will work for all Linux-based systems:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://download.java.net/java/GA/jdk11/28/GPL/openjdk-11+28_linux-x64_bin.tar.gz <span class="nt">-O</span> /tmp/openjdk-11+28_linux-x64_bin.tar.gz
+
+<span class="nb">sudo tar </span>xfvz /tmp/openjdk-11+28_linux-x64_bin.tar.gz <span class="nt">--directory</span> /usr/lib/jvm
+
+rm <span class="nt">-f</span> /tmp/openjdk-11+28_linux-x64_bin.tar.gz
+</code></pre></div></div>
+
+<h3 id="windows">Windows</h3>
+
+<p>First, install Java 11 from <a href="https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html">this site here</a>.</p>
+
+<p>You will want the Windows file that ends in <code class="highlighter-rouge">.exe</code>. That install will allow you to run Java programs everywhere but the command line by default.</p>
+
+<p>To get command line Java up and running, follow the instructions <a href="https://javatutorial.net/set-java-home-windows-10">located here</a>. If you have trouble with this guide, a few more are provided down below.</p>
+
+<p>This will allow you to run java commands from any command line instance, which is not strictly necessary, but highly useful for any Java development on Windows.</p>
+
+<p>If you are running Windows 10, you could also take advantage of the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">ability to run Linux as an application inside Windows</a>.</p>
+
+<p>How-ToGeek has a good guide on that as well <a href="https://www.howtogeek.com/249966/how-to-install-and-use-the-linux-bash-shell-on-windows-10/">located here</a>.</p>
+
+<h3 id="mac">Mac</h3>
+
+<p><em>Older systems may not be able to use some of the tools; if this is an issue, please let the team know and we may be able to help you. The test system for Mac OSX is currently on 10.13.6, but some consideration was taken for 10.10.5 while the system was still on that version.</em></p>
+
+<p>With that said, installing the newest Java install is pretty simple. Just go grab the <a href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">Java 11 JDK .DMG</a>. Run that, follow what the archive asks, and you’re good to go!</p>
+
+<p>You could also install <a href="https://brew.sh/">Homebrew</a>, then run <code class="highlighter-rouge">brew cask install java</code> and let it do the work for you. Homebrew is wonderful for development on Mac in general, since options are otherwise limited.</p>
+
+<p>If that doesn’t sound good, there is another option in <a href="https:/www.macports.org/install.php">MacPorts</a>, just be aware that you’ll need Xcode installed to use this properly while Homebrew does not.</p>
+
+<h2 id="-pathing"><a name="Pathing"></a> Pathing</h2>
+
+<p>If, for some reason, you need to run a seperate Java install or the Windows instructions were not clear, this is the offical Oracle documentation about the PATH variable for all systems (including Solaris, for anyone who happens to use that):</p>
+
+<p><a href="https://java.com/en/download/help/path.xml">https://java.com/en/download/help/path.xml</a></p>
+
+<p><a href="https://docs.oracle.com/javase/tutorial/essential/environment/paths.html">https://docs.oracle.com/javase/tutorial/essential/environment/paths.html</a></p>
+
+<p>Additionally, some parts of this project may call for pathing help outside of java specifically; if this is the case, this post has all the infomation you would ever need (and more links!):</p>
+
+<p><a href="https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them">https://superuser.com/questions/284342/what-are-path-and-other-environment-variables-and-how-can-i-set-or-use-them</a></p>
+
+<h2 id="-antlr4-and-grammar-setup"><a name="antlr4"></a> Antlr4 and Grammar Setup</h2>
+
+<p>Antlr integration is vital for this project, as it will scan and detect most of the attack types listed with no interaction, and for those it does not automatically detect, it will massively reduce the workload to find the issues. As such, please ensure that everything in this section is setup properly!</p>
+
+<p>Using the <a href="https://www.antlr.org/">ANTLR website</a> should show you instructions for your operating system (and if not, the three dots in the Quick Start windows controls that), but there are some things you may want to add for each OS on top of that.</p>
+
+<p>This <a href="https://tomassetti.me/antlr-mega-tutorial/">mega tutorial</a> can run you through how this tool is supposed to work, although the Java-specific implementation notes are a little lacking compared to other languages. It’s still the best all-around resource for getting started, though.</p>
+
+<h3 id="linux">Linux</h3>
+
+<p>While not strictly necessary, to make working with ANTLR much easier, you will want to setup variables for the tools in your path. The way to do this varies from system to system, but for my Kubuntu install, adding the following to my .bashrc in my home directory did the trick.</p>
+
+<p><strong>Replace <em>antlr-4.7.2-complete.jar</em> with whatever version you are using.</strong></p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">CLASSPATH</span><span class="o">=</span><span class="s2">".:/usr/local/lib/antlr-4.7.2-complete.jar:</span><span class="nv">$CLASSPATH</span><span class="s2">"</span>
+<span class="nb">alias </span><span class="nv">grun</span><span class="o">=</span><span class="s1">'java -Xmx500M -cp "/usr/local/lib/antlr-4.7.2-complete.jar:$CLASSPATH" org.antlr.v4.gui.TestRig'</span>
+</code></pre></div></div>
+<p>Note that I placed the antlr jar file into the <em>/usr/local/lib/</em> directory; you can choose anywhere as long as you are consistent, but it is wise to put it in one of the common library directories.</p>
+
+<p>You can also run the command</p>
+
+<p><code class="highlighter-rouge">sudo apt install antlr4</code></p>
+
+<p>to get the libraries from a repo, just in case the jar isn’t working for you. Keep the grun alias either way, it will be very useful for showing AST diagrams of your queries after running through the grammar.</p>
+
+<h3 id="windows-1">Windows</h3>
+
+<p>The install instructions from the ANTLR website are actually pretty complete here, though they expect you to be able to learn about the PATH variables (refer to <a href="/setup/#Pathing">this section of the guide</a> for extra help). The only major note to add is that you may wish to create a folder just for your libraries where you put both the jar and batch files, such as <code class="highlighter-rouge">C:\lib</code>.</p>
+
+<h3 id="mac-1">Mac</h3>
+
+<p>Much like the Linux version, in both extra steps and tips. However, instead of using the package manager (since OSX doesn’t come with one), you can use Homebrew to install the tool for you. Just run</p>
+
+<p><code class="highlighter-rouge">brew install antlr</code></p>
+
+<p>and you should be set.</p>
+
+<h2 id="-maven-setup"><a name="Maven"></a> Maven Setup</h2>
+
+<p>Maven bridges an important gap between the stand-alone framework (which at one point relied on handwritten parsing to get all information, not just for web crawling and extracting SQL queries from Java code) and the antlr4 libraries. Therefore, without a working Maven install, there is no working project.</p>
+
+<p>You will need a basic Maven install to get started, since this build framework will automatically download need tools and libraries based on the pom.xml. With that said, <strong>DO NOT</strong> mess with the pom.xml without a backup and some knowledge of what you are doing; you cannot make the two projects cooperate without it or another similar build framework, at least as far as I know.</p>
+
+<h2 id="-powershell-on-mac-notes"><a name="Powershell on Mac Notes"></a> Powershell on Mac Notes</h2>
+
+<p>If you happen to be using some older install of OSX (specifically, 10.11 or lower), you won’t be able to install the latest version of Powershell due to dependency issues. If you really, really want to run the Powershell scripts, then you’ll need to download an older version. I found that <a href="https://github.com/PowerShell/PowerShell/releases/tag/v6.0.0-alpha.17">Alpha 17</a> worked for 10.10, and there should be somewhat newer versions that work with 10.11.</p>
+
+<p>Also, the best way to install Powershell via Microsoft’s own install pages is to use Homebrew using</p>
+
+<p><code class="highlighter-rouge">brew cask install powershell</code></p>
+
+<p>which will work great on 10.12 or greater.</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+
+
+        
+      </footer>
+
+      
+
+      
+    </div>
+
+    
+  </article>
+
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 Samson Wood, Bryan Arney, Ram Ilani. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.5.0/js/all.js" integrity="sha384-GqVMZRt5Gn7tB9D9q7ONtcp4gtHIUEW/yG7h98J7IpE3kpi+srfFyyB/04OV6pG0" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+  </body>
+</html>
