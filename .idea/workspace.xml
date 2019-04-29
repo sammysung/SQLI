@@ -21,7 +21,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/generated-sources/frame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
+            <state relative-caret-position="1965">
               <caret line="133" column="39" selection-start-line="109" selection-start-column="16" selection-end-line="133" selection-end-column="39" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -33,7 +33,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
+            <state relative-caret-position="1785">
               <caret line="119" column="36" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
             </state>
           </provider>
@@ -42,7 +42,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/antlr4/Test.g4">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
+            <state relative-caret-position="1080">
               <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
             </state>
           </provider>
@@ -64,19 +64,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="272" column="28" selection-start-line="272" selection-start-column="10" selection-end-line="272" selection-end-column="28" />
+            <state relative-caret-position="522">
+              <caret line="162" column="32" lean-forward="true" selection-start-line="162" selection-start-column="32" selection-end-line="162" selection-end-column="32" />
               <folding>
                 <element signature="e#958#959#0" expanded="true" />
                 <element signature="e#1006#1007#0" expanded="true" />
-                <element signature="e#1192#1193#0" expanded="true" />
-                <element signature="e#1240#1241#0" expanded="true" />
-                <element signature="e#3822#3823#0" expanded="true" />
-                <element signature="e#3857#3858#0" expanded="true" />
-                <element signature="e#10076#10077#0" expanded="true" />
-                <element signature="e#10112#10113#0" expanded="true" />
-                <element signature="e#10157#10158#0" expanded="true" />
-                <element signature="e#10193#10194#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -85,7 +77,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/BigQuery.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="2100">
               <caret line="140" column="10" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
             </state>
           </provider>
@@ -94,7 +86,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/generated-sources/backend.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-450">
+            <state relative-caret-position="300">
               <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -106,12 +98,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/generated-sources/launch.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="953">
+            <state relative-caret-position="3585">
               <caret line="244" column="26" selection-start-line="244" selection-start-column="26" selection-end-line="244" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#7585#7586#0" expanded="true" />
-                <element signature="e#7618#7619#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -207,7 +197,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,10 +209,11 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556503719750" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556503787418" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -250,7 +240,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.BigQuery">
+  <component name="RunManager" selected="JAR Application.Tautology">
     <configuration name="BigQuery Verbose" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
       <option name="PROGRAM_PARAMETERS" value="-fdov BigQuery.txt output safe.txt" />
@@ -299,6 +289,14 @@
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <method v="2" />
     </configuration>
+    <configuration name="Tautology" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
+      <option name="PROGRAM_PARAMETERS" value="-fd Tautology.txt safe.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2" />
+    </configuration>
     <configuration name="SQLI [clean,compile,package,exec:java]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -332,6 +330,7 @@
       <item itemvalue="JAR Application.Query Safe" />
       <item itemvalue="JAR Application.BigQueryList Safe" />
       <item itemvalue="JAR Application.BigQuery" />
+      <item itemvalue="JAR Application.Tautology" />
       <item itemvalue="JAR Application.BigQuery Verbose" />
       <item itemvalue="JAR Application.Output" />
       <item itemvalue="Maven.SQLI [clean,compile,package,exec:java]" />
@@ -404,7 +403,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556502814670</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Fixed the tautology stuff, except for subtraction.">
+      <created>1556503773065</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1556503773065</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TodoView">
@@ -420,7 +426,7 @@
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18030304" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18333334" />
       <window_info id="Structure" order="1" sideWeight="0.502008" side_tool="true" weight="0.17727272" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -432,7 +438,7 @@
       <window_info id="Job Explorer" order="9" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49772727" visible="true" weight="0.117549665" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" weight="0.11092715" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -499,7 +505,8 @@
     <MESSAGE value="More comments / small fixes." />
     <MESSAGE value="Listener with beginning code to handle multiple operations in a tautology attack, the current configuration won't allow it easily." />
     <MESSAGE value="Catches some (but there's one specific tautology that it doesn't like, besides the subtraction one) tautologies." />
-    <option name="LAST_COMMIT_MESSAGE" value="Catches some (but there's one specific tautology that it doesn't like, besides the subtraction one) tautologies." />
+    <MESSAGE value="Fixed the tautology stuff, except for subtraction." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed the tautology stuff, except for subtraction." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -587,16 +594,6 @@
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/antlr-output/query.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/backend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-450">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/driver.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
@@ -707,9 +704,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/TestBaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="305" column="77" selection-start-line="305" selection-end-line="306" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/BigQuery.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/frame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
+        <state relative-caret-position="1965">
           <caret line="133" column="39" selection-start-line="109" selection-start-column="16" selection-end-line="133" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -719,41 +733,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
+        <state relative-caret-position="1785">
           <caret line="119" column="36" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/antlr4/Test.g4">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="1080">
           <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/antlr-output/TestBaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="305" column="77" selection-start-line="305" selection-end-line="306" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/launch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="953">
-          <caret line="244" column="26" selection-start-line="244" selection-start-column="26" selection-end-line="244" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#7585#7586#0" expanded="true" />
-            <element signature="e#7618#7619#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/maven.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -768,31 +756,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/antlr-output/BigQuery.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/BigQuery.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="2100">
           <caret line="140" column="10" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/backend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/launch.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3585">
+          <caret line="244" column="26" selection-start-line="244" selection-start-column="26" selection-end-line="244" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="272" column="28" selection-start-line="272" selection-start-column="10" selection-end-line="272" selection-end-column="28" />
+        <state relative-caret-position="522">
+          <caret line="162" column="32" lean-forward="true" selection-start-line="162" selection-start-column="32" selection-end-line="162" selection-end-column="32" />
           <folding>
             <element signature="e#958#959#0" expanded="true" />
             <element signature="e#1006#1007#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1240#1241#0" expanded="true" />
-            <element signature="e#3822#3823#0" expanded="true" />
-            <element signature="e#3857#3858#0" expanded="true" />
-            <element signature="e#10076#10077#0" expanded="true" />
-            <element signature="e#10112#10113#0" expanded="true" />
-            <element signature="e#10157#10158#0" expanded="true" />
-            <element signature="e#10193#10194#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -37,10 +37,17 @@ public class listener extends TestBaseListener {
         boolean check;
 
 
+        // This class simply checks a string against the regex expression for all digits; ergo, if it
+        // matches, you have an integer, and if it doesn't, you have anything else.
+        // Test if this catches things like "Dept5" or anything like that.
+
         public boolean isInteger(String s){
             return s.matches("\\d+");
         }
 
+
+        // This class will convert only the left side of an equation into a sum, and currently only works with
+        // addition. You must pass a whole equation to the class; "1+1+1=3" will work, while "1+1+1" will not!
 
         public STR(String str, String delim)
         {
@@ -107,6 +114,8 @@ public class listener extends TestBaseListener {
         public void convert(){
             for(int i = 0; i < nums.length; i++)
             {
+                // This flag here will prevent non-integer input from being passed to parseInt, and will
+                // also flag the equation further down to let it know that a variable name was found.
                 if(!isInteger(nums[i])){
                     check=true;
                     break;
@@ -115,6 +124,9 @@ public class listener extends TestBaseListener {
                 num[i] = Integer.parseInt(nums[i]);
                 if(ops[i].equals("+")) {
                     op[i] = '+';
+                }
+                if(ops[i].equals("-")){
+                    op[i] = '-';
                 }
                 if(ops[i].equals("=")) break;
             }
@@ -128,6 +140,10 @@ public class listener extends TestBaseListener {
                 if(op[i] == '+')
                 {
                     sum = sum + num[i];
+                    continue;
+                }
+                if(op[i] == '-'){
+                    sum = sum - num[i];
                     continue;
                 }
                 sum = sum + num[i];
@@ -205,6 +221,10 @@ public class listener extends TestBaseListener {
                 }
             }
         }
+
+        // Just due to the fact that we need both the left and right side of equations, the following rule
+        // is not useful as of now to correctly ID tautology attacks.
+
 
         /*
     @Override public void enterPlusdigit(TestParser.PlusdigitContext ctx) {
