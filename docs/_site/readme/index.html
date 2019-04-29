@@ -175,7 +175,7 @@
             
             
 
-            <li><a href="/SQLI.zip" class="">Current Release</a></li>
+            <li><a href="/releases/" class="">Releases</a></li>
           
             
             
@@ -304,15 +304,9 @@
       <section class="page__content" itemprop="text">
         
         <h1 id="usage">Usage</h1>
-<p>Structure: <code class="highlighter-rouge">java -jar frame.jar [-{h,f,o,d,i,v,q,w,a,n,t}] [input file] [safe file] [output file]</code></p>
+<p>Structure: <code class="highlighter-rouge">java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [safe file] [output file]</code></p>
 
 <p><strong>-h</strong>: Print this help message.</p>
-
-<p><strong>-a</strong>: Run all tests implemented sequentially. Order to be updated as implementation is completed.</p>
-
-<p><strong>-n</strong>: Run AMNESIA test only. End once queries are scanned and analyzed. (Not yet implemented)</p>
-
-<p><strong>-t</strong>: Run Positive Tainting tests only. End once queries are scanned and analyzed. (In progress)</p>
 
 <p><strong>-f</strong>: Enable command line input file naming mode (first argument will be input filename).</p>
 
@@ -322,7 +316,7 @@
 
 <p><strong>-i</strong>: Enable user input output file naming mode (program will prompt for output filename).</p>
 
-<p><strong>-v</strong>: Enable verbose mode (as of now, is just a stub of functionality).</p>
+<p><strong>-v</strong>: Enable verbose mode.</p>
 
 <p><strong>-w</strong>: If an output filename is reused, overwrite without asking.</p>
 
@@ -330,19 +324,13 @@
 
 <p>Example: “<code class="highlighter-rouge">java -jar frame.jar -hfov in.txt out.txt</code>” will print the help message, read from <strong>in.txt</strong>, output to <strong>out.txt</strong>, show a test selection menu, prompt for a safe file, and be verbose.</p>
 
-<p>“<code class="highlighter-rouge">java -jar frame.jar -ftdow query.txt safe.txt test.txt</code>” will run the Positive Tainting test, pulling input data from <strong>query.txt</strong>, a safe file list from <strong>safe.txt</strong>, output to <strong>test.txt</strong>, and will overwrite <strong>test.txt</strong> if it already exists with no prompts.</p>
+<p>“<code class="highlighter-rouge">java -jar frame.jar -fdow query.txt safe.txt test</code>” will pull input data from <strong>query.txt</strong>, a safe file list from <strong>safe.txt</strong>, output to <strong>test{-type}.txt</strong>, and will overwrite <strong>test{-type}.txt</strong> if it already exists with no prompts.</p>
 
 <p>Arguments <strong>-f</strong> and <strong>-o</strong> do not run in order of appearance; if <strong>-o</strong> is before <strong>-f</strong>, the first argument will still be the input file.</p>
 
 <p>By default, with no arguments, the program will prompt for user input to assign the input filename and auto generate an output filename with the scheme “<em>report-{UTC Local Time}.txt</em>”.</p>
 
 <p>Arguments <strong>-i</strong> and <strong>-o</strong> are mutually exclusive. The program will use the autogenerate scheme if they are used together.</p>
-
-<p>If a test is not selected in the arguments, a selection menu will be shown to the user.</p>
-
-<p>Multiple test options can be selected, and they will run sequentially.</p>
-
-<p>Query file shows format this project expects as of right now.</p>
 
         
       </section>

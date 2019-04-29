@@ -175,7 +175,7 @@
             
             
 
-            <li><a href="/SQLI.zip" class="">Current Release</a></li>
+            <li><a href="/releases/" class="">Releases</a></li>
           
             
             
@@ -303,58 +303,50 @@
 
       <section class="page__content" itemprop="text">
         
-        <h1 id="right-click-on-the-below-link-in-order-to-download-this-in-a-file">Right-click on the below link in order to download this in a file:</h1>
+        <h1 id="download-the-files-here">Download the files here!</h1>
 
-<p><a href="/query.txt">query list</a></p>
+<p><a href="BigQuery.txt" download="">Master Query List</a></p>
 
-<h2 id="sample-query-list">Sample query list</h2>
+<p><a href="safe.txt" download="">Sample Safe Query List</a></p>
 
-<p>select Fname, Lname, Ssn
-from EMPLOYEE
-where Dno=5;</p>
+<p><a href="AlternateEncoding.txt" download="">Alternate Encoding Attacks</a></p>
 
-<p>select Fname, Lname, Ssn
-from EMPLOYEE,
-where Salary &gt; 30000;</p>
+<p><a href="Illogical.txt" download="">Illogical Attacks</a></p>
 
-<p>select Fname, Lname, Ssn
-from EMPLOYEE
-where Dno=5 and Sex=’M’;</p>
+<p><a href="Inference.txt" download="">Inference Attacks</a></p>
 
-<p>select Dname
-from EMPLOYEE, DEPARTMENT
-where Dno=Dnumber
-group by Dname
-having avg(Salary)&gt;30000;</p>
+<p><a href="Piggyback.txt" download="">Piggyback Attacks</a></p>
 
-<p>select Fname, Lname
-from EMPLOYEE
-where Dno = (select Dno
-from EMPLOYEE
-where Salary = (select max(Salary)
-from EMPLOYEE));</p>
+<p><a href="StoredProcAsPiggy.txt" download="">Stored Procedures as Piggyback Attacks</a></p>
 
-<p>select Fname, Lname, Ssn
-from EMPLOYEE
-where Dno=5 or 1=1;</p>
+<p><a href="StoredProcedure.txt" download="">Stored Procedure Attacks</a></p>
 
-<p>select Fname, Lname, Ssn
-from EMPLOYEE
-where Dno=5 and Sex=’M’ or 1=1;</p>
+<p><a href="Tautology.txt" download="">Tautology Attacks</a></p>
 
-<p>select Fname, Lname
-from EMPLOYEE
-where Dno=5  ‘; drop table EMPLOYEE’;</p>
+<p><a href="Union.txt" download="">Union Attacks</a></p>
 
-<p>select Fname, Lname, Ssn
-from EMPLOYEE,
-where Salary &gt; 30000 ‘;SHUTDOWN; – ‘;</p>
+<h1 id="these-links-will-open-in-your-browser-by-default-for-quick-viewing">These links will open in your browser by default, for quick viewing.</h1>
+<h1 id="right-click-on-the-below-links-in-order-to-download-these-files">Right-click on the below links in order to download these files:</h1>
 
-<p>select Fname, Lname
-from EMPLOYEE
-where Salary &gt; 15000
-UNION ALL select Ssn
-from FMOLOYEE;</p>
+<p><a href="/BigQuery.txt">Master Query List</a></p>
+
+<p><a href="/safe.txt">Sample Safe Query List</a></p>
+
+<p><a href="/AlternateEncoding.txt">Alternate Encoding Attacks</a></p>
+
+<p><a href="/Illogical.txt">Illogical Attacks</a></p>
+
+<p><a href="/Inference.txt">Inference Attacks</a></p>
+
+<p><a href="/Piggyback.txt">Piggyback Attacks</a></p>
+
+<p><a href="/StoredProcAsPiggy.txt">Stored Procedures as Piggyback Attacks</a></p>
+
+<p><a href="/StoredProcedure.txt">Stored Procedure Attacks</a></p>
+
+<p><a href="/Tautology.txt">Tautology Attacks</a></p>
+
+<p><a href="/Union.txt">Union Attacks</a></p>
 
         
       </section>

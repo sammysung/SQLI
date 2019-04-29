@@ -1,0 +1,26 @@
+SELECT name, description, price
+FROM products
+WHERE category=1 UNION SELECT 'A', 'B', 3
+
+SELECT name, description, price
+FROM products
+WHERE category=1 UNION SELECT name,ssn FROM all_tables
+
+SELECT Name, Phone
+FROM User
+WHERE Id=1 UNION ALL SELECT creditCardNumber, 1 FROM CreditCarTable
+
+SELECT supplier_id
+FROM suppliers
+UNION ALL
+SELECT supplier_id
+FROM orders;
+WHERE category=1 UNION SELECT 'A', 'B', 3
+
+SELECT supplier_id
+FROM suppliers
+WHERE category=1 UNION SELECT 'A', 'B', 3
+UNION ALL
+SELECT supplier_id
+FROM orders;
+WHERE category=1

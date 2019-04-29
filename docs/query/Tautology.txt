@@ -1,0 +1,23 @@
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or 1=1;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 and Sex='M' or 1=1;
+
+SELECT *
+FROM users
+WHERE username='admin' AND password='wrongpassword' OR 'a'='a';
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or 1+1+1=3;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or 1+1+1+1+1+1=6;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno=5 or 1+1+1+1-1-1=2;

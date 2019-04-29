@@ -3,6 +3,19 @@ layout: single
 title: Getting Started
 permalink: /start/
 ---
+# Table of Contents
+
+[Java Setup](#Java Initial Setup)
+
+[Pathing Help for Windows](#Pathing)
+
+[Ruby Setup](#Ruby)
+
+[CMake Setup](#CMake Setup)
+
+[PowerShell for OSX 10.11 and lower](#Powershell on Mac Notes)
+
+
 # Overall Notes
 
 Many of the things mentioned here can and have been automated via the use of scripts; if it would prove useful, these scripts can be supplied on this site on request.
@@ -13,7 +26,7 @@ The [Powershell Github repository](https://github.com/PowerShell/PowerShell#get-
 
 With that said, there are Bash shell scripts, as well as Windows cmd batch and Mac command files available as well.
 
-## Java Initial Setup
+## <a name="Java Initial Setup"></a> Java Initial Setup
 
 Java will need to be setup on your system in order to run this program. As it is currently a command line only tool (though this is set to change) you will need to setup a JDK for your system and ensure that command line tools can use it. 
 
@@ -61,7 +74,7 @@ You could also install [Homebrew](https://brew.sh/), then run `brew cask install
 
 If that doesn’t sound good, there is another option in [MacPorts](https:/www.macports.org/install.php), just be aware that you’ll need Xcode installed to use this properly while Homebrew does not.
 
-### Pathing
+### <a name="Pathing"></a> Pathing
 
 If, for some reason, you need to run a seperate Java install or the Windows instructions were not clear, this is the offical Oracle documentation about the PATH variable for all systems (including Solaris, for anyone who happens to use that):
 
@@ -69,7 +82,7 @@ If, for some reason, you need to run a seperate Java install or the Windows inst
 
 <https://docs.oracle.com/javase/tutorial/essential/environment/paths.html>
 
-## Ruby
+## <a name="Ruby"></a> Ruby
 
 Once it is available, if you would like to use the website hosting tools used to make this site, you will need to have Ruby installed and ready for deployment. 
 
@@ -112,7 +125,7 @@ Installing this updated version, at least from my testing, proved to be a bit cu
 Simply put, the first solution installs the whole Ruby development kit, which is unnecessary for simply running the server gem included here. [Homebrew](https://brew.sh/) will handle just what is needed for the script, be more lightweight, and is more versatile 
 in that it can install other apps.
 
-## CMake Setup
+## <a name="CMake Setup"></a> CMake Setup
 
 ### General notes
 
@@ -150,7 +163,7 @@ if you already have it setup.
 
 Otherwise, grab the [DMG here](https://github.com/Kitware/CMake/releases/download/v3.13.3/cmake-3.13.3-Darwin-x86_64.dmg) and install it.
 
-## Powershell on Mac Notes
+## <a name="Powershell on Mac Notes"></a> Powershell on Mac Notes
 
 If you happen to be using some older install of OSX (specifically, 10.11 or lower), you won’t be able to install the latest version of Powershell due to dependency issues. If you really, really want to run the Powershell scripts, then you’ll need to download an older version. I found that [Alpha 17](https://github.com/PowerShell/PowerShell/releases/tag/v6.0.0-alpha.17) worked for 10.10, and there should be somewhat newer versions that work with 10.11. 
 

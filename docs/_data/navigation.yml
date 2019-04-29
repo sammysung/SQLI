@@ -20,8 +20,8 @@ docs:
     children:
       - title: "Purpose"
         url: /purpose/
-      - title: "Current Release"
-        url: /SQLI.zip
+      - title: "Releases"
+        url: /releases/
       - title: "Getting Started"
         url: /start/
       - title: "Diagrams"

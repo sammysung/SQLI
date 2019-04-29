@@ -10,7 +10,7 @@ permalink: /com/
 
 As of this writing, the JAR file must be run from the command line due to a lack of an implemented GUI.
 Because of this, simply double-clicking the JAR will appear to make it crash.
-This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable, go to [this page](/start/) if you need help) from within the respective CLI.
+This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable, go to [this page](/start/#Pathing) if you need help) from within the respective CLI.
 
 With the integration with CMake as a build utility, rudimentary support for exporting to IDEs have been enabled. While Eclipse is not working as expected so far, Visual Studio solution files have been created and confirmed working.
 

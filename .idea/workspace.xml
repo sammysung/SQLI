@@ -2,7 +2,51 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d02d571a-d3f7-447e-9bd6-d25cd4b5074a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/AlternateEncoding.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/BigQuery.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Illogical.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Inference.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Piggyback.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/StoredProcAsPiggy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/StoredProcedures.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Tautology.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Union.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/AlternateEncoding.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/BigQuery.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/Illogical.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/Inference.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/Piggyback.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/StoredProcAsPiggy.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/StoredProcedures.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/Tautology.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/Union.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/query/safe.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/releases.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/safe.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Gemfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_data/navigation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/ack/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/ack/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/assets/js/_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/assets/js/_main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/assets/js/plugins/jquery.smooth-scroll.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/com/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/com/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/dia/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/dia/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/purpose/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/purpose/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/query.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/query/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/query/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/readme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/readme/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/start/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/tools/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/com.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/com.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/query.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/query.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/query.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/start.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/start.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tools.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tools.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -60,11 +104,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="198" column="13" lean-forward="true" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
+            <state relative-caret-position="548">
+              <caret line="213" column="18" lean-forward="true" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
               <folding>
                 <element signature="e#958#959#0" expanded="true" />
                 <element signature="e#1006#1007#0" expanded="true" />
@@ -73,11 +117,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="367">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tautology.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -147,7 +200,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/safe.txt" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/BigQueryList_Numbered.txt" />
         <option value="$PROJECT_DIR$/BigQueryList.txt" />
         <option value="$PROJECT_DIR$/src/main/generated-sources/GUI.java" />
@@ -168,6 +220,7 @@
         <option value="$PROJECT_DIR$/antlr-output/TestBaseListener.java" />
         <option value="$PROJECT_DIR$/maven.sh" />
         <option value="$PROJECT_DIR$/src/main/generated-sources/listener.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -195,9 +248,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="36" />
-    <option name="width" value="832" />
-    <option name="height" value="477" />
+    <option name="x" value="44" />
+    <option name="width" value="812" />
+    <option name="height" value="475" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -205,6 +258,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -212,16 +266,20 @@
               <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
               <item name="SQLI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556553977896" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556562927498" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -425,7 +483,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556552804453</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added newest tests, removed old ones.">
+      <created>1556554004500</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1556554004500</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -439,9 +504,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18333334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18636364" />
       <window_info id="Structure" order="1" sideWeight="0.502008" side_tool="true" weight="0.17727272" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -453,7 +517,7 @@
       <window_info id="Job Explorer" order="9" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49772727" visible="true" weight="0.21688741" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" weight="0.21688741" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -522,7 +586,8 @@
     <MESSAGE value="Catches some (but there's one specific tautology that it doesn't like, besides the subtraction one) tautologies." />
     <MESSAGE value="Fixed the tautology stuff, except for subtraction." />
     <MESSAGE value="Tautologies can now handle subtraction input!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tautologies can now handle subtraction input!" />
+    <MESSAGE value="Added newest tests, removed old ones." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added newest tests, removed old ones." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -569,13 +634,6 @@
         <state relative-caret-position="-4" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="82">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/safe.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
@@ -583,20 +641,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/BigQueryList.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BigQueryList_Numbered.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2286">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/BigQueryList.txt" />
+    <entry file="file://$PROJECT_DIR$/BigQueryList_Numbered.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/Test.java" />
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/Test.form" />
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/GUI.java">
@@ -720,13 +766,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/antlr-output/TestBaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="305" column="77" selection-start-line="305" selection-end-line="306" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/TestBaseListener.java" />
     <entry file="file://$PROJECT_DIR$/maven.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -734,9 +774,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/antlr-output/BigQuery.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/BigQuery.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/frame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1965">
@@ -772,6 +810,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Tautology.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/BigQuery.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2100">
@@ -799,21 +844,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tautology.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="198" column="13" lean-forward="true" selection-start-line="198" selection-start-column="13" selection-end-line="198" selection-end-column="13" />
+        <state relative-caret-position="548">
+          <caret line="213" column="18" lean-forward="true" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
           <folding>
             <element signature="e#958#959#0" expanded="true" />
             <element signature="e#1006#1007#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="367">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>
