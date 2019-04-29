@@ -21,11 +21,122 @@ public class listener extends TestBaseListener {
 
         int t=0, s=0, p=0, b=0;
         int count=0;
+
+        public boolean isInteger(String s){
+            return s.matches("\\d+");
+        }
+
+    class STR
+    {
+        String nums[];
+        String ops[];
+        char op[];
+        int num[];
+        int index;
+        int limit;
+
+        public STR(String str, String delim)
+        {
+            limit = str.length();
+
+            nums = new String[limit];
+            num = new int[limit];
+            ops = new String[limit];
+            op  = new char[limit];
+
+            String    token, op;
+            char      c1,c2;
+            index     =  0;
+            int start =  0;
+            int end   = -1;
+
+            for(int i = 0; i < str.length()-1; i++)
+            {
+                c1 = str.charAt(i);
+                c2 = str.charAt(i+1);
+
+                if(isDelim(c1, delim) &&! isDelim(c2, delim))
+                {
+                    start = i+1;
+                }
+
+                if(isDelim(c2, delim) &&! isDelim(c1, delim))
+                {
+                    end = i+1;
+                }
+
+                if (start < end) {
+
+                    token = str.substring(start, end);
+                    op = str.substring(end, end+1);
+                    nums[index] = token;
+                    ops[index] = op;
+                    index++;
+                    start = i+1;
+                }
+            }
+
+            if(start > end)
+            {
+                token = str.substring(start);
+                nums[index] = str.substring(start);
+                index++;
+            }
+        }
+
+        public boolean isDelim(char c, String s)
+        {
+            for(int i = 0; i < s.length(); i++)
+            {
+                if(c == s.charAt(i))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public void convert(){
+            System.out.println(nums.length);
+            for(int i = 0; i < nums.length; i++)
+            {
+                if(nums[i] == null) break;
+                num[i] = Integer.parseInt(nums[i]);
+                if(ops[i].isBlank()){
+                    break;
+                }
+                if(ops[i].equals("+")) {
+                    op[i] = '+';
+                    System.out.println(op[i]);
+                }
+                if(ops[i].equals("=")) break;
+            }
+        }
+
+        public int math(){
+            int sum = 0;
+
+            for(int i = 0; i < num.length; i++){
+
+                if(op[i] == '+')
+                {
+                    sum = sum + num[i];
+                    continue;
+                }
+                sum = sum + num[i];
+            }
+
+            System.out.println("sum = " + sum);
+            return sum;
+        }
+    }
+
+
         @Override public void enterEveryRule(ParserRuleContext ctx) {
             //see gramBaseListener for allowed functions
            // System.out.println("Test log: " + ctx.getText());      //code that executes per rule
         }
-        
+
         @Override public void enterQuery(TestParser.QueryContext ctx) {
             //check[c]=ctx.getText();
             //c++;
@@ -39,43 +150,75 @@ public class listener extends TestBaseListener {
             // at least for the purpose of seeing if this is usable attack. OR statements are not, by default, bad.
 
             String[] h=ctx.getText().split("=");
+            /*
+            System.out.println(ctx.getText());
 
-            int hl=h.length;
-
-            for (int i=0; i<hl-1; i++){
-
+            STR stok= new STR(ctx.getText(),"+-=");
+            stok.convert();
+            int left = stok.math();
+            int right=Integer.parseInt(h[1]);
+            */
+            if(h[0]==h[1]){
+                bad[0][b] = Integer.toString(b+1);
+                bad[1][b] = Integer.toString(count);
+                bad[2][b] = "Tautology";
+                bad[3][b] = h[0]+"="+h[1];
+                b++;
             }
+
+
+            /*
             if(h[0].equals(h[1])){
                 bad[0][b] = Integer.toString(b+1);
                 bad[1][b] = Integer.toString(count);
                 bad[2][b] = "Tautology";
                 bad[3][b] = h[0]+"="+h[1];
                 b++;
-            };
+            }
+            */
         }
-        
-        @Override public void enterCommand(TestParser.CommandContext ctx) { 
+
+        /*
+    @Override public void enterPlusdigit(TestParser.PlusdigitContext ctx) {
+        System.out.println(ctx.getText());
+        STR stok= new STR(ctx.getText()+"=0","+-=");
+        stok.convert();
+        int left = stok.math();
+        int right=Integer.parseInt(h[1]);
+        if(left==right){
+            bad[0][b] = Integer.toString(b+1);
+            bad[1][b] = Integer.toString(count);
+            bad[2][b] = "Tautology";
+            bad[3][b] = h[0]+"="+h[1];
+            b++;
+        }
+    }
+    */
+
+
+
+    @Override public void enterCommand(TestParser.CommandContext ctx) {
             //System.out.println("Here's an emoticon! " + ctx.getText());
         }
-        
+
         @Override public void enterNested(TestParser.NestedContext ctx) {
             //query[count]=ctx.getText();
             //count++;
             //System.out.println("double "+ctx.getText());
         }
-        
-        @Override public void enterLongline(TestParser.LonglineContext ctx) { 
+
+        @Override public void enterLongline(TestParser.LonglineContext ctx) {
             //query[count]=ctx.getText();
             //count++;
             //System.out.println("long "+ctx.getText());
         }
-        
-        @Override public void enterLine(TestParser.LineContext ctx) { 
+
+        @Override public void enterLine(TestParser.LineContext ctx) {
             //query[count]=ctx.getText();
             //count++;
           //  System.out.println("line "+ctx.getText());
         }
-        
+
         @Override public void enterPiggyback(TestParser.PiggybackContext ctx) {
 
                 bad[0][b] = Integer.toString(b+1);
@@ -83,7 +226,6 @@ public class listener extends TestBaseListener {
                 bad[2][b] = "Piggyback";
                 bad[3][b] = ctx.getText();
                 b++;
-
         }
 
     /*
