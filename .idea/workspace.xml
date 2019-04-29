@@ -64,8 +64,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="168" column="5" lean-forward="true" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
+            <state relative-caret-position="150">
+              <caret line="272" column="28" selection-start-line="272" selection-start-column="10" selection-end-line="272" selection-end-column="28" />
               <folding>
                 <element signature="e#958#959#0" expanded="true" />
                 <element signature="e#1006#1007#0" expanded="true" />
@@ -73,10 +73,10 @@
                 <element signature="e#1240#1241#0" expanded="true" />
                 <element signature="e#3822#3823#0" expanded="true" />
                 <element signature="e#3857#3858#0" expanded="true" />
-                <element signature="e#10132#10133#0" expanded="true" />
-                <element signature="e#10168#10169#0" expanded="true" />
-                <element signature="e#10213#10214#0" expanded="true" />
-                <element signature="e#10249#10250#0" expanded="true" />
+                <element signature="e#10076#10077#0" expanded="true" />
+                <element signature="e#10112#10113#0" expanded="true" />
+                <element signature="e#10157#10158#0" expanded="true" />
+                <element signature="e#10193#10194#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -134,6 +134,7 @@
       <find>taut</find>
       <find>infer</find>
       <find>cate</find>
+      <find>System.out.println</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -222,7 +223,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556502690611" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556503719750" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -396,7 +397,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556498999525</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Catches some (but there's one specific tautology that it doesn't like, besides the subtraction one) tautologies.">
+      <created>1556502814670</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1556502814670</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -424,7 +432,7 @@
       <window_info id="Job Explorer" order="9" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49772727" visible="true" weight="0.049668875" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49772727" visible="true" weight="0.117549665" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -490,7 +498,8 @@
     <MESSAGE value="Added verbose option, commented some methods, other small fixes." />
     <MESSAGE value="More comments / small fixes." />
     <MESSAGE value="Listener with beginning code to handle multiple operations in a tautology attack, the current configuration won't allow it easily." />
-    <option name="LAST_COMMIT_MESSAGE" value="Listener with beginning code to handle multiple operations in a tautology attack, the current configuration won't allow it easily." />
+    <MESSAGE value="Catches some (but there's one specific tautology that it doesn't like, besides the subtraction one) tautologies." />
+    <option name="LAST_COMMIT_MESSAGE" value="Catches some (but there's one specific tautology that it doesn't like, besides the subtraction one) tautologies." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -771,8 +780,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="168" column="5" lean-forward="true" selection-start-line="168" selection-start-column="5" selection-end-line="168" selection-end-column="5" />
+        <state relative-caret-position="150">
+          <caret line="272" column="28" selection-start-line="272" selection-start-column="10" selection-end-line="272" selection-end-column="28" />
           <folding>
             <element signature="e#958#959#0" expanded="true" />
             <element signature="e#1006#1007#0" expanded="true" />
@@ -780,10 +789,10 @@
             <element signature="e#1240#1241#0" expanded="true" />
             <element signature="e#3822#3823#0" expanded="true" />
             <element signature="e#3857#3858#0" expanded="true" />
-            <element signature="e#10132#10133#0" expanded="true" />
-            <element signature="e#10168#10169#0" expanded="true" />
-            <element signature="e#10213#10214#0" expanded="true" />
-            <element signature="e#10249#10250#0" expanded="true" />
+            <element signature="e#10076#10077#0" expanded="true" />
+            <element signature="e#10112#10113#0" expanded="true" />
+            <element signature="e#10157#10158#0" expanded="true" />
+            <element signature="e#10193#10194#0" expanded="true" />
           </folding>
         </state>
       </provider>

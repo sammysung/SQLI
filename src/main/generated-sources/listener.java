@@ -105,20 +105,16 @@ public class listener extends TestBaseListener {
         }
 
         public void convert(){
-            System.out.println(nums.length);
             for(int i = 0; i < nums.length; i++)
             {
                 if(!isInteger(nums[i])){
                     check=true;
-                    System.out.println(nums[i]);
-                    System.out.println("Gotcha");
                     break;
                 }
                 if(nums[i] == null) break;
                 num[i] = Integer.parseInt(nums[i]);
                 if(ops[i].equals("+")) {
                     op[i] = '+';
-                    System.out.println(op[i]);
                 }
                 if(ops[i].equals("=")) break;
             }
@@ -137,7 +133,6 @@ public class listener extends TestBaseListener {
                 sum = sum + num[i];
             }
 
-            System.out.println("sum = " + sum);
             return sum;
         }
 
@@ -167,10 +162,7 @@ public class listener extends TestBaseListener {
             String[] h=ctx.getText().split("=");
 
             if(!isInteger(h[0])&&!isInteger(h[1])){
-                if(h[0].trim()==h[1].trim()){
-                    System.out.println("Did it!");
-                    System.out.println(h[0]);
-                    System.out.println(h[1]);
+                if(h[0].trim().equals(h[1].trim())){
                     bad[0][b] = Integer.toString(b+1);
                     bad[1][b] = Integer.toString(count);
                     bad[2][b] = "Tautology";
@@ -180,7 +172,7 @@ public class listener extends TestBaseListener {
                 return;
             }
 
-            System.out.println(ctx.getText());
+            //System.out.println(ctx.getText());
 
             STR stok= new STR(ctx.getText(),"+-=");
             stok.convert();
@@ -204,13 +196,7 @@ public class listener extends TestBaseListener {
                 }
             }
             else {
-                System.out.println("Got it!");
-                System.out.println(h[0]);
-                System.out.println(h[1]);
-                if(h[0].trim()==h[1].trim()){
-                    System.out.println("Did it!");
-                    System.out.println(h[0]);
-                    System.out.println(h[1]);
+                if(h[0].trim().equals(h[1].trim())){
                     bad[0][b] = Integer.toString(b+1);
                     bad[1][b] = Integer.toString(count);
                     bad[2][b] = "Tautology";
