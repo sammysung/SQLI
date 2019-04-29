@@ -36,5 +36,5 @@ _Runs the default options, except that the program will prompt for the user to i
 
 `java -jar frame.jar -ftdow query.txt safe.txt test.txt`
 
-_Runs the Positive Tainting test, while also taking the first argument as the input filename, the second as the safety checking code, and the third as the output filename, while overwriting it without asking if found. Note that **-f** and **-d** run in order of definition, while **-o** will always run last._
+_Takes the first argument as the input filename, the second as the safety checking code, and the third as the output filename, while overwriting it without asking if found. Note that **-f** and **-d** run in order of definition, while **-o** will always run last._
  

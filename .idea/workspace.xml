@@ -2,51 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d02d571a-d3f7-447e-9bd6-d25cd4b5074a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/AlternateEncoding.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/BigQuery.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Illogical.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Inference.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Piggyback.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/StoredProcAsPiggy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/StoredProcedures.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Tautology.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/Union.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/AlternateEncoding.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/BigQuery.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/Illogical.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/Inference.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/Piggyback.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/StoredProcAsPiggy.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/StoredProcedures.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/Tautology.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/Union.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/query/safe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/releases.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/safe.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Gemfile.lock" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_data/navigation.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/ack/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/ack/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/assets/js/_main.js" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/assets/js/_main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/assets/js/plugins/jquery.smooth-scroll.min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/com/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/com/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/dia/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/dia/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/feed.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/purpose/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/purpose/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/query.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/query/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/query/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/readme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/readme/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/sitemap.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/start/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/tools/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/com.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/com.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/query.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/query.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/query.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/start.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/start.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/tools.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tools.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -108,7 +78,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="548">
-              <caret line="213" column="18" lean-forward="true" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
+              <caret line="213" column="18" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
               <folding>
                 <element signature="e#958#959#0" expanded="true" />
                 <element signature="e#1006#1007#0" expanded="true" />
@@ -121,7 +91,7 @@
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="367">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -279,7 +249,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556562927498" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556576697113" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -490,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556554004500</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Updated the website with the new test files, as well as edited some information on others. Added Table of Contents to the setup page, which will eventually be replaced by a new one describing the current setup.&#10;&#10;Also added the proper rule to ignore Gemfile.lock files.">
+      <created>1556563036238</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1556563036238</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -587,7 +564,8 @@
     <MESSAGE value="Fixed the tautology stuff, except for subtraction." />
     <MESSAGE value="Tautologies can now handle subtraction input!" />
     <MESSAGE value="Added newest tests, removed old ones." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added newest tests, removed old ones." />
+    <MESSAGE value="Updated the website with the new test files, as well as edited some information on others. Added Table of Contents to the setup page, which will eventually be replaced by a new one describing the current setup.&#10;&#10;Also added the proper rule to ignore Gemfile.lock files." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated the website with the new test files, as well as edited some information on others. Added Table of Contents to the setup page, which will eventually be replaced by a new one describing the current setup.&#10;&#10;Also added the proper rule to ignore Gemfile.lock files." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -847,7 +825,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/listener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="548">
-          <caret line="213" column="18" lean-forward="true" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
+          <caret line="213" column="18" selection-start-line="213" selection-start-column="18" selection-end-line="213" selection-end-column="18" />
           <folding>
             <element signature="e#958#959#0" expanded="true" />
             <element signature="e#1006#1007#0" expanded="true" />
@@ -858,7 +836,7 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="367">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>

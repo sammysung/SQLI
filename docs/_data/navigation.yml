@@ -5,7 +5,7 @@ main:
   #- title: "About"
   #  url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Getting Started"
-    url: /start/
+    url: /setup/
   - title: "Current Release"
     url: /SQLI.zip
 #  - title: "Sample Posts"
@@ -23,7 +23,7 @@ docs:
       - title: "Releases"
         url: /releases/
       - title: "Getting Started"
-        url: /start/
+        url: /setup/
       - title: "Diagrams"
         url: /dia/
       - title: "Acknowledgements"
@@ -38,6 +38,8 @@ docs:
         url: /query/
       - title: "Tools"
         url: /tools/
+      - title: "Outdated Setup (for reference)"
+        url: /start/
   - title: "Dev Portal"
     children:
       - title: "Repo"
