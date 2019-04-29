@@ -319,7 +319,7 @@
 Because of this, simply double-clicking the JAR will appear to make it crash.
 This also means that the code will only work on Linux, Mac, or Windows (if you take the time to add the proper PATH variable, go to <a href="/SQLI/setup/#Pathing">this page</a> if you need help) from within the respective CLI.</p>
 
-<p>With the integration with CMake as a build utility, rudimentary support for exporting to IDEs have been enabled. While Eclipse is not working as expected so far, Visual Studio solution files have been created and confirmed working.</p>
+<p>Maven works from both a command line interface and from a IDE standpoint, as long as one takes the time to setup the IDE with the proper options. Refer to the <a href="/SQLI/setup/#Config">Configuration section</a> for more help with this.</p>
 
 <h2 id="first-run">First run</h2>
 
@@ -341,9 +341,9 @@ This also means that the code will only work on Linux, Mac, or Windows (if you t
 
 <p><em>Runs the default options, except that the program will prompt for the user to input an output filename during program execution.</em></p>
 
-<p><code class="highlighter-rouge">java -jar frame.jar -ftdow query.txt safe.txt test.txt</code></p>
+<p><code class="highlighter-rouge">java -jar frame.jar -fdow query.txt test safe.txt</code></p>
 
-<p><em>Takes the first argument as the input filename, the second as the safety checking code, and the third as the output filename, while overwriting it without asking if found. Note that <strong>-f</strong> and <strong>-d</strong> run in order of definition, while <strong>-o</strong> will always run last.</em></p>
+<p><em>Takes the first argument as the input filename, the second as the root output filename, and the third as the safe query list, while overwriting it without asking if found. Note that order of the <strong>-f</strong>, <strong>-d</strong>, and <strong>-o</strong> options does not matter; the input name, then the root filename, and then the safe query list file will be read in that order every time.</em></p>
 
 
         
