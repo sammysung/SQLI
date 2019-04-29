@@ -110,45 +110,107 @@ public class launch{
 
         String[] tempQ = listen.getQuery();
         String[][] baqQueries = listen.getBadQuery();
+        String[] tempQuery;
+        String[] tempAttack;
+
         int bqc = listen.getBadQueryCount();
         int tempP, badC, allC=0, i,j,k,revC=0;
         for (i=0; i<allQueries.length;i++){
             if (allQueries[i]!=null){
-                allQueries[i]=allQueries[i].replaceAll("[\\t\\n\\r]+"," ");
+                allQueries[i]=allQueries[i].replaceAll("[\t\n\r]+"," ");
                 allC++;
             }
             if (tempQ[i] != null){
-                tempQ[i]=tempQ[i].replaceAll("[\\t\\n\\r]+"," ");
+                tempQ[i]=tempQ[i].replaceAll("[\t\n\r]+"," ");
             }
         }
-        System.out.printf("   %-5s %-12s  %-17s  %-40s  %s \n", "#", "Query Number","Attack Type", "Attack in Query", "Bad Query");
-        System.out.print( "--".repeat(75) +"\n");
-        doneBad+= String.format("   %-5s %-12s  %-17s  %-40s  %s \n", "#", "Query Number","Attack Type", "Attack in Query", "Bad Query");
-        doneBad+= "--".repeat(75) + "\n";
+        System.out.printf(" %-3s %-12s   %-20s    %-40s  %s \n", "#", "Query Number","Attack Type", "Attack in Query", "Bad Query");
+        System.out.print( "--".repeat(85) +"\n");
+        doneBad+= String.format(" %-3s %-12s   %-20s    %-40s  %s \n", "#", "Query Number","Attack Type", "Attack in Query", "Bad Query");
+        doneBad+= "--".repeat(85) + "\n";
 
 
-        for (badC = 0; badC<bqc; badC++){
+        for (badC = 0; badC<bqc; badC++) {
             tempP = Integer.parseInt(baqQueries[1][badC]);
-            baqQueries[4][badC] = tempQ[tempP-1];
-            for (i=0; i<allQueries.length;i++){
-                if (baqQueries[4][badC].equals(allQueries[i]) ){
-                    tempP=i+1;
+            baqQueries[4][badC] = tempQ[tempP - 1];
+            for (i = 0; i < allQueries.length; i++) {
+                if (baqQueries[4][badC].equals(allQueries[i])) {
+                    tempP = i + 1;
                     break;
                 }
             }
-            System.out.printf("   %-5s      %-7d  %-17s  %-40s  %s \n",
-                    baqQueries[0][badC] ,tempP, baqQueries[2][badC], baqQueries[3][badC], baqQueries[4][badC] );
-            doneBad+=String.format("   %-5s      %-7d  %-17s  %-40s  %s \n",
-                    baqQueries[0][badC] ,tempP, baqQueries[2][badC], baqQueries[3][badC], baqQueries[4][badC] );
+            if (baqQueries[3][badC].length() > 40 && baqQueries[4][badC].length() > 90) {
+                tempAttack = baqQueries[3][badC].split("SELECT",2);
+                if (tempAttack[1].length() <35) {
+                    tempAttack[1] = "SELECT" + tempAttack[1];
+                }
+                else{
+                    tempAttack[0] =  tempAttack[0]+"SELECT" ;
+                }
+
+
+                tempQuery = baqQueries[4][badC].split("SELECT",3);
+                tempQuery[1] = "SELECT" + tempQuery[1];
+                tempQuery[2] = "SELECT" + tempQuery[2];
+                System.out.printf(" %-3s    %-10d %-20s    %-40s  %s \n \t\t\t\t\t\t\t\t\t\t    %-40s   %s \n",
+                        baqQueries[0][badC], tempP, baqQueries[2][badC], tempAttack[0], tempQuery[1],
+                        tempAttack[1], tempQuery[2]);
+                doneBad +=String.format(" %-3s    %-10d %-20s    %-40s  %s \n \t\t\t\t\t\t\t\t\t\t    %-40s   %s \n",
+                        baqQueries[0][badC], tempP, baqQueries[2][badC], tempAttack[0], tempQuery[1],
+                        tempAttack[1], tempQuery[2]);
+
+
+            } else if (baqQueries[3][badC].length() > 40) {
+          //      System.out.println("if else 1");
+                tempAttack = baqQueries[3][badC].split("SELECT",2);
+                if (tempAttack.length ==1 ){
+                    tempAttack = tempAttack[0].split("=",2);
+                    tempAttack[0] = tempAttack[0] + "=";
+                }
+                else if (tempAttack[1].length() <35) {
+                    tempAttack[1] = "SELECT" + tempAttack[1];
+                }
+                else{
+                    tempAttack[0] =  tempAttack[0]+"SELECT" ;
+                }
+                System.out.printf(" %-3s    %-10d %-20s    %-40s  %s  \n  \t\t\t\t\t\t\t\t\t\t\t%-40s  \n",
+                        baqQueries[0][badC], tempP, baqQueries[2][badC], tempAttack[0], baqQueries[4][badC],
+                        tempAttack[1].replaceAll("[\t\n\r]+"," "));
+                doneBad +=String.format(" %-3s    %-10d %-20s    %-40s  %s  \n  \t\t\t\t\t\t\t\t\t\t\t%-40s  \n",
+                        baqQueries[0][badC], tempP, baqQueries[2][badC], tempAttack[0], baqQueries[4][badC],
+                        tempAttack[1].replaceAll("[\t\n\r]+"," "));
+
+
+            }
+            else if (baqQueries[4][badC].length() > 90) {
+                tempQuery = baqQueries[4][badC].split("SELECT",3);
+                tempQuery[1] = "SELECT" + tempQuery[1];
+                tempQuery[2] = "SELECT" + tempQuery[2];
+
+
+                System.out.printf(" %-3s    %-10d %-20s    %-40s  %s  \n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t%s \n",
+                        baqQueries[0][badC], tempP, baqQueries[2][badC], baqQueries[3][badC].replaceAll("[\t\n\r]+"," "),
+                        tempQuery[1], tempQuery[2].replaceAll("[\t\n\r]+"," "));
+                doneBad +=String.format(" %-3s    %-10d %-20s    %-40s  %s  \n \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t%s \n",
+                        baqQueries[0][badC], tempP, baqQueries[2][badC], baqQueries[3][badC].replaceAll("[\t\n\r]+"," "),
+                        tempQuery[1], tempQuery[2].replaceAll("[\t\n\r]+"," "));
+            }
+            else {
+          //      System.out.println("else");
+                System.out.printf(" %-3s    %-10d %-20s    %-40s  %s \n",
+                        baqQueries[0][badC], tempP, baqQueries[2][badC], baqQueries[3][badC], baqQueries[4][badC]);
+                doneBad += String.format(" %-3s    %-10d %-20s    %-40s  %s \n",
+                        baqQueries[0][badC], tempP, baqQueries[2][badC], baqQueries[3][badC], baqQueries[4][badC]);
+            }
+
         }
 
-
-        doneReview += String.format("   %-5s %-12s  %-17s    %s \n", "#", "Query Number","Status", "Query");
-        System.out.printf("\n\n   %-5s %-12s  %-17s    %s \n", "#", "Query Number","Status", "Query");
-        doneReview+= "--".repeat(75) + "\n";
-        System.out.printf("--".repeat(75) + "\n");
+        doneReview += String.format(" %-3s %-12s   %-20s    %s \n", "#", "Query Number","Status", "Query");
+        System.out.printf("\n\n %-3s %-12s   %-20s    %s \n", "#", "Query Number","Status", "Query");
+        doneReview+= "--".repeat(85) + "\n";
+        System.out.printf("--".repeat(85) + "\n");
         String reviewQ;
-        for( i=0; i<30;i++) {
+        for( i=0; i<70;i++) {
             if (tempQ[i] != null) {
                 reviewQ = tempQ[i];
                 for (j = 0; j < badC; j++) {
@@ -160,15 +222,15 @@ public class launch{
                 }
             }
         }
-        for( i=0; i<30;i++) {
+        for( i=0; i<70;i++) {
             if (tempQ[i] != null) {
                 reviewQ = tempQ[i];
                 //         System.out.println("checkall: "+ i + "    "+  reviewQ );
                 for (k = 0; k < allC; k++) {
                     if (reviewQ.equals(allQueries[k])) {
-                        doneReview += String.format("   %-5d      %-7d    %-40s  %s \n",
+                        doneReview += String.format(" %-3s   %-8s     %-20s    %s \n",
                                 revC, k+1, "Review", reviewQ);
-                        System.out.printf("   %-5d      %-7d    %-40s  %s \n",
+                        System.out.printf(" %-3s   %-8s     %-20s    %s \n",
                                 revC+1, k+1, "Review", reviewQ);
                         revC++;
                         //break;
