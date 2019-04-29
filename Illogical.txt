@@ -1,0 +1,30 @@
+SELECT title, content
+FROM posts
+WHERE page='xyz')
+
+SELECT title, content
+FROM posts
+WHERE page='dogs' AND 'a'='a
+
+SELECT title, content
+FROM posts
+WHERE page='dogs' AND 'a'='b'
+
+SELECT title, content
+FROM posts
+WHERE topic='do' 'gs'
+
+SELECT name, description, price
+FROM products
+WHERE category=1 AND 1=2
+UNION
+SELECT username, password, 1
+FROM members
+
+SELECT description
+FROM products
+WHERE name ='z' AND 'a'='b'
+UNION
+SELECT password
+FROM members
+WHERE username='admin'

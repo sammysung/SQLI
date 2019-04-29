@@ -1,0 +1,11 @@
+select Fname, Lname
+from EMPLOYEE
+where Dno=5  '; drop table EMPLOYEE';
+
+select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary > 30000 ';SHUTDOWN; -- ';
+
+select Fname, Lname, Ssn
+from EMPLOYEE,
+where Salary > 30000 ';DELETE TABLE; -- ';

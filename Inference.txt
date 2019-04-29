@@ -1,0 +1,14 @@
+SELECT name, email
+FROM members
+WHERE id=1; IF SYSTEM_USER='sam wood' SELECT 1/0
+ELSE SELECT 5
+
+SELECT name, ssn
+FROM EMPLOYEE
+WHERE name=any; IF USER='wt987654' SELECT 5/0
+THEN SELECT *
+
+SELECT *
+FROM credit_card.table
+WHERE id=any AND SYSTEM_USER='Bryan Arney' THEN SELECT 1/0
+ELSE SELECT 3;

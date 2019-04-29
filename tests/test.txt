@@ -1,7 +1,0 @@
-Dno={1,2,3,4,5}
-Fname={Abby,Scott,John,Jane}
-Lname={Smith,Proctor,Weiss,Turner}
-Ssn={000000000}
-table={EMPLOYEE,DEPARTMENT}
-Dnumber={1,2,3,4,5}
-Salary={*#*}

@@ -1,0 +1,27 @@
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = char(0x45ef);
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = 0xffe;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = U+176e;
+
+select Fname, Lname, Ssn
+from EMPLOYEE
+where Dno = char(u+0021);
+
+SELECT *
+FROM users
+WHERE login= '' AND pass=' ';exec(char(0x73687574646f776e)) '
+
+SELECT *
+FROM users
+WHERE login= '' AND pass=' ';char(0x73687574646f776e) '
+
+SELECT NAME,ID
+FROM SYSOBJECTS
+WHERE NAME = 0x7300790073006F0062006A006500630074;

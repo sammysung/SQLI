@@ -1,7 +1,0 @@
-select Fname, Lname
-from EMPLOYEE
-where Dno=5  '; drop table EMPLOYEE';
-
-select *
-from EMPLOYEE
-where userid = 'abcd' and password = ''; drop table xyz -- '
