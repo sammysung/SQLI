@@ -1,7 +1,7 @@
 ---
 layout: single
 title: Sample Queries
-permalink: /query/
+permalink: /scripts/
 ---
 # Download the files here!
 
