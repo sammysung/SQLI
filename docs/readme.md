@@ -5,16 +5,17 @@ permalink: /readme/
 ---
 
 # Usage
-Structure: `java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [output root filename] [safe file]`
+Structure: 
 
+`java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [output root filename] [safe file]`
 
 **-h**: Print this help message.
 
 **-f**: Enable command line input file naming mode (first argument will be input filename).
 
-**-o**: Enable command line output file naming mode (third argument will be output filename if -f is present, first otherwise).
+**-o**: Enable command line output file naming mode (second argument will be output filename if -f is present, first otherwise).
 
-**-d**: Enables command line safe query list definition (second argument will be safe filename)
+**-d**: Enables command line safe query list definition (third argument will be safe filename if other arguments are present).
 
 **-i**: Enable user input output file naming mode (program will prompt for output filename).
 

@@ -10,6 +10,8 @@ main:
     url: /SQLI.zip
   - title: "CLI Option List"
     url: /readme/
+  - title: "Test Query Collection"
+    url: /query/
 #  - title: "Sample Posts"
 #    url: /year-archive/
 #  - title: "Sample Collections"

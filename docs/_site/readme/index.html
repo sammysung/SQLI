@@ -117,6 +117,8 @@
               <a href="/SQLI.zip" >Current Release</a>
             </li><li class="masthead__menu-item">
               <a href="/readme/" >CLI Option List</a>
+            </li><li class="masthead__menu-item">
+              <a href="/query/" >Test Query Collection</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -322,15 +324,17 @@
       <section class="page__content" itemprop="text">
         
         <h1 id="usage">Usage</h1>
-<p>Structure: <code class="highlighter-rouge">java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [output root filename] [safe file]</code></p>
+<p>Structure:</p>
+
+<p><code class="highlighter-rouge">java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [output root filename] [safe file]</code></p>
 
 <p><strong>-h</strong>: Print this help message.</p>
 
 <p><strong>-f</strong>: Enable command line input file naming mode (first argument will be input filename).</p>
 
-<p><strong>-o</strong>: Enable command line output file naming mode (third argument will be output filename if -f is present, first otherwise).</p>
+<p><strong>-o</strong>: Enable command line output file naming mode (second argument will be output filename if -f is present, first otherwise).</p>
 
-<p><strong>-d</strong>: Enables command line safe query list definition (second argument will be safe filename)</p>
+<p><strong>-d</strong>: Enables command line safe query list definition (third argument will be safe filename if other arguments are present).</p>
 
 <p><strong>-i</strong>: Enable user input output file naming mode (program will prompt for output filename).</p>
 
