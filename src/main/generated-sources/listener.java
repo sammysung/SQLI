@@ -18,8 +18,10 @@ public class listener extends TestBaseListener {
         //String[] tautQuery= new String[queryLimit];
         String[][] bad = new String[5][queryLimit];
         String[] query=new String[queryLimit];
+        String[] storedP = {"CREATE","INSERT","DELETE","SHUTDOWN","UPDATE","DROP"};
 
-        int t=0, s=0, p=0, b=0;
+
+    int t=0, s=0, p=0, b=0;
         int count=0;
 
         public boolean isInteger(String s){
@@ -272,8 +274,19 @@ public class listener extends TestBaseListener {
                 bad[0][b] = Integer.toString(b+1);
                 bad[1][b] = Integer.toString(count);
                 bad[2][b] = "Piggyback";
-                bad[3][b] = ctx.getText();
+                bad[3][b] = ctx.getText().trim();
                 b++;
+
+                for (s=0; s<storedP.length; s++){
+                    if(ctx.getText().toUpperCase().contains(storedP[s])){
+                        bad[0][b] = Integer.toString(b+1);
+                        bad[1][b] = Integer.toString(count);
+                        bad[2][b] = "Stored procedure";
+                        bad[3][b] = storedP[s];
+                        b++;
+                    }
+                }
+
         }
 
     /*
@@ -300,7 +313,7 @@ public class listener extends TestBaseListener {
            bad[0][b] = Integer.toString(b+1);
            bad[1][b] = Integer.toString(count);
            bad[2][b] = "Union";
-           bad[3][b] = ctx.getText();
+           bad[3][b] = ctx.getText().trim();
            b++;
 
         }
@@ -314,7 +327,7 @@ public class listener extends TestBaseListener {
         bad[0][b]= Integer.toString(b+1);
         bad[1][b] = Integer.toString(count);
         bad[2][b] = "Alternative Encoding";
-        bad[3][b] = ctx.getText();
+        bad[3][b] = ctx.getText().trim();
         b++;
     }
 
@@ -322,7 +335,7 @@ public class listener extends TestBaseListener {
         bad[0][b]= Integer.toString(b+1);
         bad[1][b] = Integer.toString(count);
         bad[2][b] = "Inference";
-        bad[3][b] = ctx.getText();
+        bad[3][b] = ctx.getText().trim();
         b++;
     }
 

@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d02d571a-d3f7-447e-9bd6-d25cd4b5074a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_site/releases/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/releases/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/releases.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/releases.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,19 +61,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
+            <state relative-caret-position="272">
               <caret line="25" selection-start-line="25" selection-end-line="25" />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/docs/_config.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3782" />
           </provider>
         </entry>
       </file>
@@ -233,7 +223,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556586420793" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556589430297" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -260,7 +250,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.Tautology">
+  <component name="RunManager" selected="JAR Application.BigQuery">
     <configuration name="BigQuery Verbose" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
       <option name="PROGRAM_PARAMETERS" value="-fdov BigQuery.txt output safe.txt" />
@@ -500,7 +490,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556585442776</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Added old project source code from release V0.1.0 and V0.1.1 to website releases page.">
+      <created>1556586478617</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1556586478617</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TodoView">
@@ -514,7 +511,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="7" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18636364" />
       <window_info id="Structure" order="1" sideWeight="0.502008" side_tool="true" weight="0.17727272" />
@@ -528,7 +524,7 @@
       <window_info id="Job Explorer" order="9" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" weight="0.21688741" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" visible="true" weight="0.15728477" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -604,7 +600,8 @@
     <MESSAGE value="Fixed web navigation?" />
     <MESSAGE value="Added Scripts page to download scripts, can update if any are added." />
     <MESSAGE value="Fixed up navigation options, looking into homepage navigation." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed up navigation options, looking into homepage navigation." />
+    <MESSAGE value="Added old project source code from release V0.1.0 and V0.1.1 to website releases page." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added old project source code from release V0.1.0 and V0.1.1 to website releases page." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -872,16 +869,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="1183">
+          <caret line="280" column="21" lean-forward="true" selection-start-line="280" selection-start-column="21" selection-end-line="280" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/_config.yml">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3782" />
+        <state relative-caret-position="272">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
       </provider>
     </entry>
   </component>
