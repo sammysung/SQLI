@@ -3,17 +3,21 @@ layout: single
 title: Getting Started
 permalink: /start/
 ---
+# Warning!
+
+Some of this information is outdated and does not work with the current Maven setup! This page is still up to learn from, if needed.
+
 # Table of Contents
 
-[Java Setup](#Java Initial Setup)
+- [Java Setup](#Java Initial Setup)
 
-[Pathing Help for Windows](#Pathing)
+- [Pathing Help for Windows](#Pathing)
 
-[Ruby Setup](#Ruby)
+- [Ruby Setup](#Ruby)
 
-[CMake Setup](#CMake Setup)
+- [CMake Setup](#CMake Setup)
 
-[PowerShell for OSX 10.11 and lower](#Powershell on Mac Notes)
+- [PowerShell for OSX 10.11 and lower](#Powershell on Mac Notes)
 
 
 # Overall Notes

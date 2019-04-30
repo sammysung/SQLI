@@ -8,30 +8,24 @@ permalink: /setup/
 
 # Table of Contents
 
-[Java Setup](#Java Initial Setup)
+- [Java Setup](#Java Initial Setup)
 
-[Pathing Help for Windows](#Pathing)
+- [Pathing Help for Windows](#Pathing)
 
-[Antlr4 and Grammar Setup](#antlr4)
+- [Antlr4 and Grammar Setup](#antlr4)
 
-[Maven Setup](#Maven)
+- [Maven Setup](#Maven)
 
-[Configuration](#Config)
+- [Configuration](#Config)
 
+- [Ruby Setup](#Ruby)
 
-
-
-
-[Ruby Setup](#Ruby)
-
-[CMake Setup](#CMake Setup)
-
-[PowerShell for OSX 10.11 and lower](#Powershell on Mac Notes)
+- [PowerShell for OSX 10.11 and lower](#Powershell on Mac Notes)
 
 
 # Overall Notes
 
-Many of the things mentioned here can and have been automated via the use of scripts; if it would prove useful, these scripts can be supplied on this site on request.
+Note that some scripts are outdated due to using different build environments, but are kept for both backwards compatibility and to allow future maintainers to learn from and potentially use the code, if they find a use for it. Anything referencing "**make**", "**CMake**", or "**Ant**" can be assumed to not work with the antlr code, and the same goes for the jar and init commands. The install files options are still the same, however, so feel free to use that for setting up if needed.
 
 Java is the main dependency for this project at this state, though using Powershell as it is (surprisingly) cross-platform is a good idea if you would like to go the script route.
 
@@ -158,6 +152,54 @@ Maven bridges an important gap between the stand-alone framework (which at one p
 You will need a basic Maven install to get started, since this build framework will automatically download need tools and libraries based on the pom.xml. With that said, **DO NOT** mess with the pom.xml without a backup and some knowledge of what you are doing; you cannot make the two projects cooperate without it or another similar build framework, at least as far as I know.
 
 
+
+
+
+
+
+
+## <a name="Ruby"></a> Ruby
+
+Once it is available, if you would like to use the website hosting tools used to make this site, you will need to have Ruby installed and ready for deployment. 
+
+For all platforms, a terminal will need to be opened and the following command ran:
+
+`gem install bundler`
+
+Jekyll, and therefore Github Pages, needs this technology to do anything.
+
+Run this on all platforms to install all needed bundles, check for updates, and begin hosting the page locally:
+
+```Ruby
+bundle install
+bundle update
+bundle exec jekyll serve
+```
+
+If the website info is released, these will be built into scripts for ease of use.
+
+### Linux Install
+
+Run this command in order to install Ruby and the dependencies for Pages:
+
+`sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev ruby-all-dev`
+
+### Windows Install
+
+Download the [RubyInstaller for Windows](https://rubyinstaller.org/) package, and install it. 
+
+This will fix the PATH for you, but if something goes wrong there, the above Java documentation may be able to help.
+
+Powershell or CMD will be able to run Ruby now.
+
+### Mac Install
+
+Do not use the built-in Ruby install for this! While you may not end up causing any problems, most advice I found while creating this guide indicated that this is a terrible idea, since it is quite a pain to revert it if something should go wrong. Instead, you'll want to setup a separate, most likely updated, install of Ruby that is free to be edited as needed.
+
+Installing this updated version, at least from my testing, proved to be a bit cumbersome. [This Stack Overflow page](https://stackoverflow.com/questions/38194032/how-to-update-ruby-version-2-0-0-to-the-latest-version-in-mac-osx-yosemite) offers two ways to approach this problem; while the first, accepted solution is what I got working on my system, and is 100% recommended for anyone planning to seriously use Ruby outside of this project, the second answer, titled “**Brew only solution**” should be attempted first.
+
+Simply put, the first solution installs the whole Ruby development kit, which is unnecessary for simply running the server gem included here. [Homebrew](https://brew.sh/) will handle just what is needed for the script, be more lightweight, and is more versatile 
+in that it can install other apps.
 
 ## <a name="Powershell on Mac Notes"></a> Powershell on Mac Notes
 

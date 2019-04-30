@@ -115,6 +115,8 @@
               <a href="/setup/" >Getting Started</a>
             </li><li class="masthead__menu-item">
               <a href="/SQLI.zip" >Current Release</a>
+            </li><li class="masthead__menu-item">
+              <a href="/readme/" >CLI Option List</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -251,6 +253,14 @@
             
             
 
+            <li><a href="/scripts/" class="">Scripts</a></li>
+          
+            
+            
+
+            
+            
+
             <li><a href="/start/" class="">Outdated Setup (for reference)</a></li>
           
         </ul>
@@ -315,25 +325,33 @@
 
 <h1 id="table-of-contents">Table of Contents</h1>
 
-<p><a href="#Java Initial Setup">Java Setup</a></p>
-
-<p><a href="#Pathing">Pathing Help for Windows</a></p>
-
-<p><a href="#antlr4">Antlr4 and Grammar Setup</a></p>
-
-<p><a href="#Maven">Maven Setup</a></p>
-
-<p><a href="#Config">Configuration</a></p>
-
-<p><a href="#Ruby">Ruby Setup</a></p>
-
-<p><a href="#CMake Setup">CMake Setup</a></p>
-
-<p><a href="#Powershell on Mac Notes">PowerShell for OSX 10.11 and lower</a></p>
+<ul>
+  <li>
+    <p><a href="#Java Initial Setup">Java Setup</a></p>
+  </li>
+  <li>
+    <p><a href="#Pathing">Pathing Help for Windows</a></p>
+  </li>
+  <li>
+    <p><a href="#antlr4">Antlr4 and Grammar Setup</a></p>
+  </li>
+  <li>
+    <p><a href="#Maven">Maven Setup</a></p>
+  </li>
+  <li>
+    <p><a href="#Config">Configuration</a></p>
+  </li>
+  <li>
+    <p><a href="#Ruby">Ruby Setup</a></p>
+  </li>
+  <li>
+    <p><a href="#Powershell on Mac Notes">PowerShell for OSX 10.11 and lower</a></p>
+  </li>
+</ul>
 
 <h1 id="overall-notes">Overall Notes</h1>
 
-<p>Many of the things mentioned here can and have been automated via the use of scripts; if it would prove useful, these scripts can be supplied on this site on request.</p>
+<p>Note that some scripts are outdated due to using different build environments, but are kept for both backwards compatibility and to allow future maintainers to learn from and potentially use the code, if they find a use for it. Anything referencing “<strong>make</strong>”, “<strong>CMake</strong>”, or “<strong>Ant</strong>” can be assumed to not work with the antlr code, and the same goes for the jar and init commands. The install files options are still the same, however, so feel free to use that for setting up if needed.</p>
 
 <p>Java is the main dependency for this project at this state, though using Powershell as it is (surprisingly) cross-platform is a good idea if you would like to go the script route.</p>
 
@@ -454,6 +472,48 @@ rm <span class="nt">-f</span> /tmp/openjdk-11+28_linux-x64_bin.tar.gz
 <p>Maven bridges an important gap between the stand-alone framework (which at one point relied on handwritten parsing to get all information, not just for web crawling and extracting SQL queries from Java code) and the antlr4 libraries. Therefore, without a working Maven install, there is no working project.</p>
 
 <p>You will need a basic Maven install to get started, since this build framework will automatically download need tools and libraries based on the pom.xml. With that said, <strong>DO NOT</strong> mess with the pom.xml without a backup and some knowledge of what you are doing; you cannot make the two projects cooperate without it or another similar build framework, at least as far as I know.</p>
+
+<h2 id="-ruby"><a name="Ruby"></a> Ruby</h2>
+
+<p>Once it is available, if you would like to use the website hosting tools used to make this site, you will need to have Ruby installed and ready for deployment.</p>
+
+<p>For all platforms, a terminal will need to be opened and the following command ran:</p>
+
+<p><code class="highlighter-rouge">gem install bundler</code></p>
+
+<p>Jekyll, and therefore Github Pages, needs this technology to do anything.</p>
+
+<p>Run this on all platforms to install all needed bundles, check for updates, and begin hosting the page locally:</p>
+
+<pre><code class="language-Ruby">bundle install
+bundle update
+bundle exec jekyll serve
+</code></pre>
+
+<p>If the website info is released, these will be built into scripts for ease of use.</p>
+
+<h3 id="linux-install">Linux Install</h3>
+
+<p>Run this command in order to install Ruby and the dependencies for Pages:</p>
+
+<p><code class="highlighter-rouge">sudo apt-get install build-essential patch ruby-dev zlib1g-dev liblzma-dev ruby-all-dev</code></p>
+
+<h3 id="windows-install">Windows Install</h3>
+
+<p>Download the <a href="https://rubyinstaller.org/">RubyInstaller for Windows</a> package, and install it.</p>
+
+<p>This will fix the PATH for you, but if something goes wrong there, the above Java documentation may be able to help.</p>
+
+<p>Powershell or CMD will be able to run Ruby now.</p>
+
+<h3 id="mac-install">Mac Install</h3>
+
+<p>Do not use the built-in Ruby install for this! While you may not end up causing any problems, most advice I found while creating this guide indicated that this is a terrible idea, since it is quite a pain to revert it if something should go wrong. Instead, you’ll want to setup a separate, most likely updated, install of Ruby that is free to be edited as needed.</p>
+
+<p>Installing this updated version, at least from my testing, proved to be a bit cumbersome. <a href="https://stackoverflow.com/questions/38194032/how-to-update-ruby-version-2-0-0-to-the-latest-version-in-mac-osx-yosemite">This Stack Overflow page</a> offers two ways to approach this problem; while the first, accepted solution is what I got working on my system, and is 100% recommended for anyone planning to seriously use Ruby outside of this project, the second answer, titled “<strong>Brew only solution</strong>” should be attempted first.</p>
+
+<p>Simply put, the first solution installs the whole Ruby development kit, which is unnecessary for simply running the server gem included here. <a href="https://brew.sh/">Homebrew</a> will handle just what is needed for the script, be more lightweight, and is more versatile 
+in that it can install other apps.</p>
 
 <h2 id="-powershell-on-mac-notes"><a name="Powershell on Mac Notes"></a> Powershell on Mac Notes</h2>
 

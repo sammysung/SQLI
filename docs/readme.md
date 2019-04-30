@@ -5,7 +5,7 @@ permalink: /readme/
 ---
 
 # Usage
-Structure: `java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [safe file] [output file]`
+Structure: `java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [output root filename] [safe file]`
 
 
 **-h**: Print this help message.
@@ -26,9 +26,9 @@ Structure: `java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [safe file] [o
 
 Example: "`java -jar frame.jar -hfov in.txt out.txt`" will print the help message, read from **in.txt**, output to **out.txt**, show a test selection menu, prompt for a safe file, and be verbose.
 
-"`java -jar frame.jar -fdow query.txt safe.txt test`" will pull input data from **query.txt**, a safe file list from **safe.txt**, output to **test{-type}.txt**, and will overwrite **test{-type}.txt** if it already exists with no prompts.
+"`java -jar frame.jar -fdow query.txt test safe.txt`" will pull input data from **query.txt**, a safe file list from **safe.txt**, output to **test{-type}.txt**, and will overwrite **test{-type}.txt** if it already exists with no prompts.
 
-Arguments **-f** and **-o** do not run in order of appearance; if **-o** is before **-f**, the first argument will still be the input file.
+Note that order of the **-f**, **-d**, and **-o** options does not matter; the input name, then the root filename, and then the safe query list file will be read in that order every time.
 
 By default, with no arguments, the program will prompt for user input to assign the input filename and auto generate an output filename with the scheme "*report-{UTC Local Time}.txt*".
 

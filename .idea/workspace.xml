@@ -2,10 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d02d571a-d3f7-447e-9bd6-d25cd4b5074a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/Make.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/WinMake.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/WinSetup.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/linux.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/osx.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/pwsh.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/scripts.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/scripts.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_data/navigation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/ack/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/ack/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/com/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/com/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/dia/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/dia/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/feed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/com.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/com.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/purpose/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/purpose/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/query/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/query/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/readme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/readme/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/releases/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/releases/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/setup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/setup/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/start/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/tools/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/setup.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/setup.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/start.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/start.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -230,52 +252,6 @@
               <item name="SQLI" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="_data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="_site" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="_site" type="462c0819:PsiDirectoryNode" />
-              <item name="dia" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="_site" type="462c0819:PsiDirectoryNode" />
-              <item name="readme" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="_site" type="462c0819:PsiDirectoryNode" />
-              <item name="releases" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="_site" type="462c0819:PsiDirectoryNode" />
-              <item name="setup" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -284,7 +260,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556580194743" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556581293948" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -523,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556579574909</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Fixed web navigation?">
+      <created>1556581282673</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1556581282673</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
@@ -623,7 +606,8 @@
     <MESSAGE value="Updated the website with the new test files, as well as edited some information on others. Added Table of Contents to the setup page, which will eventually be replaced by a new one describing the current setup.&#10;&#10;Also added the proper rule to ignore Gemfile.lock files." />
     <MESSAGE value="Added new setup page, figured out links between pages, added space for old setup page (for future reference)." />
     <MESSAGE value="Added index files for web" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added index files for web" />
+    <MESSAGE value="Fixed web navigation?" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed web navigation?" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

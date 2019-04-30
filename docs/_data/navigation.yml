@@ -8,6 +8,8 @@ main:
     url: /setup/
   - title: "Current Release"
     url: /SQLI.zip
+  - title: "CLI Option List"
+    url: /readme/
 #  - title: "Sample Posts"
 #    url: /year-archive/
 #  - title: "Sample Collections"
@@ -38,6 +40,8 @@ docs:
         url: /query/
       - title: "Tools"
         url: /tools/
+      - title: "Scripts"
+        url: /scripts/
       - title: "Outdated Setup (for reference)"
         url: /start/
   - title: "Dev Portal"

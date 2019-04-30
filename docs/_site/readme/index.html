@@ -115,6 +115,8 @@
               <a href="/setup/" >Getting Started</a>
             </li><li class="masthead__menu-item">
               <a href="/SQLI.zip" >Current Release</a>
+            </li><li class="masthead__menu-item">
+              <a href="/readme/" >CLI Option List</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -251,6 +253,14 @@
             
             
 
+            <li><a href="/scripts/" class="">Scripts</a></li>
+          
+            
+            
+
+            
+            
+
             <li><a href="/start/" class="">Outdated Setup (for reference)</a></li>
           
         </ul>
@@ -312,7 +322,7 @@
       <section class="page__content" itemprop="text">
         
         <h1 id="usage">Usage</h1>
-<p>Structure: <code class="highlighter-rouge">java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [safe file] [output file]</code></p>
+<p>Structure: <code class="highlighter-rouge">java -jar frame.jar [-{h,f,o,d,i,v,q,w}] [input file] [output root filename] [safe file]</code></p>
 
 <p><strong>-h</strong>: Print this help message.</p>
 
@@ -332,9 +342,9 @@
 
 <p>Example: “<code class="highlighter-rouge">java -jar frame.jar -hfov in.txt out.txt</code>” will print the help message, read from <strong>in.txt</strong>, output to <strong>out.txt</strong>, show a test selection menu, prompt for a safe file, and be verbose.</p>
 
-<p>“<code class="highlighter-rouge">java -jar frame.jar -fdow query.txt safe.txt test</code>” will pull input data from <strong>query.txt</strong>, a safe file list from <strong>safe.txt</strong>, output to <strong>test{-type}.txt</strong>, and will overwrite <strong>test{-type}.txt</strong> if it already exists with no prompts.</p>
+<p>“<code class="highlighter-rouge">java -jar frame.jar -fdow query.txt test safe.txt</code>” will pull input data from <strong>query.txt</strong>, a safe file list from <strong>safe.txt</strong>, output to <strong>test{-type}.txt</strong>, and will overwrite <strong>test{-type}.txt</strong> if it already exists with no prompts.</p>
 
-<p>Arguments <strong>-f</strong> and <strong>-o</strong> do not run in order of appearance; if <strong>-o</strong> is before <strong>-f</strong>, the first argument will still be the input file.</p>
+<p>Note that order of the <strong>-f</strong>, <strong>-d</strong>, and <strong>-o</strong> options does not matter; the input name, then the root filename, and then the safe query list file will be read in that order every time.</p>
 
 <p>By default, with no arguments, the program will prompt for user input to assign the input filename and auto generate an output filename with the scheme “<em>report-{UTC Local Time}.txt</em>”.</p>
 
