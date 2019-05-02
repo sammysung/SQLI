@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Tools used
+title: Tools Used
 permalink: /tools/
 --- 
 # List of tools used for development

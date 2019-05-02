@@ -1,0 +1,126 @@
+##################################
+1.   General Information
+2.   CMake Usage
+3.   Program Usage
+4.   Extra Notes
+##################################
+
+##################################
+1.   General Information
+##################################
+
+	This codebase is the baseline development environment for creating a SQL injection attacks scanning tool, intended for use by
+researchers and database administrators. To use the basic features of this codebase, the relevant CMake library must be installed 
+for your system; however, the tool itself only requires an up-to-date Java Development Kit installed for your system.
+
+	The scripts included in the "scripts" folder are designed to be ran directly in the folder they reside in, and therefore should
+not be moved, or they will cease to function properly. As organized, all platforms recognize the relative pathing used to move
+within scripts, and therefore can be easily ported from system to system.
+
+	For more in-depth information on specific uses of the program, design goals, and setup information, please visit the site below:
+
+https://sammysung.github.io/SQLI/
+
+##################################
+2.   CMake Usage
+##################################
+
+    CMake is an open-source makefile solution primarily designed to create consistent cross-platform makefiles; while the 
+solution is focused on the C language, it offers support for creating Java .JAR files, support which this SQLI project is 
+relient on. Our use of CMake is focused on the cross-plaftorm and scriptable testing support offered by the project. In 
+order to run the make commands with this project, CMake must be installed and ideally set in your PATH variable for the 
+system. The site listed above will help you get CMake installed if it is not present on your system, or there are scripts
+in the repo that will do this for you.
+
+    Once CMake is installed, you will be able to run one of the provided scripts in the "Make" or "WinMake" folders to 
+create the proper CMake commands for the OS in use. Java must be installed for this particular project to work. If you do
+not have both of these installed, you may use the following scripts to automatically setup up the dependencies and package 
+managers to keep them updated:
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+# Windows
+
+	scripts/pwsh/choco_lite.ps1
+	
+# Linux
+
+	scripts/linux/install_lite.sh
+	
+# Mac OSX
+
+	scripts/osx/brew_lite.command
+	
+-------------------------------------------------------------------------------------------------------------------------------
+	
+	If you cannot install package managers for whatever reason, the site above has instructions to help you get started with 
+this.
+
+	Now, before you run the scripts to run CMake, there is an option in CMakeLists.txt that you should take in consideration.
+This project is designed with 3 different levels of setup dependency throughness, as follows below:
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+# Lite  -  set(Type "lite")
+
+	This is the most bare-bones install, installing only CMake and Java using the platform-specific package manager.
+	Windows does have one extra install, mingw, that simulates various functions of a Unix terminal. This is used 
+	to supplement the native NMake libraries, since it would not work with CMake in our tests.
+	
+# Standard  -  set(Type "stand")
+
+	Designed to provide the most balanced install when comparing download overhead and flexibilty; will install everything
+	included in the Lite package, as well as Visual Studio Code on Linux and Mac OSX platforms, and Visual Studio Community
+	2017 with Native C and Unix C packages included. Also included is the required Ruby libraries for each system in order 
+	to run a local copy of the development website, should you wish to test/use some functionality there.
+	Powershell in also included, so there is a consistent compiling method available to all OS' (some code is still Windows
+	specific here for the install scripts).
+	This install is recommended if you already have CMake and Java ready for use.
+	
+# Full  -  set(Type "full")
+
+	Use this if you are testing cross-plaftorm functionality or wish to setup projects for other IDEs that are not directly
+	supported with this release. This will install everything that the Standard install covers, as well as the Intellj and 
+	Eclipse IDEs for testing, as well as both Visual Studio Community 2017 and Visual Studio Code for Windows.
+	For the most part, this is redundant, but will allow one to test the built-in export functions for Eclipse, or
+	manually import the project into their desired IDE.
+	
+-------------------------------------------------------------------------------------------------------------------------------
+	
+	In order to set these parameters, edit the line 'set(Type "stand")' to match the line next to the level you wish to use.
+Once this is done, run the following scripts according to your system:
+
+-------------------------------------------------------------------------------------------------------------------------------
+
+# Windows
+
+	For Makefile usage: scripts/WinMake/makeM.ps1
+	For Visual Studio usage: scripts/WinMake/makeV.ps1
+	
+# Linux
+
+	scripts/Make/lmake.sh
+	
+# Mac OSX
+
+	scripts/Make/omake.command
+	
+-------------------------------------------------------------------------------------------------------------------------------
+
+	Any other scripts in the Make or WinMake directories are in the test phase due to errors; use at your own risk.
+As they all create seperate directories, this will not cause damage, but the files created likely will not work.
+
+##################################
+3.   Program Usage
+##################################
+
+	For any first run, the command "java -jar frame.jar -hq" should be used to see the help menu and exit out of the program.
+This will cover the main usage of the program, but if this proves insufficent for your needs, the website referened above has a 
+section dedicated to usage and a section for examples, as well as an example of well-formed test file formats.
+
+##################################
+4.   Extra Notes
+##################################
+
+	Please let us know if there is any usability feature you would like reworked or added; while the tool refinement phase of the
+project is over for now, any suggestions that can be accomplished when there is downtime will be considered.

@@ -2,7 +2,61 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d02d571a-d3f7-447e-9bd6-d25cd4b5074a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/docs/PleaseRead!.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/branch.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/docs.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/frame.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/instr.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/maven_setup.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/setup_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/setup_2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/setup_3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/setup_3b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/setup_4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/setup_4b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/setup_5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/setup_5b.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maven.command" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/maven.ps1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BigQuery.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BigQuery.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Please Read!.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/SQLI.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_data/navigation.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_data/navigation.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/SQLI.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/ack/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/ack/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/com/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/com/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/dia/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/dia/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/purpose/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/purpose/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/query/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/query/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/readme/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/readme/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/releases/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/releases/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/setup/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/setup/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/sitemap.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/sitemap.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/start/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/start/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/_site/tools/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/_site/tools/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/linux.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/linux.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/osx.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/osx.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/pwsh.zip" beforeDir="false" afterPath="$PROJECT_DIR$/docs/pwsh.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/setup.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/setup.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/start.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/start.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tools.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tools.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/linux/install_full.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/linux/install_full.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/linux/install_lite.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/linux/install_lite.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/linux/install_stand.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/linux/install_stand.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/linux/maven.sh" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/linux/maven.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/osx/brew_full.command" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/osx/brew_full.command" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/osx/brew_lite.command" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/osx/brew_lite.command" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/osx/brew_stand.command" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/osx/brew_stand.command" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/osx/maven.command" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/osx/maven.command" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pwsh/maven.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pwsh/maven.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pwsh/winInstall_full.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pwsh/winInstall_full.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pwsh/winInstall_lite.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pwsh/winInstall_lite.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/scripts/pwsh/winInstall_stand.ps1" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/pwsh/winInstall_stand.ps1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/MathParser.org-mXparser-v.4.2.0-jdk.1.10.jar" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -18,80 +72,46 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/scripts/pwsh/winInstall_lite.ps1">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1785">
-              <caret line="119" column="36" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
+            <state relative-caret-position="30">
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/antlr4/Test.g4">
+        <entry file="file://$PROJECT_DIR$/scripts/pwsh/winInstall_full.ps1">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+            <state relative-caret-position="255">
+              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/generated-sources/visitor.java">
+        <entry file="file://$PROJECT_DIR$/maven.command">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-              <folding>
-                <element signature="e#1443#1444#0" expanded="true" />
-                <element signature="e#1475#1476#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+        <entry file="file://$PROJECT_DIR$/maven.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+            <state relative-caret-position="30">
+              <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/generated-sources/launch.java">
+        <entry file="file://$PROJECT_DIR$/maven.ps1">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="244" column="26" selection-start-line="244" selection-start-column="26" selection-end-line="244" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tautology.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/BigQuery.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
-              <caret line="140" column="10" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/generated-sources/backend.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret column="35" selection-start-column="35" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -102,6 +122,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="PowerShell File" />
       </list>
     </option>
   </component>
@@ -149,6 +170,21 @@
         <option value="$PROJECT_DIR$/maven.sh" />
         <option value="$PROJECT_DIR$/src/main/generated-sources/listener.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/BigQuery.txt" />
+        <option value="$PROJECT_DIR$/scripts/linux/maven.sh" />
+        <option value="$PROJECT_DIR$/scripts/osx/maven.command" />
+        <option value="$PROJECT_DIR$/scripts/pwsh/maven.ps1" />
+        <option value="$PROJECT_DIR$/scripts/pwsh/winInstall_full.ps1" />
+        <option value="$PROJECT_DIR$/scripts/osx/brew_full.command" />
+        <option value="$PROJECT_DIR$/scripts/linux/install_full.sh" />
+        <option value="$PROJECT_DIR$/scripts/osx/brew_lite.command" />
+        <option value="$PROJECT_DIR$/scripts/pwsh/winInstall_lite.ps1" />
+        <option value="$PROJECT_DIR$/scripts/pwsh/winInstall_stand.ps1" />
+        <option value="$PROJECT_DIR$/scripts/osx/brew_stand.command" />
+        <option value="$PROJECT_DIR$/scripts/linux/install_stand.sh" />
+        <option value="$PROJECT_DIR$/scripts/linux/install_lite.sh" />
+        <option value="$PROJECT_DIR$/maven.command" />
+        <option value="$PROJECT_DIR$/maven.ps1" />
       </list>
     </option>
   </component>
@@ -176,9 +212,9 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="44" />
-    <option name="width" value="812" />
-    <option name="height" value="475" />
+    <option name="x" value="4" />
+    <option name="width" value="902" />
+    <option name="height" value="484" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -187,6 +223,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -194,33 +231,14 @@
               <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
               <item name="SQLI" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SQLI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SQLI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556591487470" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556836494060" />
     <property name="jdk.selected.PLUGIN_MODULE" value="IntelliJ IDEA Community Edition IC-183.5912.21" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/BigQueryList.txt" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -233,8 +251,8 @@
       <recent name="$PROJECT_DIR$/src/main/generated-sources" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/generated-sources" />
       <recent name="$PROJECT_DIR$/antlr-output" />
+      <recent name="$PROJECT_DIR$/src/main/generated-sources" />
       <recent name="$PROJECT_DIR$/src/lib" />
       <recent name="$PROJECT_DIR$" />
     </key>
@@ -251,10 +269,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JAR Application.BigQuery">
+  <component name="RunManager" selected="JAR Application.BigQuery Interactive Verbose">
+    <configuration name="BigQuery Interactive Verbose" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
+      <option name="PROGRAM_PARAMETERS" value="-fdivw BigQuery.txt safe.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2" />
+    </configuration>
     <configuration name="BigQuery Verbose" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
-      <option name="PROGRAM_PARAMETERS" value="-fdov BigQuery.txt output safe.txt" />
+      <option name="PROGRAM_PARAMETERS" value="-fdovw BigQuery.txt output safe.txt" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
@@ -268,33 +294,48 @@
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <method v="2" />
     </configuration>
-    <configuration name="BigQueryList Safe" type="JarApplication" factoryName="JAR Application">
+    <configuration name="Default" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
-      <option name="PROGRAM_PARAMETERS" value="-fd BigQueryList.txt safe.txt" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <method v="2" />
     </configuration>
-    <configuration name="Help" type="JarApplication" factoryName="JAR Application">
+    <configuration name="Illogical" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
-      <option name="PROGRAM_PARAMETERS" value="-hq" />
+      <option name="PROGRAM_PARAMETERS" value="-fd Illogical.txt safe.txt" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <method v="2" />
     </configuration>
-    <configuration name="Output" type="JarApplication" factoryName="JAR Application">
+    <configuration name="Inference" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
-      <option name="PROGRAM_PARAMETERS" value="-fdi BigQueryList.txt safe.txt " />
+      <option name="PROGRAM_PARAMETERS" value="-fd Inference.txt safe.txt" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <method v="2" />
     </configuration>
-    <configuration name="Query Safe" type="JarApplication" factoryName="JAR Application">
+    <configuration name="Piggyback" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
-      <option name="PROGRAM_PARAMETERS" value="-fd query.txt safe.txt" />
+      <option name="PROGRAM_PARAMETERS" value="-fd Piggyback.txt safe.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Stored Procedure / Piggyback" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
+      <option name="PROGRAM_PARAMETERS" value="-fd StoredProcAsPiggy.txt safe.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Stored Procedure" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
+      <option name="PROGRAM_PARAMETERS" value="-fd StoredProcedure.txt safe.txt" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
@@ -303,6 +344,14 @@
     <configuration name="Tautology" type="JarApplication" factoryName="JAR Application">
       <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
       <option name="PROGRAM_PARAMETERS" value="-fd Tautology.txt safe.txt" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Union" type="JarApplication" factoryName="JAR Application">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/frame.jar" />
+      <option name="PROGRAM_PARAMETERS" value="-fd Union.txt safe.txt" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
@@ -337,13 +386,17 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="JAR Application.Help" />
-      <item itemvalue="JAR Application.Query Safe" />
-      <item itemvalue="JAR Application.BigQueryList Safe" />
+      <item itemvalue="JAR Application.Inference" />
+      <item itemvalue="JAR Application.Union" />
       <item itemvalue="JAR Application.BigQuery" />
+      <item itemvalue="JAR Application.Piggyback" />
+      <item itemvalue="JAR Application.Illogical" />
       <item itemvalue="JAR Application.Tautology" />
+      <item itemvalue="JAR Application.Stored Procedure / Piggyback" />
+      <item itemvalue="JAR Application.Stored Procedure" />
       <item itemvalue="JAR Application.BigQuery Verbose" />
-      <item itemvalue="JAR Application.Output" />
+      <item itemvalue="JAR Application.BigQuery Interactive Verbose" />
+      <item itemvalue="JAR Application.Default" />
       <item itemvalue="Maven.SQLI [clean,compile,package,exec:java]" />
     </list>
   </component>
@@ -505,7 +558,14 @@
       <option name="project" value="LOCAL" />
       <updated>1556589535678</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Cleanup, to make repo a little smaller.">
+      <created>1556591588911</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1556591588911</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -519,8 +579,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="732" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.18636364" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49799198" visible="true" weight="0.13636364" />
       <window_info id="Structure" order="1" sideWeight="0.502008" side_tool="true" weight="0.17727272" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -532,13 +593,13 @@
       <window_info id="Job Explorer" order="9" weight="0.32954547" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" visible="true" weight="0.049668875" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49772727" weight="0.95033115" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39900663" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294702" />
       <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924242" weight="0.3294702" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49924242" weight="0.330033" />
       <window_info anchor="bottom" id="Tool Output" order="9" weight="0.3294702" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50151515" side_tool="true" weight="0.95033115" />
       <window_info anchor="bottom" id="Console" order="11" />
@@ -548,7 +609,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.15227273" />
+      <window_info anchor="right" id="Maven" order="3" visible="true" weight="0.31742424" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="6" />
@@ -610,7 +671,8 @@
     <MESSAGE value="Fixed up navigation options, looking into homepage navigation." />
     <MESSAGE value="Added old project source code from release V0.1.0 and V0.1.1 to website releases page." />
     <MESSAGE value="Pushing up Ram's changes, pull was taking too long." />
-    <option name="LAST_COMMIT_MESSAGE" value="Pushing up Ram's changes, pull was taking too long." />
+    <MESSAGE value="Cleanup, to make repo a little smaller." />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleanup, to make repo a little smaller." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -631,154 +693,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/resources/META-INF/plugin.xml" />
-    <entry file="file://$PROJECT_DIR$/report-2019-04-27T16-13-34.959416.txt" />
-    <entry file="file://$PROJECT_DIR$/report-2019-04-27T16-11-59.087478.txt" />
-    <entry file="jar://$PROJECT_DIR$/frame.jar!/licenses/extreme.indiana.edu.license.TXT">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/frame.jar!/licenses/javolution.license.TXT">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/frame.jar!/licenses/thoughtworks.TXT">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/report-2019-04-27T16-47-18.470131.txt" />
-    <entry file="file://$PROJECT_DIR$/output.txt" />
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="438" column="68" selection-start-line="438" selection-start-column="68" selection-end-line="438" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assembly/jar.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/safe.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BigQueryList.txt" />
-    <entry file="file://$PROJECT_DIR$/BigQueryList_Numbered.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/Test.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/Test.form" />
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/GUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/GUI.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/antlr-output/query.txt" />
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/driver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="111" column="24" selection-start-line="111" selection-start-column="24" selection-end-line="111" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/list.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-          <folding>
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#366#367#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
-            <element signature="e#795#796#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#951#952#0" expanded="true" />
-            <element signature="e#979#980#0" expanded="true" />
-            <element signature="e#1035#1036#0" expanded="true" />
-            <element signature="e#1062#1063#0" expanded="true" />
-            <element signature="e#1109#1110#0" expanded="true" />
-            <element signature="e#1145#1146#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1223#1224#0" expanded="true" />
-            <element signature="e#1273#1274#0" expanded="true" />
-            <element signature="e#1301#1302#0" expanded="true" />
-            <element signature="e#1354#1355#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#1475#1476#0" expanded="true" />
-            <element signature="e#1535#1536#0" expanded="true" />
-            <element signature="e#1563#1564#0" expanded="true" />
-            <element signature="e#1634#1635#0" expanded="true" />
-            <element signature="e#1662#1663#0" expanded="true" />
-            <element signature="e#1725#1726#0" expanded="true" />
-            <element signature="e#1753#1754#0" expanded="true" />
-            <element signature="e#1816#1817#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#1942#1943#0" expanded="true" />
-            <element signature="e#1969#1970#0" expanded="true" />
-            <element signature="e#2035#2036#0" expanded="true" />
-            <element signature="e#2062#2063#0" expanded="true" />
-            <element signature="e#2186#2187#0" expanded="true" />
-            <element signature="e#2213#2214#0" expanded="true" />
-            <element signature="e#2263#2264#0" expanded="true" />
-            <element signature="e#2287#2288#0" expanded="true" />
-            <element signature="e#2341#2342#0" expanded="true" />
-            <element signature="e#2365#2366#0" expanded="true" />
-            <element signature="e#2429#2430#0" expanded="true" />
-            <element signature="e#2456#2457#0" expanded="true" />
-            <element signature="e#2529#2530#0" expanded="true" />
-            <element signature="e#2556#2557#0" expanded="true" />
-            <element signature="e#2633#2634#0" expanded="true" />
-            <element signature="e#2660#2661#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="109" selection-start-line="2" selection-start-column="109" selection-end-line="2" selection-end-column="109" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/pkg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="120" selection-start-line="2" selection-start-column="120" selection-end-line="2" selection-end-column="120" />
-          <folding>
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#573#574#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/read.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="62" selection-start-line="4" selection-start-column="62" selection-end-line="4" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/taint.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/prog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="32" column="71" selection-start-line="32" selection-start-column="71" selection-end-line="32" selection-end-column="71" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/build.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -790,14 +704,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/antlr-output/TestBaseListener.java" />
-    <entry file="file://$PROJECT_DIR$/maven.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/antlr-output/BigQuery.txt" />
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/frame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1965">
@@ -812,48 +718,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1785">
           <caret line="119" column="36" selection-start-line="119" selection-start-column="36" selection-end-line="119" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/antlr4/Test.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/visitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
-          <folding>
-            <element signature="e#1443#1444#0" expanded="true" />
-            <element signature="e#1475#1476#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tautology.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BigQuery.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="140" column="10" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/backend.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -875,17 +739,261 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2306">
+          <caret line="438" column="38" selection-start-line="438" selection-start-column="38" selection-end-line="438" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/antlr_4_7_2_complete.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/BigQuery.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-840">
+          <caret line="13" column="25" lean-forward="true" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
+        <state relative-caret-position="397">
           <caret line="27" column="11" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/visitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <element signature="e#1443#1444#0" expanded="true" />
+            <element signature="e#1475#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/generated-sources/backend.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="23" column="34" selection-start-line="23" selection-start-column="34" selection-end-line="23" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/Tautology.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr4/Test.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="42" selection-start-line="72" selection-start-column="42" selection-end-line="72" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tautology.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/Illogical.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/Inference.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/Piggyback.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/StoredProcAsPiggy.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/StoredProcedures.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/antlr-output/Union.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/BigQuery.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/osx/maven.command">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/pwsh/maven.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/pwsh/help_lite.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/pwsh/choco_lite.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="44" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/osx/brew_full.command">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/osx/jar.command">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/osx/gem.command">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/linux/maven.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/linux/jar.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/linux/init.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/linux/gem.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Make/emake.command">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Make/emake.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Make/lmake.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/Make/omake.command">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/pwsh/winInstall_stand.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/pwsh/winInstall_lite.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="1" selection-end-line="2" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/osx/brew_stand.command">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/linux/install_full.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="117" selection-start-line="2" selection-start-column="117" selection-end-line="2" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/WinSetup/setup.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/generated-sources/launch.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="244" column="26" selection-start-line="244" selection-start-column="26" selection-end-line="244" selection-end-column="26" />
+        <state relative-caret-position="717">
+          <caret line="218" column="50" selection-start-line="218" selection-start-column="50" selection-end-line="218" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/WinSetup/winInstall.bat">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/linux/install_lite.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/linux/install_stand.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="118" selection-start-line="2" selection-start-column="118" selection-end-line="2" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/osx/brew_lite.command">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" lean-forward="true" selection-start-line="2" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven.command">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="35" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/pwsh/winInstall_full.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/maven.ps1">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="35" selection-start-column="35" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -947,6 +1055,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -966,7 +1075,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>antlr-4.7.2-complete</last-edited>
+          <last-edited>Maven: backport-util-concurrent:backport-util-concurrent:3.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -977,5 +1086,8 @@
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="" />
   </component>
 </project>

@@ -149,14 +149,97 @@ and you should be set.
 
 Maven bridges an important gap between the stand-alone framework (which at one point relied on handwritten parsing to get all information, not just for web crawling and extracting SQL queries from Java code) and the antlr4 libraries. Therefore, without a working Maven install, there is no working project.
 
-You will need a basic Maven install to get started, since this build framework will automatically download need tools and libraries based on the pom.xml. With that said, **DO NOT** mess with the pom.xml without a backup and some knowledge of what you are doing; you cannot make the two projects cooperate without it or another similar build framework, at least as far as I know.
+You will need a basic Maven install to get started, since this build framework will automatically download needed tools and libraries based on the pom.xml. With that said, **DO NOT** mess with the pom.xml without a backup and some knowledge of what you are doing; you cannot make the two projects cooperate without it or another similar build framework, at least as far as I know.
+
+For all OSes, if you are not planning/cannot use a package manager, [this site here](https://www.baeldung.com/install-maven-on-windows-linux-mac) will provide basic setup instructions no matter what kind of system you run.
+
+### Windows
+
+The install scripts with the project include the Chocolately method of installing Maven, but if you want to do it manually, try this website out:
+
+[Manual Maven Setup](https://docs.wso2.com/display/IS323/Installing+Apache+Maven+on+Windows)
+
+Chocolately will take care of your PATH for you, but the site also shows you how to set it up properly.
+
+### Linux
+
+`sudo apt install maven`
+
+works for any Ubuntu derivative, and similar commands for different distributions should work, as well.
+
+If for some reason that won't work, the source files are available here:
+
+[Maven Source Files](http://maven.apache.org/download.cgi)
+
+### Mac OSX
+
+`brew install maven`
+
+works for Homebrew users. Otherwise, the setup is much the same as the source file method described up above in the main header and the "Linux" section. There is apparently problems with the default High Sierra install, so be wary of that and follow Baeldungs instructions to avoid that.
+
+## <a name="Config"></a> Configuration
+
+With all of the major tools setup, you can now work in the command line on the main project with no issues! However, you may prefer to work with an IDE for the extra features they bring, and even if you don't, the config options offered can reduce the need for scripts to perform common actions. The following setups are for Intellij, but might be applicable to other IDEs with some work/luck.
+
+### Initial Setup
+
+Once you first pull down the repo (especially if you pull it straight from Github), you may notice that the default project directory is set to the 
+
+`{SQLI directory}/src/main` or `{SQLI directory}\src\main`
+
+directory; this is a problem, since all the default locations for everything is at the root of the entire project. You'll need to fix this by adding a new module in your Project Structure screen (File > Project Structure or Ctrl+Alt+Shift+S, then the Module tab, and the "plus" sign there). It should have the content root as your root directory, and sources in the src/main/generated-sources location, as shown in the picture below:
+
+![Intellij Root Setup](../setup_1.png "Root Setup")
+
+You should be able to delete the old one if everything goes well. I've also found that dropping the files into a new project seems to sidestep this issue, if it's still giving you trouble.
+
+### Maven Lifecycle
+
+The next thing you'll want to do is make sure that the Maven sidebar on the right side of the screen has detected your pom.xml; either hitting the "refresh" icon to have Intellij scan again or manually adding with the "plus" sign might be necessary if you can't get it up and running. It should look a little something like this once it's done:
+
+![Maven Lifecycle Setup](../maven_setup.png "Lifecycle Setup")
+
+This will allow you to easily run individual Maven tasks, which may make debugging any Maven issues much less tedious for you. Just click on the one you want and hit the green "play" button in the Maven sidebar.
 
 
+### Test Configs
+
+While you can most certainly integrate actual JUnit tests into Maven projects, we did not get that fair in our project, and cannot comment on that. However, for "hand-testing", so to speak, there is the option to setup different configurations of running the frame.jar once you have compilied it. To take a look at them, go to where the "BigQuery Interactive Verbose" option is in the below screenshot:
+
+![Configs Setup](../setup_2.png "Individual Configs Setup")
+
+First off, you must hit the plus sign and select "JAR Application" to get the proper items to shown up, and then you can input the proper configuration information. For example, I've setup the framework to run with the 
+
+- "CLI input filename" -f
+- "CLI safe query filename" -d
+- "prompt user for output filename" -i
+- "verbose output" -v
+- "overwrite any output files without prompting" -w
+
+flags set, as well as the input filename and safe query filename, in that order. The picture below shows this setup to run everytime I click the green button shown in the last picture, and I can pick the other examples once setup using the dropdown:
+
+![BigQuery Interactive Setup](../setup_3.png "Interactive Setup")
+
+![BigQuery Interactive Setup Zoom](../setup_3b.png "Interactive Setup Zoom")
 
 
+As a different example using the same input and safe query, but setup to run the "CLI output root filename" flag as well, including the output filename inbetween the two other filenames:
 
+![BigQuery Verbose Setup](../setup_4.png "Verbose Setup")
 
+![BigQuery Verbose Setup Zoom](../setup_4b.png "Verbose Setup Zoom")
 
+These two, and the help doc on the repo/website/running the -h command will help you make the CLI work as efficiently as possible. However, besides just running the jar with various options, you can also configure presets for Maven to run, just in case you need different options to run for whatever reason. I personally only used one setup,
+
+`mvn clean compile package exec:java`
+
+but that doesn't mean that you have to. Below is how to set that up in Maven to work with the dropdown menus like the JAR application:
+
+![Maven Dropdown Setup](../setup_5.png "Maven Dropdown Setup")
+
+![Maven Dropdown Setup Zoom](../setup_5b.png "Maven Dropdown Setup Zoom")
+
+This should be enough to get you going with some easy-to-use manual testing of features, and even just reduce the amount you type by using the tools available to you. Keep in mind that all of the program install scripts can install Intellij for you; it's now in every level of the setup. Or you can set it up manually, your call.
 
 ## <a name="Ruby"></a> Ruby
 

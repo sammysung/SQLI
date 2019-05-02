@@ -2,5 +2,4 @@
 
 cd ..
 cd ..
-mvn clean compile package
-cp target/frame.jar .
+mvn clean compile package exec:java

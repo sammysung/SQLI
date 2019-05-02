@@ -6,8 +6,8 @@ main:
   #  url: https://mmistakes.github.io/minimal-mistakes/about/
   - title: "Getting Started"
     url: /setup/
-  - title: "Current Release"
-    url: /SQLI.zip
+  - title: "Current Executable Release"
+    url: /frame.jar
   - title: "CLI Option List"
     url: /readme/
   - title: "Test Query Collection"
@@ -24,7 +24,9 @@ docs:
     children:
       - title: "Purpose"
         url: /purpose/
-      - title: "Releases"
+      - title: "Current Executable Release"
+        url: /frame.jar
+      - title: "Source Releases"
         url: /releases/
       - title: "Getting Started"
         url: /setup/
@@ -50,8 +52,10 @@ docs:
     children:
       - title: "Repo"
         url: https://github.com/sammysung/SQLI
-      - title: "Wiki"
-        url: https://github.com/sammysung/SQLI/wiki
+      #- title: "Wiki"
+      #  url: https://github.com/sammysung/SQLI/wiki
+      - title: "Branch Info"
+        url: /branch/
   
         
 #- name: Home

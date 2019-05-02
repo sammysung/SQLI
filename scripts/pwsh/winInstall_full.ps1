@@ -15,4 +15,5 @@ choco install mingw -y
 choco install vim -y
 choco install msys2 -y
 choco install vscode -y
+choco install maven -y
 refreshenv
