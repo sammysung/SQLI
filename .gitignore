@@ -5,6 +5,7 @@
 /**/target
 /**/test-output
 /**/antlr-output
+/**/.idea
 
 # Log file
 *.log
