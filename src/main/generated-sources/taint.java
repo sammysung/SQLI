@@ -12,7 +12,7 @@ public class taint {
         String u="";
         boolean safe = false;
         list bad = new list();
-        printSafe=String.format("   %-5s %-12s  %-17s  %-25s  \n", "#", "Query Number","Status", "Query");
+        printSafe=String.format(" %-3s %-12s   %-20s    %s \n", "#", "Query Number","Status", "Query");
         printSafe+= "--".repeat(85) + "\n";
         int count=1;
         //System.out.println("Showing the original list");
@@ -39,7 +39,7 @@ public class taint {
                 //System.out.println(pu+"\n");
                 if (qu.equalsIgnoreCase(pu)) {
                     safe = true;
-                    printSafe += String.format("   %-5s      %-7d  %-17s  %-25s  \n",
+                    printSafe += String.format(" %-3s      %-8d   %-20s   %-40s\n",
                             count, i+1, "Safe", qu);
                     count++;
                     break;

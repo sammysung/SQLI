@@ -18,7 +18,7 @@ public class listener extends TestBaseListener {
         //String[] tautQuery= new String[queryLimit];
         String[][] bad = new String[5][queryLimit];
         String[] query=new String[queryLimit];
-        String[] storedP = {"CREATE","INSERT","DELETE","SHUTDOWN","UPDATE","DROP"};
+        String[] storedP = {"CREATE","INSERT","DELETE","SHUTDOWN","UPDATE","DROP","ADMIN"};
 
 
     int t=0, s=0, p=0, b=0;
@@ -172,57 +172,70 @@ public class listener extends TestBaseListener {
         }
 
     @Override public void enterIsequal(TestParser.IsequalContext ctx) {
-            //  System.out.println("from enterTautology"+count);
+        //  System.out.println("from enterTautology"+count);
 
-            // Tautology attacks require this framework to calculate whether the right and left sides are truly equals,
-            // at least for the purpose of seeing if this is usable attack. OR statements are not, by default, bad.
+        // Tautology attacks require this framework to calculate whether the right and left sides are truly equals,
+        // at least for the purpose of seeing if this is usable attack. OR statements are not, by default, bad.
 
-            String[] h=ctx.getText().split("=");
 
-            if(!isInteger(h[0])&&!isInteger(h[1])){
-                if(h[0].trim().equals(h[1].trim())){
-                    bad[0][b] = Integer.toString(b+1);
-                    bad[1][b] = Integer.toString(count);
-                    bad[2][b] = "Tautology";
-                    bad[3][b] = h[0]+"="+h[1];
-                    b++;
-                }
-                return;
+        String[] h = ctx.getText().split("=");
+
+        if (!isInteger(h[0]) && !isInteger(h[1])) {
+            if (h[0].trim().equals(h[1].trim())) {
+                bad[0][b] = Integer.toString(b + 1);
+                bad[1][b] = Integer.toString(count);
+                bad[2][b] = "Tautology";
+                bad[3][b] = h[0] + "=" + h[1];
+                b++;
             }
+       //     return;
+        }
 
-            //System.out.println(ctx.getText());
-
-            STR stok= new STR(ctx.getText(),"+-=");
+        //System.out.println(ctx.getText());
+        else{
+            STR stok = new STR(ctx.getText(), "+-=");
             stok.convert();
             int left = stok.math();
-            int right=0;
-            if(!isInteger(h[1])){
-                right=-10;
-            }
-            else{
-                right=Integer.parseInt(h[1]);
+            int right = 0;
+            if (!isInteger(h[1])) {
+                right = -10;
+            } else {
+                right = Integer.parseInt(h[1]);
             }
 
-            boolean c=stok.flagged();
-            if(right!=-10||!c){
-                if(left==right){
-                    bad[0][b] = Integer.toString(b+1);
+            boolean c = stok.flagged();
+            if (right != -10 || !c) {
+                if (left == right) {
+                    bad[0][b] = Integer.toString(b + 1);
                     bad[1][b] = Integer.toString(count);
                     bad[2][b] = "Tautology";
-                    bad[3][b] = h[0]+"="+h[1];
+                    bad[3][b] = h[0] + "=" + h[1];
                     b++;
                 }
-            }
-            else {
-                if(h[0].trim().equals(h[1].trim())){
-                    bad[0][b] = Integer.toString(b+1);
+            } else {
+                if (h[0].trim().equals(h[1].trim())) {
+                    bad[0][b] = Integer.toString(b + 1);
                     bad[1][b] = Integer.toString(count);
                     bad[2][b] = "Tautology";
-                    bad[3][b] = h[0]+"="+h[1];
+                    bad[3][b] = h[0] + "=" + h[1];
                     b++;
                 }
             }
         }
+
+        String tQuery=query[count-1];
+    //    System.out.println("tQuery =  "+tQuery);
+        for (s=0; s<storedP.length; s++){
+            if(tQuery.toUpperCase().contains(storedP[s])){
+                bad[0][b] = Integer.toString(b+1);
+                bad[1][b] = Integer.toString(count);
+                bad[2][b] = "Stored procedure";
+                bad[3][b] = storedP[s];
+                b++;
+            }
+        }
+
+    }
 
         // Just due to the fact that we need both the left and right side of equations, the following rule
         // is not useful as of now to correctly ID tautology attacks.

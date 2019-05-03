@@ -61,7 +61,7 @@ ORDER BY 2;
 
 SELECT name, description, price
 FROM products
-WHERE category=1 UNION SELECT 'A', 'B', 3
+WHERE category=1 UNION SELECT 'C', 'B', 3
 
 SELECT name, description, price
 FROM products
