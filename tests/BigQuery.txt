@@ -179,7 +179,7 @@ WHERE login= '' AND pass=' ';char(0x73687574646f776e) '
 
 SELECT name, description, price
 FROM products
-WHERE category=1 UNION SELECT 'A','B', 3 FROM all_tables
+WHERE category=1 UNION SELECT 'A','C', 3 FROM all_tables
 
 SELECT Name, Phone
 FROM User
